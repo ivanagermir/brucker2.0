@@ -1,0 +1,147 @@
+/* Portada - home */
+.jumbotron {
+  background-image: url('../img/img-portadas/cordoba3.png');
+  background-size: cover;
+  height: 700px;
+  position: relative;
+  z-index: 0;
+  background-attachment: fixed;
+}
+
+/* CARDS - home */
+.card-section {
+  margin: -100px 50px 50px 50px;
+  padding: 0px 50px 50px 50px;
+  position: relative;
+  z-index: 1;
+}
+  
+.card{
+  box-shadow: 5px 5px 5px #dcdddd;
+  position: relative;
+  z-index: 2;
+}
+  
+.card-first {
+  background-color: #002244;
+  color: #fff;
+  border-radius: 7px;
+  box-shadow: 5px 5px 5px rgb(236, 234, 234);
+  padding-block: 120px 50px;
+  position: relative;
+  z-index: 2;
+}
+.card-first .card-body{
+  margin-left: 25px;
+}
+  
+.card-first .social-icons i{
+  color: #C9C2B2;
+}
+  
+.card-img-top{
+  padding: 5%;
+  border-radius: 25% 10%;
+}
+
+/* Valores-home*/
+.values-section{
+  font-family: 'Montserrat', sans-serif;
+  src: url(Montserrat-VariableFont_wght);
+  margin-bottom: 50px;
+}
+  
+.values-title {
+  text-align: center;
+  font-weight: bold;
+  color: #002244;
+  margin-bottom: 50px;
+}
+  
+.value-image {
+  align-content: center;
+  margin-bottom: -150px;
+}
+
+.list-values .text-principal {
+  align-items: center;
+  margin-bottom: 50px;
+  border: none;
+}
+  
+.list-values {
+  background-color: #EFF0F0;
+  text-align: center;
+  padding-top: 15%;
+}
+  
+.list-values ul li{
+  list-style-type: none;
+  margin: 30px;
+}
+  
+.list-values h6 {
+  color: #002244;
+  font-weight: bold;
+  margin-top: 10px;
+  border: 2px solid #002244;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.list-values p {
+  font-weight: bold;
+  color: #105498;
+  font-size: 14px;
+}
+
+.image-logo {
+  width: 180px;
+  margin-bottom: 10px;
+}
+
+/* TESTIMONIOS */
+.testimonials-title {
+  text-align: center;
+  font-weight: 100;
+  color: #938282;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.testimonials-title strong{
+  color: #002244;
+}
+
+.section-testimonials .card-text {
+  border-bottom: 4px solid #105498;
+  font-style: italic;
+}
+
+.section-testimonials .card-title {
+  text-align: end;
+}
+
+.section-testimonials .card {
+  background-color: #C9C2B2;
+  border-radius: 30px;
+  border: none;
+  margin-top: 20px;
+}
+  
+/* PROPIEDADES */
+.properties {
+  background-color: #002244;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 5%;
+}
+  
+.custom-video {
+  max-width: 100%;
+  height: auto;
+}
+  
+.text-properties {
+  color: #fff;
+}

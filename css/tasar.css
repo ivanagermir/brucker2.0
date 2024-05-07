@@ -1,0 +1,61 @@
+.portada-tasar {
+    background-image: url('../img/img-portadas/portada-tasar.png');
+    background-size: cover;
+    height: 650px;
+    position: relative;
+    z-index: 0;
+    background-attachment: fixed;
+}
+
+.portada-tasar h1 {
+    color: #002244;
+    text-shadow: #fff;
+}
+
+/* estilos para los textos */
+.title-tasar {
+    color: #938282;
+    margin-top: 30px;
+}
+
+.title-tasar strong {
+    color: #002244;
+}
+
+section p {
+    color: #938282;
+}
+
+.subtitle-tasar {
+    color: #002244;
+}
+
+/* Estilos para la imagen-pirámide*/
+section img {
+    margin: 0 auto;
+}
+
+/* Formulario Tasar */
+.contact-form{
+    text-align: center;
+}
+
+form {
+    color: #fff;
+    width: 60%;
+    height: 50%;
+    padding: 5%;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: #002244;
+}
+
+form h4 {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+button {
+    text-align: end;
+    align-items: end;
+}

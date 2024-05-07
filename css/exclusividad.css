@@ -1,0 +1,18 @@
+
+.portada-exclusividad {
+    background-image: url('../img/img-contacto/po');
+    background-size: cover;
+    height: 650px; /* Ajusta la altura según tus necesidades */
+    position: relative;
+    z-index: 0;
+    background-attachment: fixed; /* Para que la imagen quede quieta*/
+}
+
+.title-propiedades-pag{
+    margin-top: 5px;
+    font-family: sans-serif;
+    background-color: #002240;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+}

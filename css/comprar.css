@@ -1,0 +1,68 @@
+main{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.portada-comprar {
+  background-image: url('../img/img-comprar/portada-comprar.png');
+  background-size: cover;
+  height: 650px;
+  position: relative;
+  z-index: 0;
+  background-attachment: fixed;
+}
+
+/* Titulo y parte superior antes de las cards*/
+.title{
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+.title-comprar {
+  color: #938282;
+  margin-top: 30px;
+}
+
+.title-comprar strong {
+  color: #002244;
+}
+
+.subtitle-comprar {
+  color: #002244;
+}
+
+/* Cards comprar */
+.container-cards-comprar{
+  margin-left: 5%;
+  margin-right: 5%;  
+}
+
+.cards-comprar{
+  margin-top: 2%;
+}
+
+.card{    
+  margin-top: 5%;
+  box-shadow: 10px 5px 5px #9382826e;
+}
+
+.card img {
+  padding: 5%;
+  border-radius: 25% 10%;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  background-color: #002244;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+}

@@ -1,0 +1,65 @@
+@include tablet {
+    .contenedor-anuncios {
+        @include grid(3, 2rem);
+    }
+}
+  
+  
+  /* Estilos CSS para las tarjetas */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea si no hay suficiente espacio */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+.card {
+    background-color: lighten($gris, 5);
+     border: 1px solid darken($gris, 10);
+    margin-bottom: 2rem;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+    margin-bottom: 5px;
+}
+
+.card p {
+    margin: 5px 0;
+    color: $grisOscuro;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.card a:hover {
+    color: #ff6600;
+}
+
+/* Estilos CSS para el botón "Ver más" */
+.ver-propiedad {
+    background-color: #002244;
+}
