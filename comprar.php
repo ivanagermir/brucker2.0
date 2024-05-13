@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="../bruckerCopia/css/comprar.css">
-    <link rel="stylesheet" href="../bruckerCopia/css/style.css">
+    <link rel="stylesheet" href="../brucker2.0/css/comprar.css">
+    <link rel="stylesheet" href="../brucker2.0/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
 </head>
@@ -21,7 +21,7 @@
       <div class="col-lg-10 container-fluid">
         <!-- Logo aqui POSICIONADO A LA IZQUIERDA-->
         <a class="navbar-brand" href="/html/index.html">
-          <img src="../bruckerCopia/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker" height="70">
+          <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker" height="70">
         </a>
         <!-- Botón de colapsar para pantallas pequeñas -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse navbar-style" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto justify-content-end">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../bruckerCopia/home.php"><b>Home</b></a>
+              <a class="nav-link" aria-current="page" href="../brucker2.0/home.php"><b>Home</b></a>
             </li>
             <!-- desplegable nosotros -->
             <li class="nav-item dropdown">
@@ -39,8 +39,8 @@
                 <b>Nosotros</b>
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../bruckerCopia/quienesSomos.php">Quiénes somos</a></li>
-                <li><a class="dropdown-item" href="../bruckerCopia/exclusividad.php">La exclusividad</a></li>
+                <li><a class="dropdown-item" href="../brucker2.0/quienesSomos.php">Quiénes somos</a></li>
+                <li><a class="dropdown-item" href="../brucker2.0/exclusividad.php">La exclusividad</a></li>
               </ul>
             </li>
             <!-- desplegable servicios -->
@@ -49,21 +49,21 @@
                 <b>Servicios</b>
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../bruckerCopia/comprar.php">Comprar</a></li>
-                <li><a class="dropdown-item" href="../bruckerCopia/vender.php">Vender</a></li>
-                <li><a class="dropdown-item" href="../bruckerCopia/tasar.php">Tasar</a></li>
-                <li><a class="dropdown-item" href="../bruckerCopia/invertir.php">Invertir</a></li>
+                <li><a class="dropdown-item" href="../brucker2.0/comprar.php">Comprar</a></li>
+                <li><a class="dropdown-item" href="../brucker2.0/vender.php">Vender</a></li>
+                <li><a class="dropdown-item" href="../brucker2.0/tasar.php">Tasar</a></li>
+                <li><a class="dropdown-item" href="../brucker2.0/invertir.php">Invertir</a></li>
               </ul>
             </li>
             <!-- nav propiedades-novedades-contacto -->
             <li class="nav-item">
-              <a class="nav-link" href="../bruckerCopia/propiedadesBrucker.php"><b>Propiedades</b></a>
+              <a class="nav-link" href="../brucker2.0/propiedadesBrucker.php"><b>Propiedades</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../bruckerCopia/novedades.php"><b>Novedades</b></a>
+              <a class="nav-link" href="../brucker2.0/novedades.php"><b>Novedades</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../bruckerCopia/contacto.php"><b>Contacto</b></a>
+              <a class="nav-link" href="../brucker2.0/contacto.php"><b>Contacto</b></a>
             </li>
           </ul>
         </div>
@@ -86,7 +86,7 @@
         <div class="whatsapp-container">
           <a href="https://wa.me/543512010010" class="whatsapp-logo" target="_blank">
             <div class="tooltip">¿Necesitás asesoramiento?</div>
-            <img src="../bruckerCopia/img/logo/whatsapp-icon-green.png" alt="WhatsApp Logo">
+            <img src="../brucker2.0/img/logo/whatsapp-icon-green.png" alt="WhatsApp Logo">
           </a>
         </div>
       </div>  
@@ -103,7 +103,7 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col">
             <div class="card h-100" data-aos="fade-down">
-              <img src="../bruckerCopia/img/img-comprar/paso1.jpg" class="card-img-top" alt="Persona en notebook">
+              <img src="../brucker2.0/img/img-comprar/paso1.jpg" class="card-img-top" alt="Persona en notebook">
               <div class="card-body">
                 <h5 class="card-title">1</h5>
                 <p class="card-text">¿Qué estas buscando? Tomamos en cuenta tu objetivo de manera personalizada.</p>
@@ -112,7 +112,7 @@
           </div>
           <div class="col">
             <div class="card h-100" data-aos="fade-down">
-              <img src="../bruckerCopia/img/img-comprar/paso2.jpg" class="card-img-top" alt="Análisis y cálculos">
+              <img src="../brucker2.0/img/img-comprar/paso2.jpg" class="card-img-top" alt="Análisis y cálculos">
               <div class="card-body">
                 <h5 class="card-title">2</h5>
                 <p class="card-text">Analizamos el mercado seleccionamos propiedades que puedan ser de tu interés.</p>
@@ -123,7 +123,7 @@
             <div class="card h-100" data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1500">
-              <img src="../bruckerCopia/img/img-comprar/paso3.jpg" class="card-img-top" alt="Personas analizando">
+              <img src="../brucker2.0/img/img-comprar/paso3.jpg" class="card-img-top" alt="Personas analizando">
               <div class="card-body">
                 <h5 class="card-title">3</h5>
                 <p class="card-text">Juntos analizamos cada una de las opciones. Definiendo según tu orden de propiedades.</p>
@@ -132,7 +132,7 @@
           </div>
           <div class="col">
             <div class="card h-100" data-aos="fade-down">
-              <img src="../bruckerCopia/img/img-comprar/paso4.jpg" class="card-img-top" alt="Visitas guiadas">
+              <img src="../brucker2.0/img/img-comprar/paso4.jpg" class="card-img-top" alt="Visitas guiadas">
               <div class="card-body">
                 <h5 class="card-title">4</h5>
                 <p class="card-text">Coordinaremos juntos visitas a las propiedades seleccionadas. Te ayudamos a tomar la mejor decisión.</p>
@@ -141,7 +141,7 @@
           </div>
           <div class="col">
             <div class="card h-100" data-aos="fade-down">
-              <img src="../bruckerCopia/img/img-comprar/paso5.jpg" class="card-img-top" alt="Manos estrechadas">
+              <img src="../brucker2.0/img/img-comprar/paso5.jpg" class="card-img-top" alt="Manos estrechadas">
               <div class="card-body">
                 <h5 class="card-title">5</h5>
                 <p class="card-text">“La Negociación”  Nos ocupamos de obtener el mejor acuerdo para vos.</p>
@@ -152,7 +152,7 @@
             <div class="card h-100" data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1500">
-              <img src="../bruckerCopia/img/img-comprar/paso6.jpg" class="card-img-top" alt="Buscando en carpetas">
+              <img src="../brucker2.0/img/img-comprar/paso6.jpg" class="card-img-top" alt="Buscando en carpetas">
               <div class="card-body">
                 <h5 class="card-title">6</h5>
                 <p class="card-text">Armamos la carpeta, revisamos la documentación. Brindándote tranquilidad jurídica. </p>
@@ -161,7 +161,7 @@
           </div>
           <div class="col">
             <div class="card h-100" data-aos="fade-down">
-              <img src="../bruckerCopia/img/img-comprar/paso7.jpg" class="card-img-top" alt="firma">
+              <img src="../brucker2.0/img/img-comprar/paso7.jpg" class="card-img-top" alt="firma">
               <div class="card-body">
                 <h5 class="card-title">7</h5>
                 <p class="card-text">Vamos juntos a escribanía.</p>
@@ -170,7 +170,7 @@
           </div>
           <div class="col">
             <div class="card h-100" data-aos="fade-down">
-              <img src="../bruckerCopia/img/img-comprar/paso8.jpg" class="card-img-top" alt="Mudanza">
+              <img src="../brucker2.0/img/img-comprar/paso8.jpg" class="card-img-top" alt="Mudanza">
               <div class="card-body">
                 <h5 class="card-title">8</h5>
                 <p class="card-text">Es tuyo! A disfrutarlo!</p>
@@ -181,7 +181,7 @@
             <div class="card h-100" data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1500" >
-              <img src="../bruckerCopia/img/logo/PNG/sinFondocompleto.png" class="card-img-top" alt="Logo de Brücker">           
+              <img src="../brucker2.0a/img/logo/PNG/sinFondocompleto.png" class="card-img-top" alt="Logo de Brücker">           
             </div>
           </div>
         </div>
@@ -208,7 +208,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 text-center mb-3 mb-md-0">
-          <img src="../bruckerCopia/img/logo/PNG/sinFondocompleto.png" alt="Logo de la empresa" class="img-fluid" style="max-height: 70px;">
+          <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo de la empresa" class="img-fluid" style="max-height: 70px;">
           <p class="mt-3">© 2024 Brücker. Todos los derechos reservados.</p>
         </div>
         <div class="col-md-4 text-center mb-3 mb-md-0">

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .portada-quienesSomos {
-  background-image: url('/img/img-quienesSomos/portada-quienesSomos.png');
+  background-image: url('../img/img-quienesSomos/portada.jpeg');
   background-size: cover;
   height: 650px;
   position: relative;
