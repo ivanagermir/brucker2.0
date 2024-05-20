@@ -1,18 +1,68 @@
-
-.portada-exclusividad {
-    background-image: url('../img/img-contacto/po');
+main{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .portada-exclusividad {
+    background-image: url('/brucker2.0/img/img-portadas/portada-exclusividad.png');
     background-size: cover;
-    height: 650px; /* Ajusta la altura según tus necesidades */
+    height: 650px;
     position: relative;
     z-index: 0;
-    background-attachment: fixed; /* Para que la imagen quede quieta*/
-}
-
-.title-propiedades-pag{
-    margin-top: 5px;
-    font-family: sans-serif;
-    background-color: #002240;
-    color: #fff;
+    background-attachment: fixed;
+  }
+  /* Titulo y parte superior antes de las cards*/
+  .title{
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+  
+  .title-vender {
+    color: #938282;
+    margin-top: 30px;
+  }
+  
+  .title-vender strong {
+    color: #002244;
+  }
+  
+  .subtitle-vender {
+    color: #002244;
+  }
+  
+  /* Cards comprar */
+  .container-cards-vender{
+    margin-left: 5%;
+    margin-right: 5%;  
+  }
+  
+  .cards-vender{
+    margin-top: 2%;
+  }
+  
+  .card{    
+    margin-top: 5%;
+    box-shadow: 10px 5px 5px #9382826e;
+  }
+  
+  .card img {
+    padding: 5%;
+    border-radius: 25% 10%;
+  }
+  
+  .card-body {
     text-align: center;
-    padding-top: 10px;
-}
+  }
+  
+  .card-title {
+    background-color: #002244;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+  }
+  

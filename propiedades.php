@@ -23,8 +23,8 @@
     <nav class=" navbar navbar-expand-lg">
       <div class="col-lg-10 container-fluid">
         <!-- Logo aqui POSICIONADO A LA IZQUIERDA-->
-        <a class="navbar-brand" href="/html/index.html">
-          <img src="../bruckerCopia/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker" height="70">
+        <a class="navbar-brand" href=".brucker2.0/home.php">
+          <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker" height="70">
         </a>
         <!-- Botón de colapsar para pantallas pequeñas -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +34,7 @@
         <div class="collapse navbar-collapse navbar-style" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto justify-content-end">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../bruckerCopia/home.php"><b>Home</b></a>
+              <a class="nav-link" aria-current="page" href="../brucker2.0/home.php"><b>Home</b></a>
             </li>
             <!-- desplegable nosotros -->
             <li class="nav-item dropdown">
@@ -42,8 +42,8 @@
                 <b>Nosotros</b>
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../bruckerCopia/quienesSomos.php">Quiénes somos</a></li>
-                <li><a class="dropdown-item" href="../bruckerCopia/exclusividad.php">La exclusividad</a></li>
+                <li><a class="dropdown-item" href="../brucker2.0/quienesSomos.php">Quiénes somos</a></li>
+                <li><a class="dropdown-item" href="../brucker2.0/exclusividad.php">La exclusividad</a></li>
               </ul>
             </li>
             <!-- desplegable servicios -->
@@ -52,21 +52,21 @@
                 <b>Servicios</b>
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../bruckerCopia/comprar.php">Comprar</a></li>
-                <li><a class="dropdown-item" href="../bruckerCopia/vender.php">Vender</a></li>
-                <li><a class="dropdown-item" href="../bruckerCopia/tasar.php">Tasar</a></li>
-                <li><a class="dropdown-item" href="../bruckerCopia/invertir.php">Invertir</a></li>
+                <li><a class="dropdown-item" href="../brucker2.0/comprar.php">Comprar</a></li>
+                <li><a class="dropdown-item" href="../brucker2.0/vender.php">Vender</a></li>
+                <li><a class="dropdown-item" href="../brucker2.0/tasar.php">Tasar</a></li>
+                <li><a class="dropdown-item" href="../brucker2.0/invertir.php">Invertir</a></li>
               </ul>
             </li>
             <!-- nav propiedades-novedades-contacto -->
             <li class="nav-item">
-              <a class="nav-link" href="../bruckerCopia/propiedades.php"><b>Propiedades</b></a>
+              <a class="nav-link" href="../brucker2.0/propiedades.php"><b>Propiedades</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../bruckerCopia/novedades.php"><b>Novedades</b></a>
+              <a class="nav-link" href="../brucker2.0/novedades.php"><b>Novedades</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../bruckerCopia/contacto.php"><b>Contacto</b></a>
+              <a class="nav-link" href="../brucker2.0/contacto.php"><b>Contacto</b></a>
             </li>
           </ul>
         </div>
@@ -92,7 +92,7 @@
         <div class="whatsapp-container">
           <a href="https://wa.me/543512010010" class="whatsapp-logo" target="_blank">
             <div class="tooltip">¿Necesitás asesoramiento?</div>
-            <img src="../bruckerCopia/img/logo/whatsapp-icon-green.png" alt="WhatsApp Logo">
+            <img src="../brucker2.0/img/logo/whatsapp-icon-green.png" alt="WhatsApp Logo">
           </a>
         </div>
       </div>
@@ -115,7 +115,6 @@ $data = json_decode($response, true);
 // Verificar si se obtuvieron datos y si existen propiedades
 if ($data && isset($data['objects'])) {
     foreach ($data['objects'] as $property) {
-        // Mostrar la tarjeta (card) de la propiedad con la imagen y los detalles
         // Mostrar la tarjeta (card) de la propiedad con la imagen y los detalles
 echo '<div class="card">'; // Agregamos el inicio de la tarjeta
 
@@ -205,7 +204,7 @@ echo '</div>'; // Cerramos la tarjeta
     <div class="container">
       <div class="row">
         <div class="col-md-4 text-center mb-3 mb-md-0">
-          <img src="../bruckerCopia/img/logo/PNG/sinFondocompleto.png" alt="Logo de la empresa" class="img-fluid" style="max-height: 70px;">
+          <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo de la empresa" class="img-fluid" style="max-height: 70px;">
           <p class="mt-3">© 2024 Brücker. Todos los derechos reservados.</p>
         </div>
         <div class="col-md-4 text-center mb-3 mb-md-0">
