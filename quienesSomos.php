@@ -20,8 +20,8 @@
     <nav class=" navbar navbar-expand-lg">
       <div class="col-lg-10 container-fluid">
         <!-- Logo aqui POSICIONADO A LA IZQUIERDA-->
-        <a class="navbar-brand" href="../bruckerCopia/home.php">
-          <img src="../bruckerCopia/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker" height="70">
+        <a class="navbar-brand" href="../brucker2.0/home.php">
+          <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker" height="70">
         </a>
         <!-- Botón de colapsar para pantallas pequeñas -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse navbar-style" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto justify-content-end">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../bruckerCopia/home.php"><b>Home</b></a>
+              <a class="nav-link" aria-current="page" href="../brucker2.0/home.php"><b>Home</b></a>
             </li>
             <!-- desplegable nosotros -->
             <li class="nav-item dropdown">
@@ -39,8 +39,8 @@
                 <b>Nosotros</b>
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../bruckerCopia/quienesSomos.php">Quiénes somos</a></li>
-                <li><a class="dropdown-item" href="../bruckerCopia/exclusividad.php">La exclusividad</a></li>
+                <li><a class="dropdown-item" href="../brucker2.0/quienesSomos.php">Quiénes somos</a></li>
+                <li><a class="dropdown-item" href="../brucker2.0/exclusividad.php">La exclusividad</a></li>
               </ul>
             </li>
             <!-- desplegable servicios -->
@@ -49,21 +49,21 @@
                 <b>Servicios</b>
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../bruckerCopia/comprar.php">Comprar</a></li>
-                <li><a class="dropdown-item" href="../bruckerCopia/vender.php">Vender</a></li>
-                <li><a class="dropdown-item" href="../bruckerCopia/tasar.php">Tasar</a></li>
-                <li><a class="dropdown-item" href="../bruckerCopia/invertir.php">Invertir</a></li>
+                <li><a class="dropdown-item" href="../brucker2.0/comprar.php">Comprar</a></li>
+                <li><a class="dropdown-item" href="../brucker2.0/vender.php">Vender</a></li>
+                <li><a class="dropdown-item" href="../brucker2.0/tasar.php">Tasar</a></li>
+                <li><a class="dropdown-item" href="../brucker2.0/invertir.php">Invertir</a></li>
               </ul>
             </li>
             <!-- nav propiedades-novedades-contacto -->
             <li class="nav-item">
-              <a class="nav-link" href="../bruckerCopia/propiedades.php"><b>Propiedades</b></a>
+              <a class="nav-link" href="../brucker2.0/propiedades.php"><b>Propiedades</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../bruckerCopia/novedades.php"><b>Novedades</b></a>
+              <a class="nav-link" href="../brucker2.0/novedades.php"><b>Novedades</b></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../bruckerCopia/contacto.php"><b>Contacto</b></a>
+              <a class="nav-link" href="../brucker2.0/contacto.php"><b>Contacto</b></a>
             </li>
           </ul>
         </div>
@@ -86,7 +86,7 @@
       <div class="whatsapp-container">
         <a href="https://wa.me/543512010010" class="whatsapp-logo" target="_blank">
           <div class="tooltip">¿Necesitás asesoramiento?</div>
-          <img src="../bruckerCopia/img/logo/whatsapp-icon-green.png" alt="WhatsApp Logo">
+          <img src="../brucker2.0/img/logo/whatsapp-icon-green.png" alt="WhatsApp Logo">
         </a>
       </div>
     </aside>  
@@ -104,50 +104,50 @@
           <div class="container text-center">
             <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1">
               <div class="col">
-                <img src="../bruckerCopia/img/img-valores/compromiso.png" alt="Logo compromiso">
+                <img src="../brucker2.0/img/img-valores/compromiso.png" alt="Logo compromiso">
                 <h6 class="text-uppercase" data-aos="flip-right">compromiso</h6>
                 <p>Trabajamos con dedicación y esmero para cumplir con las necesidades y 
                   expectativas de nuestros clientes, garantizando un servicio de calidad.
                 </p>
               </div>
               <div class="col">
-                <img src="../bruckerCopia/img/img-valores/lealtad.png" alt="Logo Lealtad">
+                <img src="../brucker2.0/img/img-valores/lealtad.png" alt="Logo Lealtad">
                 <h6 class="text-uppercase" data-aos="flip-right">lealtad</h6>
                 <p>Establecemos relaciones duraderas y de confianza con nuestros clientes, 
                   siendo fieles a nuestros compromisos y valores.</p>
               </div>
               <div class="col">
-                <img src="../bruckerCopia/img/img-valores/transparencia.png" alt="Logo Transparencia">
+                <img src="../brucker2.0/img/img-valores/transparencia.png" alt="Logo Transparencia">
                 <h6 class="text-uppercase" data-aos="flip-right">transparencia</h6>
                 <p>Actuamos con honestidad y sinceridad en todas nuestras interacciones, 
                   asegurando la claridad en los procesos y la información.</p>
               </div>
               <div class="col">
-                <img src="../bruckerCopia/img/img-valores/seguridad.png" alt="Logo seguridad">
+                <img src="../brucker2.0/img/img-valores/seguridad.png" alt="Logo seguridad">
                 <h6 class="text-uppercase" data-aos="flip-right">seguridad</h6>
                 <p>Proporcionamos soluciones confiables y seguras a nuestros clientes, 
                   cuidando su patrimonio y sus intereses.</p>
               </div>
               <div class="col">
-                <img src="../bruckerCopia/img/img-valores/confianza.png" alt="Logo confianza">
+                <img src="../brucker2.0/img/img-valores/confianza.png" alt="Logo confianza">
                 <h6 class="text-uppercase" data-aos="flip-right">confianza</h6>
                 <p>Fomentamos un ambiente de confianza y respeto, basado en la honestidad, 
                   la integridad y el compromiso con nuestros clientes.</p>
               </div>
               <div class="col">
-                <img src="../bruckerCopia/img/img-valores/proactividad.png" alt="Logo proactividad">
+                <img src="../brucker2.0/img/img-valores/proactividad.png" alt="Logo proactividad">
                 <h6 class="text-uppercase" data-aos="flip-right">proactividad</h6>
                 <p>Nos adelantamos a las necesidades de nuestros clientes, ofreciendo 
                   soluciones creativas e innovadoras, y mejorando continuamente nuestros procesos.</p>
               </div>
               <div class="col">
-                <img src="../bruckerCopia/img/img-valores/esfuerzo.png" alt="Logo esfuerzo">
+                <img src="../brucker2.0/img/img-valores/esfuerzo.png" alt="Logo esfuerzo">
                 <h6 class="text-uppercase" data-aos="flip-right">esfuerzo</h6>
                 <p>Trabajamos con perseverancia y dedicación, buscando siempre superar las 
                   expectativas de nuestros clientes y alcanzar la excelencia en nuestro servicio.</p>
               </div>
               <div class="col">
-                <img class="image-logo" data-aos="flip-right" src="../bruckerCopia/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker">
+                <img class="image-logo" data-aos="flip-right" src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker">
                 <p>Únete a nosotros en la construcción de tus sueños. <strong>¡Descubre cómo Brücker puede ser 
                   tu puente hacia una experiencia inmobiliaria única y satisfactoria!</strong></p>
               </div>
@@ -165,7 +165,7 @@
           <div class="head">
               <div class="circle"> </div>
               <div class="img">
-                  <img src="../bruckerCopia/img/img-quienesSomos/damian1.jpeg" alt="Damian Gari">
+                  <img src="../brucker2.0/img/img-quienesSomos/damian1.jpeg" alt="Damian Gari">
               </div>
           </div>
     
@@ -202,7 +202,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 text-center mb-3 mb-md-0">
-          <img src="../bruckerCopia/img/logo/PNG/sinFondocompleto.png" alt="Logo de la empresa" class="img-fluid" style="max-height: 70px;">
+          <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo de la empresa" class="img-fluid" style="max-height: 70px;">
           <p class="mt-3">© 2024 Brücker. Todos los derechos reservados.</p>
         </div>
         <div class="col-md-4 text-center mb-3 mb-md-0">

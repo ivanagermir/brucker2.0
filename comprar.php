@@ -20,7 +20,7 @@
     <nav class=" navbar navbar-expand-lg">
       <div class="col-lg-10 container-fluid">
         <!-- Logo aqui POSICIONADO A LA IZQUIERDA-->
-        <a class="navbar-brand" href="/html/index.html">
+        <a class="navbar-brand" href="../bruckerCopia/home.php">
           <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker" height="70">
         </a>
         <!-- Botón de colapsar para pantallas pequeñas -->
@@ -181,7 +181,7 @@
             <div class="card h-100" data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1500" >
-              <img src="../brucker2.0a/img/logo/PNG/sinFondocompleto.png" class="card-img-top" alt="Logo de Brücker">           
+              <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" class="card-img-top" alt="Logo de Brücker">           
             </div>
           </div>
         </div>
