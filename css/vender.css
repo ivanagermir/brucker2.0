@@ -6,7 +6,7 @@ main{
 }
 
 .portada-vender {
-  background-image: url('/brucker2.0/img/img-vender/portadaVender.png');
+  background-image: url('../img/img-vender/portadaVender.png');
   background-size: cover;
   height: 650px;
   position: relative;
