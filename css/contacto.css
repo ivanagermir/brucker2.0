@@ -2,7 +2,7 @@
 
 /* Portada */
 .portada-contacto {
-  background-image: url('../img/img-contacto/po');
+  background-image: url('../img/img-contacto/contacto.png');
   background-size: cover;
   height: 650px;
   position: relative;
@@ -10,9 +10,6 @@
   background-attachment: fixed;
 }
 
-main{
-  margin-top: 10%;
-}
 /* Textos de comprar*/
 .contact-section {
   font-family: 'Montserrat', sans-serif;

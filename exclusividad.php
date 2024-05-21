@@ -92,21 +92,39 @@
     </aside>  
 
     <!--Exclusividad-->
-    <section class="title-exclusividad">
-      <h3>La Exclusiva Inmobiliaria: Un Compromiso de Confianza y Resultados</h3>
-      <p>La Exclusiva Inmobiliaria representa un sólido compromiso de representación entre el cliente y el profesional, donde se establece un equipo dedicado a alcanzar el objetivo de vender la propiedad en las mejores condiciones. Este acuerdo transparente y formal proporciona una serie de beneficios significativos para el cliente.</p>
-    </section>
-
-    <section class="beneficios">
-      <h3>Beneficios para el Cliente:</h3>
-      <p>
-      Transparencia y Compromiso: La Exclusiva garantiza total transparencia en la comercialización de la propiedad, eliminando sorpresas desagradables. Al elegirnos mutuamente, ambas partes se comprometen plenamente a alcanzar el objetivo de venta.
-Asesoramiento Profesional: El cliente es el protagonista en la toma de decisiones mientras que el profesional aporta conocimientos de mercado y garantiza seguridad jurídica, brindando así tranquilidad y confianza en todo el proceso.
-Comunicación Eficiente: La Exclusiva establece un único canal de comunicación entre los interesados y el cliente, aprovechando la experiencia en negociación de la agencia para obtener los mejores resultados.
-Máxima Exposición: Desarrollamos un plan de marketing personalizado para cada propiedad, aprovechando los principales portales de venta web, compartiendo cartera de propiedades con la red de colegas y socios estratégicos, garantizando así una máxima exposición y alcance.
-Seguimiento y Resultados: Se proporcionan informes semanales que detallan la evolución de la propiedad en el mercado, junto con opiniones de interesados y ofertas concretas por escrito, brindando al cliente la información necesaria para tomar decisiones informadas.
-
+    <section class="container exclusividad">
+      <h3> <strong>La Exclusiva Inmobiliaria:</strong> Un Compromiso de Confianza y Resultados</h3>
+      <hr>
+      <p>La Exclusiva Inmobiliaria representa un sólido compromiso de representación entre el 
+        cliente y el profesional, donde se establece un equipo dedicado a alcanzar el objetivo de vender 
+        la propiedad en las mejores condiciones. Este acuerdo transparente y formal proporciona una serie de 
+        beneficios significativos para el cliente.
       </p>
+
+      <h3>Beneficios para el <strong>Cliente</strong>:</h3>
+      <hr>
+      <div class="parrafos-exclusividad">
+        <p>
+          <strong>Transparencia y Compromiso:</strong> La Exclusiva garantiza total transparencia en la comercialización de la propiedad, 
+          eliminando sorpresas desagradables. Al elegirnos mutuamente, ambas partes se comprometen plenamente a alcanzar 
+          el objetivo de venta.
+        </p>      
+        <p> <strong>Asesoramiento Profesional:</strong> El cliente es el protagonista en la toma de decisiones mientras que el profesional 
+          aporta conocimientos de mercado y garantiza seguridad jurídica, brindando así tranquilidad y confianza en todo 
+          el proceso.
+        </p>
+        <p><strong>Comunicación Eficiente:</strong> La Exclusiva establece un único canal de comunicación entre los interesados y el cliente, 
+          aprovechando la experiencia en negociación de la agencia para obtener los mejores resultados.
+        </p>
+        <p><strong>Máxima Exposición:</strong> Desarrollamos un plan de marketing personalizado para cada propiedad, aprovechando los 
+          principales portales de venta web, compartiendo cartera de propiedades con la red de colegas y socios 
+          estratégicos, garantizando así una máxima exposición y alcance.
+        </p>
+        <p><strong>Seguimiento y Resultados:</strong> Se proporcionan informes semanales que detallan la evolución de la propiedad en el 
+          mercado, junto con opiniones de interesados y ofertas concretas por escrito, brindando al cliente la información 
+          necesaria para tomar decisiones informadas.
+        </p>
+      </div>
     </section>
       
   </main>
