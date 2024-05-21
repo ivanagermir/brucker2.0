@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 main{
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
@@ -6,7 +8,7 @@ main{
 }
 
 .portada-invertir {
-  background-image: url('/brucker2.0/img/img-portadas/portada-invertir.jpg');
+  background-image: url('../img/img-portadas/portada_invertir01.png');
   background-size: cover;
   height: 650px;
   position: relative;
@@ -14,22 +16,28 @@ main{
   background-attachment: fixed;
 }
 
-.portada-invertir h1{
+/* TURNERO */
+.headTurnero {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.headTurnero h4 {
+  font-size: 24px;
+  color: #002244;
+}
+
+.headTurnero h5 {
+  font-size: 20px;
   color: #002244;
 }
 
 
-
-.title-invertir {
-  color: #938282;
-  margin-top: 30px;
+.social-icons {
+  font-size: 24px;
 }
 
-.title-invertir strong {
-  color: #002244;
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
 }
-
-.subtitle-invertir {
-  color: #002244;
-}
-
