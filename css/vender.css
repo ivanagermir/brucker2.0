@@ -6,14 +6,13 @@ main{
 }
 
 .portada-vender {
-  background-image: url('../img/img-vender/portada-vender.png');
+  background-image: url('/brucker2.0/img/img-vender/portadaVender.png');
   background-size: cover;
   height: 650px;
   position: relative;
   z-index: 0;
   background-attachment: fixed;
 }
-
 /* Titulo y parte superior antes de las cards*/
 .title{
   margin-top: 5%;
@@ -33,7 +32,7 @@ main{
   color: #002244;
 }
 
-/* Estilos para las cards vender */
+/* Cards comprar */
 .container-cards-vender{
   margin-left: 5%;
   margin-right: 5%;  
