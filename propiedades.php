@@ -99,105 +99,98 @@
     </aside>
 
       
+    <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <?php
+        // Realizar la solicitud a la API de Tokko Broker para obtener los datos de las propiedades
+        $url = 'http://www.tokkobroker.com/api/v1/property/?limit=10&offset=0&lang=es_ar&format=json&key=afc6818db3d1bc5b3ae1e77169f5cb2aae4542f3';
+        $response = file_get_contents($url);
+        $data = json_decode($response, true);
 
-    <div class="container-cards">
-    <?php
-// Realizar la solicitud a la API de Tokko Broker para obtener los datos de las propiedades
-$url = 'http://www.tokkobroker.com/api/v1/property/?limit=10&offset=0&lang=es_ar&format=json&key=afc6818db3d1bc5b3ae1e77169f5cb2aae4542f3';
-$response = file_get_contents($url);
-$data = json_decode($response, true);
+        // Verificar si se obtuvieron datos y si existen propiedades
+        if ($data && isset($data['objects'])) {
+            foreach ($data['objects'] as $property) {
+                // Mostrar la tarjeta (card) de la propiedad con la imagen y los detalles
+                echo '<div class="col">'; // Inicio de la columna
+                echo '<div class="card h-100 d-flex flex-column">'; // Agregamos el inicio de la tarjeta
 
-?>
+                // Mostrar la primera imagen de la propiedad
+                if (isset($property['photos']) && is_array($property['photos']) && !empty($property['photos'])) {
+                    $first_photo = reset($property['photos']);
+                    echo '<div class="property-image">';
+                    echo '<img src="' . $first_photo['image'] . '" class="card-img-top" alt="' . $first_photo['description'] . '">';
+                    echo '</div>';
+                } else {
+                    echo '<div class="property-image">';
+                    echo '<img src="default-image.jpg" class="card-img-top" alt="Imagen no disponible">';
+                    echo '</div>';
+                }
 
-<!--Card con estilo-->
+                // Mostrar los detalles de la propiedad
+                echo '<div class="card-body d-flex flex-column">';
+                echo '<h5 class="card-title text-center">' . $property['publication_title'] . '</h5>';
+                echo '<div class="property-details text-left flex-grow-1">';
+                echo '<p><strong>Habitaciones:</strong> ' . $property['room_amount'] . '</p>';
+                echo '<p><strong>Baños:</strong> ' . $property['bathroom_amount'] . '</p>';
+                echo '<p><strong>Superficie:</strong> ' . $property['surface'] . '</p>';
+                echo '</div>';
 
-<?php
-// Verificar si se obtuvieron datos y si existen propiedades
-if ($data && isset($data['objects'])) {
-    foreach ($data['objects'] as $property) {
-        // Mostrar la tarjeta (card) de la propiedad con la imagen y los detalles
-echo '<div class="card">'; // Agregamos el inicio de la tarjeta
+                // Tags
+                if (isset($property['tags']) && is_array($property['tags'])) {
+                    $total_tags = count($property['tags']);
+                    $max_display_tags = 2; // Máximo de etiquetas a mostrar
+                    $displayed_tags = min($max_display_tags, $total_tags); // Número real de etiquetas a mostrar
 
-// Mostrar la primera imagen de la propiedad
-if (isset($property['photos']) && is_array($property['photos']) && !empty($property['photos'])) {
-    $first_photo = reset($property['photos']);
-    echo '<div class="property-image">';
-    echo '<img src="' . $first_photo['image'] . '" alt="' . $first_photo['description'] . '">';
-    echo '</div>';
-} else {
-    echo '<div class="property-image">';
-    echo '<img src="default-image.jpg" alt="Imagen no disponible">';
-    echo '</div>';
-}
+                    echo '<div class="tags d-flex justify-content-between">';
+                    echo '<ul class="list-unstyled">'; // Columna izquierda
+                    for ($i = 0; $i < ceil($displayed_tags / 2); $i++) {
+                        echo '<li>' . $property['tags'][$i]['name'] . '</li>';
+                    }
+                    echo '</ul>';
 
-// Mostrar los detalles de la propiedad
-echo '<div class="card-content">';
-echo '<h3>' . $property['publication_title'] . '</h3>';
-echo '<div class="property-details">';
-echo '<p><strong>Habitaciones:</strong> ' . $property['room_amount'] . '</p>';
-echo '<p><strong>Baños:</strong> ' . $property['bathroom_amount'] . '</p>';
-echo '<p><strong>Superficie:</strong> ' . $property['surface'] . '</p>';
-echo '</div>';
+                    if ($displayed_tags > ceil($displayed_tags / 2)) {
+                        echo '<ul class="list-unstyled">'; // Columna derecha
+                        for ($i = ceil($displayed_tags / 2); $i < $displayed_tags; $i++) {
+                            echo '<li>' . $property['tags'][$i]['name'] . '</li>';
+                        }
+                        echo '</ul>';
+                    }
 
+                    if ($total_tags > $max_display_tags) {
+                        echo '<p>+' . ($total_tags - $max_display_tags) . ' comodidades</p>';
+                    }
 
-//tags
-if (isset($property['tags']) && is_array($property['tags'])) {
-    $total_tags = count($property['tags']);
-    $max_display_tags = 2; // Máximo de etiquetas a mostrar
-    $displayed_tags = min($max_display_tags, $total_tags); // Número real de etiquetas a mostrar
+                    echo '</div>';
+                } else {
+                    echo '<p>No hay etiquetas disponibles</p>';
+                }
 
-    echo '<div style="display: flex;">'; // Contenedor para las dos columnas
-    echo '<ul style="flex: 1;">'; // Columna izquierda
-    for ($i = 0; $i < ceil($displayed_tags / 2); $i++) {
-        echo '<li>' . $property['tags'][$i]['name'] . '</li>';
-    }
-    echo '</ul>';
+                // Precio
+                echo '<div class="precio-propiedad">';
+                foreach ($property['operations'] as $operation) {
+                    foreach ($operation['prices'] as $price) {
+                        echo '<strong></strong> ' . $price['price'] . ' ' . $price['currency'];
+                    }
+                }
+                echo '</div>';
 
-    if ($displayed_tags > ceil($displayed_tags / 2)) {
-        echo '<ul style="flex: 1;">'; // Columna derecha
-        for ($i = ceil($displayed_tags / 2); $i < $displayed_tags; $i++) {
-            echo '<li>' . $property['tags'][$i]['name'] . '</li>';
+                // Enlace de ver propiedad
+                echo '<div class="btn-container mt-auto">';
+                echo '<a href="detallePropiedades.php?id=' . $property['id'] . '" class="btn btn-primary blue-button btn-lg btn-style">Ver Propiedad</a>';
+                echo '</div>';
+
+                echo '</div>'; // Cerramos el contenido de la tarjeta
+                echo '</div>'; // Cerramos la tarjeta
+                echo '</div>'; // Cerramos la columna
+            }
+        } else {
+            echo 'Error al obtener las propiedades.';
         }
-        echo '</ul>';
-    }
-
-    if ($total_tags > $max_display_tags) {
-        echo '<p>+' . ($total_tags - $max_display_tags) . ' comodidades</p>';
-    }
-
-    echo '</div>';
-} else {
-    echo '<p>No hay etiquetas disponibles</p>';
-}
-
-?>
-<div class="precio-propiedad">
-
-<?php
-foreach ($property['operations'] as $operation) {
-    
-    foreach ($operation['prices'] as $price) {
-        echo '<strong></strong> ' . $price['price'] . ' ' . $price['currency'] ;
-    }
-    echo '</ul>';
-}
-?>
+        ?>
+    </div>
 </div>
 
-<?php
-echo '<a href="detallePropiedades.php?id=' . $property['id'] . '" class="ver-propiedad">Ver Propiedad</a>';
 
-echo '</div>'; // Cerramos el contenido de la tarjeta
-echo '</div>'; // Cerramos la tarjeta
-
-    }
-
-
-} else {
-    echo 'Error al obtener las propiedades.';
-}
-?>
-    </div>
 
   <!--Footer-->
   <footer class="footer py-5">
@@ -219,6 +212,10 @@ echo '</div>'; // Cerramos la tarjeta
       </div>
     </div>
   </footer>
+
+      
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="/js/app.js"></script>
 </body>
 </html>
 
