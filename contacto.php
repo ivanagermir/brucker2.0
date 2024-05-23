@@ -73,6 +73,12 @@
   </header>
   
   <main>
+  <div class="img-fluid portada-contacto">
+      <div class="container cover-text">
+        <h1 class="display-4">CONTACTO</h1>
+        <hr style="border-top: 5px solid #000000; width: 10%; margin: 1rem 0;">
+      </div>
+    </div>
    
     <!-- ICONO DE WHATSAPP -->
     <aside>

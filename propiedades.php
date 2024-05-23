@@ -176,7 +176,7 @@
 
                 // Enlace de ver propiedad
                 echo '<div class="btn-container mt-auto">';
-                echo '<a href="detallePropiedades.php?id=' . $property['id'] . '" class="btn btn-primary blue-button btn-lg btn-style">Ver Propiedad</a>';
+                echo '<a href="detallePropiedades.php?id=' . $property['id'] . '" class="btn btn-primary blue-button">Ver Propiedad</a>';
                 echo '</div>';
 
                 echo '</div>'; // Cerramos el contenido de la tarjeta
