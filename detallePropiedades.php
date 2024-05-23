@@ -17,9 +17,6 @@
 </head>
 
 <body>
-
-
-
     <header>
 
         <nav class=" navbar navbar-expand-lg">
@@ -77,8 +74,6 @@
     </header>
 
     <main>
-
-
         <!-- ICONO DE WHATSAPP -->
         <aside>
             <div class="container">
@@ -103,7 +98,7 @@
                 $property = json_decode($response, true);
 
             ?>
-                <div class="contenedor-propiedades">
+                <div class="container contenedor-propiedades">
                     <?php
                     // Verificar si se obtuvieron los detalles de la propiedad
                     if ($property && isset($property['id'])) {
@@ -264,6 +259,8 @@
     </div>
   </footer>
 
-        </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="/app.js"></script>
+</body>
 
 </html>
