@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brücker</title>
-    <link rel="icon" href="/img/logo/PNG/fondoDorado.png" type="image/x-icon">
-    <link rel="shortcut icon" href="/img/logo/PNG/fondoDorado.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/novedades.css">
+    <link rel="stylesheet" href="css/ver_noticia.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+    <title>News</title>
 </head>
 <body>
+    
 
 <header>
     <nav class=" navbar navbar-expand-lg">
@@ -69,17 +70,8 @@
     </nav>
   </header>
 
-  <main>
-      <!--Portada-->
-    <div class="img-fluid portada-novedades">
-        <div class="container cover-text">
-        <h1 class="display-4">NOVEDADES</h1>
-        <hr style="border-top: 5px solid #002244; width: 10%; margin: 1rem 0;">
-        </div>
-    </div>
-
-      <!-- ICONO DE WHATSAPP -->
-      <aside class="container">
+  <!-- ICONO DE WHATSAPP -->
+  <aside class="container">
       <div class="whatsapp-container">
         <a href="https://wa.me/543512010010" class="whatsapp-logo" target="_blank">
           <div class="tooltip">¿Necesitás asesoramiento?</div>
@@ -88,56 +80,51 @@
       </div>
     </aside>
 
-  </main>
+    <section class="container container-new">
+    <?php
+    // Tu código PHP para obtener la noticia desde la base de datos
+    $servername = "localhost";
+    $username = "root";
+    $password = "1234";
+    $dbname = "bd_de_prueba";
 
-  <div class="container">
-    <div class="row card-container gx-4">
-        <?php
-        // Conexión a la base de datos
-        $servername = "localhost";
-        $username = "root";
-        $password = "1234";
-        $dbname = "bd_de_prueba";
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-        $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Conexión fallida: " . $conn->connect_error);
+    }
 
-        // Verificar conexión
-        if ($conn->connect_error) {
-            die("Conexión fallida: " . $conn->connect_error);
+    $id = $_GET['id'];
+    $sql = "SELECT title, subtitle, content, image FROM noticia_prueba WHERE id = $id";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo "<h1 class='title'>" . htmlspecialchars($row['title']) . "</h1>";
+            echo "<h3 class='subtitle text-muted'>" . htmlspecialchars($row['subtitle']) . "</h3>";
+            echo "<div class='row'>";
+            echo "<div class='content_image col-md-6'>";
+            echo "<img src='" . htmlspecialchars($row['image']) . "' alt='Imagen de la noticia'>";
+            echo "</div>";
+            echo "<div class='content_new col-md-6'>";
+            echo "<p class='content'>" . htmlspecialchars($row['content']) . "</p>";
+            echo "</div>";
+            echo "</div>";
         }
+    } else {
+        echo "<p>No se encontró la noticia</p>";
+    }
+    ?>
 
-        // Consultar datos
-        $sql = "SELECT id, title, subtitle, content, image FROM noticia_prueba";
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-            // Mostrar datos en la lista
-            while ($row = $result->fetch_assoc()) {
-                echo "<div class='col-lg-4 col-md-6'>";
-                echo "<div class='card'>";
-                echo "<div class='card-body'>";
-                echo "<h2>" . htmlspecialchars($row['title']) . "</h2>";
-                echo "<img src='" . htmlspecialchars($row['image']) . "' alt='Imagen de la noticia'>";
-                echo "</div>"; // Cierre de card-body
-                echo "<div class='card-footer'>";
-                echo "<a href='ver_noticia.php?id=" . $row['id'] . "' class='btn btn-outline-primary btn-sm float-end'>Leer Noticia...</a>";
-                echo "</div>"; // Cierre de card-footer
-                echo "</div>"; // Cierre de card
-                echo "</div>"; // Cierre de col
-            }
-        } else {
-            echo "<p>No hay noticias disponibles</p>";
-        }
-
-        $conn->close();
-        ?>
-    </div>
-</div>
-    
-</div>
-
-    
-</div>
+    <figure>
+        <blockquote class="blockquote">
+            <p>Damián Gari</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+            Corredor Inmobiliario -<cite title="Source Title">Fundador - CEO de Brucker</cite>
+        </figcaption>
+    </figure>
+</section>
 
  <!--Footer-->
  <footer class="footer py-5">
@@ -159,24 +146,14 @@
       </div>
     </div>
   </footer>
-    
-    
-    <script>
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Tu código aquí
-     // JavaScript para mostrar y ocultar el detalle de las noticias al hacer clic
-     const cards = document.querySelectorAll('.card');
-        cards.forEach(card => {
-            card.addEventListener('click', () => {
-                card.querySelector('.content').style.display = 'block';
-            });
-        });
-   
-});
-    </script>
-     <script src="js/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
+
+
 
 

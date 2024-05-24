@@ -1,0 +1,27 @@
+/*Espacio para la fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+.container-new{
+    margin-top: 15%;
+}
+
+.title{
+    text-align: center;
+}
+
+.subtitle{
+    text-align: center;
+}
+
+figure{
+    text-align: right;
+}
+
+.content_image{
+    padding: 20px;
+}
+
+.content_new{
+    padding: 30px;
+}

@@ -1,0 +1,78 @@
+
+
+/*Espacio para la fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+main{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .portada-novedades {
+    background-image: url('../img/img-novedades/portadaNovedades.jpg');
+    background-size: cover;
+    height: 650px;
+    position: relative;
+    z-index: 0;
+    background-attachment: fixed;
+  }
+
+  .card-container{
+    margin-top: 5%;
+  }
+  .card {
+    width: 350px; /* Ancho de la card */
+    height: 400px; /* Tamaño fijo para la altura de las cards */
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Cambia el ancho a 100% en pantallas pequeñas */
+    }
+}
+
+
+.card-body {
+    padding: 20px;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    padding: 10px 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.card-footer a {
+    text-decoration: none;
+}
+
+
+.card h2, .card h3, .card p {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Oculta el contenido que desborde */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos (...) si el contenido desborda */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+
+.card:hover {
+    transform: translateY(-5px); /* Efecto de levantar la tarjeta al pasar el cursor */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+
+.card img {
+    height: 200px; /* Tamaño fijo para la altura de las imágenes dentro de las cards */
+    margin-top: 5%;
+    max-width: 70%;
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+    margin-left: 40px;
+}
+
