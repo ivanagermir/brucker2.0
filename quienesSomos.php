@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="../brucker2.0/css/style.css">
     <link rel="stylesheet" href="../brucker2.0/css/quienesSomos.css">
+    <link rel="stylesheet" href="../brucker2.0/css/quienesSomos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
@@ -79,7 +80,6 @@
         <hr style="border-top: 5px solid #000000; width: 10%; margin: 1rem 0;">
         </div>
     </div>
-    ------
 
     <!-- ICONO DE WHATSAPP -->
     <aside class="container">
@@ -154,10 +154,7 @@
             </div>
           </div>
         </div>    
-      </section>
-  
-
-    
+      </section>    
 
       <!--Card-->
       <section class="body-card">
@@ -180,6 +177,57 @@
           </div>
         </div>
       </section>
+
+      <!-- Mision y Vision-->
+      <section class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="card-title text-center text-primary"><strong>MISIÓN</strong></h2>
+                <hr> 
+                <p class="card-text">
+                "En BRÜCKER, nos enfocamos en brindar soluciones inmobiliarias con un servicio diferencial y 
+                centrado en el cliente. Nuestra misión es ayudar a nuestros clientes a conseguir sus metas y 
+                objetivos inmobiliarios, poniendo a su disposición toda nuestra formación, experiencia, los mejores 
+                medios y las técnicas más avanzadas en el mercado inmobiliario.
+                </p>
+                <p class="card-text">
+                Nos comprometemos a actuar con profesionalismo, transparencia, seguridad y confianza en cada una de 
+                nuestras operaciones. A través de nuestro trabajo, buscamos contribuir al desarrollo y crecimiento de 
+                la comunidad y del sector inmobiliario, de manera sostenible y responsable.”
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="card-title text-center text-primary"><strong>VISIÓN</strong></h2>
+                <hr>
+                <p class="card-text">" Somos el puente entre nuestros clientes y sus metas y objetivos inmobiliarios. Nos comprometemos 
+                a proporcionar una experiencia personalizada y sin contratiempos, donde cada paso del proceso 
+                inmobiliario se realiza con cuidado y atención a los detalles.
+                </p>
+                <p class="card-text">
+                Nuestro enfoque se base en comprender las necesidades únicas de cada cliente y en encontrar soluciones 
+                a medida que no solo cumplan, sino que superen sus expectativas.
+                </p>
+                <p class="card-text">
+                Nos basamos en las últimas técnicas de marketing y negociación, colaborando con la mayor cantidad de 
+                Agentes de la zona.
+                </p>
+                <p class="card-text">
+                Estamos comprometidos con la excelencia en todo lo que hacemos, y cada día trabajamos con pasión y 
+                dedicación para construir un futuro donde cada cliente pueda alcanzar sus sueños inmobiliarios con 
+                confianza y tranquilidad."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
   </main>
   
         <!--Turnero-->

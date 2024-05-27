@@ -33,7 +33,7 @@
                 <div class="collapse navbar-collapse navbar-style" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto justify-content-end">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="..brucker2.0/home.php"><b>Home</b></a>
+                            <a class="nav-link" aria-current="page" href="../brucker2.0/home.php"><b>Home</b></a>
                         </li>
                         <!-- desplegable nosotros -->
                         <li class="nav-item dropdown">
