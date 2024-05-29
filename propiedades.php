@@ -101,6 +101,71 @@
       
     <div class="container">
     <div class="row row-cols-1 row-cols-md-3 g-4">
+
+    <!--Barra de búsqueda-->
+<nav class="bg-light">
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">google.load('jquery', '1.7.1');</script>
+<script type="text/javascript">google.load('jqueryui', '1.8.13');</script>
+
+<p>Tipo de Operación</p>
+<select id="operationType">
+  <option value='-1'>Seleccionar Operación</option>
+  <option value='1'>Venta</option>
+  <option value='2'>Alquiler</option>
+  <option value='3'>Alquiler Temporario</option>
+</select>
+
+
+
+
+<p>Tipo de Propiedad</p>
+<select id="propertyTypes">
+  <option value='-1'>Seleccionar Tipo de Operación</option>
+  <option value='1' >Terreno</option>
+  <option value='2' >Departamento</option>
+  <option value='3' >Casa</option>
+  <option value='4' >Casa de Fin de Semana</option>
+  <option value='5' >Oficina</option>
+  <option value='7' >Locales Comerciales</option>
+</select>
+
+
+<input type="button" onclick='doSearch()' value='Buscar' />
+
+<script>
+function doSearch(){
+  //Init data dictionary with general parameters
+  var data = {"current_localization_id":0,"current_localization_type":"country","price_from":0,"price_to":999999999,"operation_types":[1,2,3],"property_types":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25],"currency":"ANY","filters":[]}
+
+  //Set operation type value
+  if( $("#operationType").val() != -1 ){
+    data['operation_types'] = [$("#operationType").val()];
+  }
+
+  // Set property type value
+  if( $("#propertyTypes").val() != -1 ){
+    data['property_types'] = [$("#propertyTypes").val()];
+  }
+
+  if( $("#minPrice").val() > 0 ){
+    data['price_from'] = $("#minPrice").val();
+  }
+
+  if( $("#maxPrice").val() > 0 && $("#maxPrice").val() > $("#minPrice").val() ){
+    data['price_to'] = $("#maxPrice").val();
+  }
+
+  // Send data by GET to properties result page
+  window.location='./properties.php?order_by=price&limit=20&order=desc&page=1&data='+JSON.stringify(data);
+}
+
+</script>
+</nav>
+
+
+<!--Fin barra de busqueda-->
+
         <?php
         // Realizar la solicitud a la API de Tokko Broker para obtener los datos de las propiedades
         $url = 'http://www.tokkobroker.com/api/v1/property/?limit=10&offset=0&lang=es_ar&format=json&key=afc6818db3d1bc5b3ae1e77169f5cb2aae4542f3';
