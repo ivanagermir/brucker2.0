@@ -100,6 +100,7 @@
         $dbname = "bd_de_prueba";
 
         $conn = new mysqli($servername, $username, $password, $dbname);
+        
 
         // Verificar conexión
         if ($conn->connect_error) {
@@ -109,6 +110,7 @@
         // Consultar datos
         $sql = "SELECT id, title, subtitle, content, image FROM noticia_prueba";
         $result = $conn->query($sql);
+        
 
         if ($result->num_rows > 0) {
             // Mostrar datos en la lista
@@ -117,7 +119,7 @@
                 echo "<div class='card'>";
                 echo "<div class='card-body'>";
                 echo "<h2>" . htmlspecialchars($row['title']) . "</h2>";
-                echo "<img src='" . htmlspecialchars($row['image']) . "' alt='Imagen de la noticia'>";
+                echo "<img src='/administratorPanel/noticias/uploads" . htmlspecialchars($row['image']) . "' class='card-img-top' alt='" . htmlspecialchars($row['title']) . "'>";
                 echo "</div>"; // Cierre de card-body
                 echo "<div class='card-footer'>";
                 echo "<a href='ver_noticia.php?id=" . $row['id'] . "' class='btn btn-outline-primary btn-sm float-end'>Leer Noticia...</a>";
@@ -169,13 +171,13 @@ document.addEventListener('DOMContentLoaded', function() {
      const cards = document.querySelectorAll('.card');
         cards.forEach(card => {
             card.addEventListener('click', () => {
-                card.querySelector('.content').style.display = 'block';
+              
             });
         });
    
 });
     </script>
-     <script src="js/app.js"></script>
+     
 </body>
 </html>
 
