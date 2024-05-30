@@ -71,7 +71,10 @@
     </nav>
   </header>
   
+
+
   <main>
+    
       <!--Portada-->
     <div class="jumbotron jumbotron-fluid">
       <div class="container cover-text">
@@ -273,13 +276,12 @@
       </div>
     </section>
 
-      <!-- PROPIEDADES -->
+    <!-- PROPIEDADES -->
     <section class="container properties text-center">
       <div class="row align-items-center">
         <div class="col">
-          <video class="img-fluid custom-video" controls>
-            <source src="../brucker2.0/vid/video-completo-prop.mp4" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
+          <video id="randomVideo" class="img-fluid custom-video" controls>
+            <!-- Fuente del video será añadida por JavaScript -->
           </video>
         </div>
         <div class="col text-properties">
@@ -333,9 +335,27 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
-    duration: 1000,
-    once: true
-  });
+      duration: 1000,
+      once: true
+    });
+
+    // Videos obtenidos de PHP
+    const videos = <?php echo json_encode($videos); ?>;
+
+    // Seleccionar un video aleatorio
+    function getRandomVideo() {
+      const randomIndex = Math.floor(Math.random() * videos.length);
+      return videos[randomIndex];
+    }
+
+    // Asignar el video aleatorio al elemento video
+    document.addEventListener("DOMContentLoaded", () => {
+      const randomVideo = getRandomVideo();
+      const videoElement = document.getElementById("randomVideo");
+      if (randomVideo) {
+        videoElement.innerHTML = `<source src="${randomVideo}" type="video/mp4">Tu navegador no soporta el elemento de video.`;
+      }
+    });
   </script>
 </body>
 </html>

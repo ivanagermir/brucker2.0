@@ -104,3 +104,37 @@ $conn->close();
 
 </body>
 </html>
+
+
+
+<!--
+<?php
+// Conexión a la base de datos
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "tudb";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+// Obtener los videos de la base de datos
+$sql = "SELECT video_url FROM videos";
+$result = $conn->query($sql);
+
+$videos = array();
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $videos[] = $row['video_url'];
+    }
+} else {
+    echo "No se encontraron videos";
+}
+$conn->close();
+?>
+
+-->
