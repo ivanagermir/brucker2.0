@@ -107,7 +107,15 @@
                         <div class="title-propiedades-pag">
                         <?php
                         echo '<h1>' . $property['publication_title'] . '</h1>';
+                        echo '<div class="precio-propiedad">';
+                        foreach ($property['operations'] as $operation) {
+                            foreach ($operation['prices'] as $price) {
+                                echo '<strong></strong> ' . $price['price'] . ' ' . $price['currency'];
+                            }
+                        }
+                        echo '</div>';
                         ?>
+                        
                         </div>
 
                         
@@ -125,6 +133,7 @@
                         echo '<button class="carousel-control-next" onclick="nextSlide()" aria-label="Next">&gt;</button>';
                         echo '</div>';
 
+                        
                     ?>
                         <div class="caracteristicas-propiedades">
 

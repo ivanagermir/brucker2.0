@@ -208,50 +208,10 @@ function doSearch(){
                 <path d="M6 12v-7a2 2 0 0 1 2 -2h3v2.25" />
                 <path d="M4 21l1 -1.5" />
                 <path d="M20 21l-1 -1.5" />
-              </svg><strong>  Baños:</strong> ' . $property['bathroom_amount'] . '</p>';
-                echo '<p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ruler-measure" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#002244" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M19.875 12c.621 0 1.125 .512 1.125 1.143v5.714c0 .631 -.504 1.143 -1.125 1.143h-15.875a1 1 0 0 1 -1 -1v-5.857c0 -.631 .504 -1.143 1.125 -1.143h15.75z" />
-                <path d="M9 12v2" />
-                <path d="M6 12v3" />
-                <path d="M12 12v3" />
-                <path d="M18 12v3" />
-                <path d="M15 12v2" />
-                <path d="M3 3v4" />
-                <path d="M3 5h18" />
-                <path d="M21 3v4" />
+              
               </svg><strong>  Superficie:</strong> ' . $property['surface'] . '</p>';
                 echo '</div>';
 
-                // Tags
-                if (isset($property['tags']) && is_array($property['tags'])) {
-                    $total_tags = count($property['tags']);
-                    $max_display_tags = 2; // Máximo de etiquetas a mostrar
-                    $displayed_tags = min($max_display_tags, $total_tags); // Número real de etiquetas a mostrar
-
-                    echo '<div class="tags d-flex justify-content-between">';
-                    echo '<ul class="list-unstyled">'; // Columna izquierda
-                    for ($i = 0; $i < ceil($displayed_tags / 2); $i++) {
-                        echo '<li>' . $property['tags'][$i]['name'] . '</li>';
-                    }
-                    echo '</ul>';
-
-                    if ($displayed_tags > ceil($displayed_tags / 2)) {
-                        echo '<ul class="list-unstyled">'; // Columna derecha
-                        for ($i = ceil($displayed_tags / 2); $i < $displayed_tags; $i++) {
-                            echo '<li>' . $property['tags'][$i]['name'] . '</li>';
-                        }
-                        echo '</ul>';
-                    }
-
-                    if ($total_tags > $max_display_tags) {
-                        echo '<p>+' . ($total_tags - $max_display_tags) . ' comodidades</p>';
-                    }
-
-                    echo '</div>';
-                } else {
-                    echo '<p>No hay etiquetas disponibles</p>';
-                }
 
                 // Precio
                 echo '<div class="precio-propiedad">';
