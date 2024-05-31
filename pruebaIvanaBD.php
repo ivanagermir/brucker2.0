@@ -1,140 +1,174 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cargar Imagen</title>
-</head>
-<body>
-    <h2>Subir Imagen</h2>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        <label for="title">Título:</label>
-        <input type="text" name="title" id="title" required>
-        <label for="subtitle">SubTítulo:</label>
-        <input type="text" name="subtitle" id="subtitle" required>
-        <br>
-        <label for="content">Contenido:</label>
-        <textarea name="content" id="content" required></textarea>
-        <br>
-        <label for="image">Seleccionar imagen:</label>
-        <input type="file" name="image" id="image" accept="image/*" required>
-        <br>
-        <input type="submit" value="Subir Imagen">
-    </form>
+<div class="fullvideo-searchbox">
+        <div class="fullvideo-search">
+            <div class="fullvideo-operation">
+                <select id="operations" class="montserrat">
+                
+                        
+                            
+                                <option data-name="Venta" value="1">Venta</option>
+                            
+                            
+                            
+                        
+                            
+                            
+                                <option data-name="Alquiler" value="2">Alquiler</option>
+                            
+                            
+                        
+                
+                </select>
+            </div>
+            <div class="fullvideo-property">
+                <select id="property_types" class="montserrat">
+                    <option value="-1">Tipo de Propiedad</option>
+            
+                    
+                        <option data-name="Terreno" value="1">Terreno</option>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
 
+           
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        <option data-name="Departamento" value="2">Departamento</option>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
 
-    <?php
-$servername = "localhost";
-$username = "root";
-$password = "1234";
-$dbname = "bd_de_prueba";
+           
+                    
+                    
+                        <option data-name="Casa" value="3">Casa</option>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
 
-// Crear conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
+           
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                        <option data-name="Locales" value="7">Locales</option>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
 
-// Verificar conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
+           
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $title = $_POST['title'];
-    $subtitle = $_POST['$subtitle'];
-    $content = $_POST['content'];
-    $image = $_FILES['image'];
+                </select>
+            </div>
+            <div class="fullvideo-input">
+              <input type="search" id="location_quicksearch" placeholder="Buscar por ubicación, dirección o calle" class="montserrat ui-autocomplete-input autocomplete" />
+              <input type="hidden" id="location_id" value="0">
+            </div>
+            <div class="fullvideo-searchbtn montserrat" onclick="do_search()">Buscar</div>
+        </div>
+    </div>
+        <div id="fullscreenvideo" class="player"></div>
+        <div id="fullscreenvideo-thumb"><img id="fullscreenvideo-thumb-img" src="" /></div>
+    <script>
+        $(document).ready(function() {
+          
+            $("#fullscreenvideo").YTPlayer({
+                videoId: 'oB4DpK6MK2o',
+            });
+          
+            $(".header-lateral").css("padding-top",0);
+        });
 
-    // Directorio donde se guardarán las imágenes
-    $target_dir = "uploads/";
-    // Ruta completa del archivo
-    $target_file = $target_dir . basename($image["name"]);
-    $uploadOk = 1;
-    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+        $(window).load(function(){ $("#fullscreenvideo-box").height( $(window).height() );
 
-    // Comprobar si el archivo es una imagen real o una imagen falsa
-    $check = getimagesize($image["tmp_name"]);
-    if($check !== false) {
-        $uploadOk = 1;
-    } else {
-        echo "El archivo no es una imagen.";
-        $uploadOk = 0;
-    }
+        })
+    </script>
+</div>
 
-    // Comprobar si el archivo ya existe
-    if (file_exists($target_file)) {
-        echo "Lo siento, el archivo ya existe.";
-        $uploadOk = 0;
-    }
-
-    // Comprobar el tamaño del archivo
-    if ($image["size"] > 500000) {
-        echo "Lo siento, el archivo es demasiado grande.";
-        $uploadOk = 0;
-    }
-
-    // Permitir ciertos formatos de archivo
-    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-    && $imageFileType != "gif" ) {
-        echo "Lo siento, solo se permiten archivos JPG, JPEG, PNG y GIF.";
-        $uploadOk = 0;
-    }
-
-    // Comprobar si $uploadOk está establecido en 0 por algún error
-    if ($uploadOk == 0) {
-        echo "Lo siento, tu archivo no fue subido.";
-    // Si todo está bien, intenta subir el archivo
-    } else {
-        if (move_uploaded_file($image["tmp_name"], $target_file)) {
-            echo "El archivo ". htmlspecialchars( basename( $image["name"])). " ha sido subido.";
-            // Guardar la información en la base de datos
-            $sql = "INSERT INTO noticia_prueba (title, subtitle, content, image_path) VALUES ('$title', '$subtitle', '$content', '$target_file')";
-
-            if ($conn->query($sql) === TRUE) {
-                echo "Nueva noticia creada con éxito.";
-            } else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
-            }
-        } else {
-            echo "Lo siento, hubo un error al subir tu archivo.";
-        }
-    }
-}
-
-$conn->close();
-?>
-
-</body>
-</html>
-
-
-
-<!--
-<?php
-// Conexión a la base de datos
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tudb";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verificar conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
-
-// Obtener los videos de la base de datos
-$sql = "SELECT video_url FROM videos";
-$result = $conn->query($sql);
-
-$videos = array();
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $videos[] = $row['video_url'];
-    }
-} else {
-    echo "No se encontraron videos";
-}
-$conn->close();
-?>
-
--->
+<script>
