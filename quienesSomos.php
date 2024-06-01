@@ -96,10 +96,10 @@
       
         <div class="container-fluid list-values">
           <h2 class="values-title fs-2" data-aos="zoom-in">NUESTROS VALORES</h2>
-          <h6 class="text-principal text-center">Nuestro PROPÓSITO es poner al cliente como protagonista, brindar un servicio diferente, 
-            profesional, de excelente calidad y compromiso.
-            Somos el PUENTE que conecta al cliente con sus sueños. Una nueva forma de vivir 
-            la experiencia inmobiliaria.
+          <h6 class="text-principal text-center">
+            Nuestro PROPÓSITO es poner al cliente como protagonista, ofreciendo un servicio diferente, 
+            profesional, de excelencia y compromiso. Somos el PUENTE que conecta a las personas con sus 
+            sueños, brindándoles una nueva forma de vivir la experiencia inmobiliaria.
           </h6>
           <div class="container text-center">
             <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1">
@@ -168,7 +168,7 @@
     
           <div class="description">
               <h3>Damian Gari</h3>
-              <h4>Corredor Inmobiliario – Fundador – CEO DE BRÜCKER. </h4>
+              <h4>Corredor Inmobiliario – Fundador – CEO de BRÜCKER. </h4>
               <p>En la actividad desde el año 2019. Comparto mi experiencia y conocimientos adquiridos a lo largo de los años con todas las personas dispuestas a tomar acción en su vida. “Con un objetivo claro, con metas definidas, con esfuerzo extra y la actitud mental adecuada todo es posible”. BRÜCKER es un sueño que comenzó en 2020 y luego de cuatro años, finalmente se volvió realidad. La importancia de reconocer, agradecer y ayudar son los motores que impulsaron su creación. </p>
           </div>
 
