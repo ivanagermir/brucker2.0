@@ -158,10 +158,10 @@
       </div>
 
       <div class="container-fluid list-values">
-        <h6 class="text-principal text-center">Nuestro PROPÓSITO es poner al cliente como protagonista, brindar un servicio diferente, 
-          profesional, de excelente calidad y compromiso.
-          Somos el PUENTE que conecta al cliente con sus sueños. Una nueva forma de vivir 
-          la experiencia inmobiliaria.
+        <h6 class="text-principal text-center">
+          Nuestro PROPÓSITO es poner al cliente como protagonista, ofreciendo un servicio diferente, 
+          profesional, de excelencia y compromiso. Somos el PUENTE que conecta a las personas con sus 
+          sueños, brindándoles una nueva forma de vivir la experiencia inmobiliaria.
         </h6>
         <div class="container text-center">
           <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1">
