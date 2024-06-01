@@ -70,7 +70,7 @@
 
       <div class="title-propiedades-pag">
         <div class="row justify-content-center align-items-center">
-          <div class="col-md-9 order-md-1 text-title">
+          <div class="col-md-9 order-md-1 p-4 text-title">
             <h3>PROPIEDADES</h3>
           </div>
         </div>
@@ -79,30 +79,31 @@
     
 
 
-      <div class="container filtro-propiedades form-select " multiple aria-label="multiple select example">
-
-    <h1>Buscar Propiedades</h1>
-    <form action="search_properties.php" method="get">
-        <label for="property_type">Tipo de Propiedad:</label>
-        <select id="property_type" name="property_type">
-            <option value="house">Casa</option>
-            <option value="apartment">Apartamento</option>
-            <option value="land">Terreno</option>
-            <!-- Agrega más opciones según sea necesario -->
-        </select>
-
-        <label for="operation_type">Tipo de Operación:</label>
-        <select id="operation_type" name="operation_type">
+    <div class="container p-4 mb-5 mt-5 bg-opacity-10 bg-info shadow rounded form-select" multiple aria-label="multiple select example">
+      <h3 class="mb-4">Buscar Propiedades</h3>
+      <form action="search_properties.php" method="get">
+        <div class="form-group mb-3">
+            <label for="property_type">Tipo de Propiedad:</label>
+            <select id="property_type" name="property_type" class="form-control">
+              <option value="house">Casa</option>
+              <option value="apartment">Apartamento</option>
+              <option value="land">Terreno</option>
+              <!-- Agrega más opciones según sea necesario -->
+            </select>
+        </div>
+        <div class="form-group mb-3">
+          <label for="operation_type">Tipo de Operación:</label>
+          <select id="operation_type" name="operation_type" class="form-control">
             <option value="sale">Venta</option>
             <option value="rent">Alquiler</option>
             <!-- Agrega más opciones según sea necesario -->
-        </select>
-
-        <button type="submit">Buscar</button>
-    </form>
-    
-
-      </div>
+          </select>
+        </div>
+        <div class="form-group mt-4">
+          <button type="submit" class="btn btn-outline-primary">Buscar</button>
+        </div>
+      </form>
+    </div>
 
 
 
