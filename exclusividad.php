@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="../brucker2.0/css/style.css">
     <link rel="stylesheet" href="../brucker2.0/css/exclusividad.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
@@ -104,23 +105,23 @@
       <h3>Beneficios para el <strong>Cliente</strong>:</h3>
       <hr>
       <div class="parrafos-exclusividad">
-        <p>
+        <p data-aos="fade-right">
           <strong>Transparencia y Compromiso:</strong> La Exclusiva garantiza total transparencia en la comercialización de la propiedad, 
           eliminando sorpresas desagradables. Al elegirnos mutuamente, ambas partes se comprometen plenamente a alcanzar 
           el objetivo de venta.
         </p>      
-        <p> <strong>Asesoramiento Profesional:</strong> El cliente es el protagonista en la toma de decisiones mientras que el profesional 
+        <p data-aos="fade-left"> <strong>Asesoramiento Profesional:</strong> El cliente es el protagonista en la toma de decisiones mientras que el profesional 
           aporta conocimientos de mercado y garantiza seguridad jurídica, brindando así tranquilidad y confianza en todo 
           el proceso.
         </p>
-        <p><strong>Comunicación Eficiente:</strong> La Exclusiva establece un único canal de comunicación entre los interesados y el cliente, 
+        <p data-aos="fade-right"><strong>Comunicación Eficiente:</strong> La Exclusiva establece un único canal de comunicación entre los interesados y el cliente, 
           aprovechando la experiencia en negociación de la agencia para obtener los mejores resultados.
         </p>
-        <p><strong>Máxima Exposición:</strong> Desarrollamos un plan de marketing personalizado para cada propiedad, aprovechando los 
+        <p data-aos="fade-left"><strong>Máxima Exposición:</strong> Desarrollamos un plan de marketing personalizado para cada propiedad, aprovechando los 
           principales portales de venta web, compartiendo cartera de propiedades con la red de colegas y socios 
           estratégicos, garantizando así una máxima exposición y alcance.
         </p>
-        <p><strong>Seguimiento y Resultados:</strong> Se proporcionan informes semanales que detallan la evolución de la propiedad en el 
+        <p data-aos="fade-right"><strong>Seguimiento y Resultados:</strong> Se proporcionan informes semanales que detallan la evolución de la propiedad en el 
           mercado, junto con opiniones de interesados y ofertas concretas por escrito, brindando al cliente la información 
           necesaria para tomar decisiones informadas.
         </p>
@@ -168,5 +169,9 @@
     
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <script src="/js/app.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
