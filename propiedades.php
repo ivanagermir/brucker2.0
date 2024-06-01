@@ -81,39 +81,6 @@
 
       <div class="container filtro-propiedades form-select " multiple aria-label="multiple select example">
 
-
-                // Mostrar los detalles de la propiedad
-                echo '<div class="card-body d-flex flex-column">';
-                echo '<h5 class="card-title p-3 mb-4 bg-primary text-dark bg-opacity-25 text-center shadow rounded">' . $property['publication_title'] . '</h5>';
-                echo '<div class="property-details text-left flex-grow-1">';
-                echo '<p> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bed" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#002244" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M7 9m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                <path d="M22 17v-3h-20" />
-                <path d="M2 8v9" />
-                <path d="M12 14h10v-2a3 3 0 0 0 -3 -3h-7v5z" />
-              </svg><strong>  Habitaciones:</strong> ' . $property['room_amount'] . '</p>';
-                echo '<p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bath" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#002244" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M4 12h16a1 1 0 0 1 1 1v3a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-3a1 1 0 0 1 1 -1z" />
-                <path d="M6 12v-7a2 2 0 0 1 2 -2h3v2.25" />
-                <path d="M4 21l1 -1.5" />
-                <path d="M20 21l-1 -1.5" />
-              </svg><strong>  Baños:</strong> ' . $property['bathroom_amount'] . '</p>';
-                echo '<p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ruler-measure" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#002244" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M19.875 12c.621 0 1.125 .512 1.125 1.143v5.714c0 .631 -.504 1.143 -1.125 1.143h-15.875a1 1 0 0 1 -1 -1v-5.857c0 -.631 .504 -1.143 1.125 -1.143h15.75z" />
-                <path d="M9 12v2" />
-                <path d="M6 12v3" />
-                <path d="M12 12v3" />
-                <path d="M18 12v3" />
-                <path d="M15 12v2" />
-                <path d="M3 3v4" />
-                <path d="M3 5h18" />
-                <path d="M21 3v4" />
-              </svg><strong>  Superficie:</strong> ' . $property['surface'] . '</p>';
-                echo '</div>';
-
     <h1>Buscar Propiedades</h1>
     <form action="search_properties.php" method="get">
         <label for="property_type">Tipo de Propiedad:</label>
