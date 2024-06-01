@@ -128,7 +128,7 @@
 
                 // Mostrar los detalles de la propiedad
                 echo '<div class="card-body d-flex flex-column">';
-                echo '<h5 class="card-title text-center">' . $property['publication_title'] . '</h5>';
+                echo '<h5 class="card-title p-3 mb-4 bg-primary text-dark bg-opacity-25 text-center shadow rounded">' . $property['publication_title'] . '</h5>';
                 echo '<div class="property-details text-left flex-grow-1">';
                 echo '<p> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bed" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#002244" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
