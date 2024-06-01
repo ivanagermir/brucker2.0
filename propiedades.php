@@ -130,7 +130,7 @@
               }
 
               echo '<div class="card-body d-flex flex-column">';
-              echo '<h5 class="card-title text-center">' . $property['publication_title'] . '</h5>';
+              echo '<h5 class="card-title p-3 mb-4 bg-primary bg-opacity-50 shadow text-dark text-center rounded">' . $property['publication_title'] . '</h5>';
               echo '<div class="property-details text-left flex-grow-1">';
               echo '<div class="icon-text"><i class="bi bi-house-door-fill"></i> <strong>Dormitorios:</strong> ' . $property['suite_amount'] . '</div>';
               echo '<div class="icon-text"><i class="bi bi-rulers"></i> <strong>Superficie:</strong> ' . $property['surface'] . ' m²</div>';
