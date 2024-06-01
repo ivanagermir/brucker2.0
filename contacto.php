@@ -131,7 +131,7 @@
           <!-- Columna 3 derecha: Formulario -->
           <div class="col-md-6 order-md-3 contact-form">
             <h4>¿CÓMO PODEMOS AYUDARTE?</h4>
-            <form action="https://formsubmit.co/fenixcode.cba@gmail.com" method="POST"> <!-- API para enviar el Formulario al mail formsubmit.co -->
+            <form action="https://formsubmit.co/damian.gariok@gmail.com" method="POST"> <!-- API para enviar el Formulario al mail formsubmit.co -->
               <div class="row mb-3">
                 <label for="inputText" class="col-sm-2 col-form-label">Nombre</label>
                 <div class="col-sm-10">
@@ -178,7 +178,7 @@
               <!-- input para en envío del Formulario al mail API: formsubmit.co cambiar el value por la pagina en su momento -->
               <input type="hidden" name="_template" value="table">
               <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_next" value="http://127.0.0.1:5501/html/contacto.html">
+              <input type="hidden" name="_next" value="http://localhost/brucker2.0/contacto.php">
             </form>  
           </div>
         </div>

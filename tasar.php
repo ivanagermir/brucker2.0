@@ -125,7 +125,7 @@
     <section>
       <div class="container">
         <div class="form">
-          <form action="https://formsubmit.co/fenixcode.cba@gmail.com" method="POST"> <!-- API para enviar el Formulario al mail formsubmit.co -->
+          <form action="https://formsubmit.co/damian.gariok@gmail.com" method="POST"> <!-- API para enviar el Formulario al mail formsubmit.co -->
             <div class="row mb-3">
               <h4>SOLICITAR TASACIÓN</h4>
               <label for="inputText" class="col-sm-2 col-form-label">Nombre y apellido</label>
@@ -157,7 +157,7 @@
              <!-- input para en envío del Formulario al mail API: formsubmit.co cambiar el value por la pagina en su momento -->
              <input type="hidden" name="_template" value="table">
              <input type="hidden" name="_captcha" value="false">
-             <input type="hidden" name="_next" value="http://127.0.0.1:5501/html/tasar.html">      
+             <input type="hidden" name="_next" value="http://localhost/brucker2.0/tasar.php">      
           </form>         
         </div>
       </div>
