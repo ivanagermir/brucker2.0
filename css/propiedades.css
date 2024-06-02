@@ -5,7 +5,6 @@ body {
     background-color: #f8f9fa;
   }
 
-
   .navbar {
     background-color: #fff;
     border-bottom: 1px solid #ddd;
@@ -15,28 +14,72 @@ body {
     max-height: 60px;
   }
   
+ /* Estilos para el contenedor del filtro */
+ .filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+  background-image: url('//img/img-cards/card-comprar.png'); /* Ruta de la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Opacidad del fondo */
+}
+
+/* Estilos para el contenido del filtro */
+.filter-content {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Opacidad del contenido */
+  border-radius: 10px; /* Bordes redondeados para el contenido */
+}
+  
+
+
   .card {
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
   }
   
-  .card img {
-    height: 200px;
-    object-fit: cover;
-  }
-  
+
+.card-img-custom {
+  width: 100%; /* Ajusta el ancho de la imagen para que ocupe toda la tarjeta */
+  height: 100%; /* Ajusta la altura de la imagen para que ocupe toda la tarjeta */
+  object-fit: cover; /* Escala la imagen para que cubra toda la tarjeta */
+  position: relative; /* Establece la posición relativa para que los elementos secundarios se posicionen correctamente */
+}
+
+.card-img-custom img {
+  position: absolute; /* Establece la posición absoluta para que la imagen se superponga al fondo de la tarjeta */
+  top: 0; /* Alinea la imagen en la parte superior de la tarjeta */
+  left: 0; /* Alinea la imagen en la parte izquierda de la tarjeta */
+  width: 100%; /* Ajusta el ancho de la imagen para que ocupe toda la tarjeta */
+  height: 100%; /* Ajusta la altura de la imagen para que ocupe toda la tarjeta */
+  object-fit: cover; /* Escala la imagen para que cubra toda la tarjeta */
+  z-index: -1; /* Coloca la imagen detrás del contenido de la tarjeta */
+}
+
+
+
+
   .card-body {
     padding: 20px;
   }
   
-  .card-title {
-    font-size: 1.25rem;
-    color: #002244;
-  }
-  
+  .smaller-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
   .property-details {
     margin-top: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
   }
   
   .property-details p {
@@ -58,6 +101,10 @@ body {
     font-size: 1.5rem;
     color: #28a745;
     margin-top: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
   }
   
   .btn-container {

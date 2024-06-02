@@ -1,174 +1,61 @@
-<div class="fullvideo-searchbox">
-        <div class="fullvideo-search">
-            <div class="fullvideo-operation">
-                <select id="operations" class="montserrat">
-                
-                        
-                            
-                                <option data-name="Venta" value="1">Venta</option>
-                            
-                            
-                            
-                        
-                            
-                            
-                                <option data-name="Alquiler" value="2">Alquiler</option>
-                            
-                            
-                        
-                
-                </select>
-            </div>
-            <div class="fullvideo-property">
-                <select id="property_types" class="montserrat">
-                    <option value="-1">Tipo de Propiedad</option>
-            
-                    
-                        <option data-name="Terreno" value="1">Terreno</option>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-           
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                        <option data-name="Departamento" value="2">Departamento</option>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-           
-                    
-                    
-                        <option data-name="Casa" value="3">Casa</option>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-           
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                        <option data-name="Locales" value="7">Locales</option>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-           
-
-                </select>
-            </div>
-            <div class="fullvideo-input">
-              <input type="search" id="location_quicksearch" placeholder="Buscar por ubicación, dirección o calle" class="montserrat ui-autocomplete-input autocomplete" />
-              <input type="hidden" id="location_id" value="0">
-            </div>
-            <div class="fullvideo-searchbtn montserrat" onclick="do_search()">Buscar</div>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../brucker2.0/src/scss/internas/pruebaIvanaBD.scss">
+    <title>Document</title>
+</head>
+<body>
+<div class="blog-card">
+    <div class="meta">
+      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+      <ul class="details">
+        <li class="author"><a href="#">John Doe</a></li>
+        <li class="date">Aug. 24, 2015</li>
+        <li class="tags">
+          <ul>
+            <li><a href="#">Learn</a></li>
+            <li><a href="#">Code</a></li>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
-        <div id="fullscreenvideo" class="player"></div>
-        <div id="fullscreenvideo-thumb"><img id="fullscreenvideo-thumb-img" src="" /></div>
-    <script>
-        $(document).ready(function() {
-          
-            $("#fullscreenvideo").YTPlayer({
-                videoId: 'oB4DpK6MK2o',
-            });
-          
-            $(".header-lateral").css("padding-top",0);
-        });
+    <div class="description">
+      <h1>Learning to Code</h1>
+      <h2>Opening a door to the future</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+      <p class="read-more">
+        <a href="#">Read More</a>
+      </p>
+    </div>
+  </div>
+  <div class="blog-card alt">
+    <div class="meta">
+      <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
+      <ul class="details">
+        <li class="author"><a href="#">Jane Doe</a></li>
+        <li class="date">July. 15, 2015</li>
+        <li class="tags">
+          <ul>
+            <li><a href="#">Learn</a></li>
+            <li><a href="#">Code</a></li>
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h1>Mastering the Language</h1>
+      <h2>Java is not the same as JavaScript</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+      <p class="read-more">
+        <a href="#">Read More</a>
+      </p>
+    </div>
+  </div>
 
-        $(window).load(function(){ $("#fullscreenvideo-box").height( $(window).height() );
-
-        })
-    </script>
-</div>
-
-<script>
+</body>
+</html>
