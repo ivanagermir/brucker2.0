@@ -1,88 +1,37 @@
 <?php
-// Función para realizar la solicitud a la API de Tokko Broker
-function requestTokkoAPI($url) {
-    // Inicializar cURL
-    $ch = curl_init($url);
-    
-    // Configurar opciones de cURL
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-    
-    // Realizar la solicitud
-    $response = curl_exec($ch);
-    
-    // Verificar errores
-    if ($response === FALSE) {
-        throw new Exception('Error al hacer la solicitud a la API: ' . curl_error($ch));
-    }
-    
-    // Obtener el código de estado HTTP
-    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    if ($httpCode != 200) {
-        throw new Exception('Error al hacer la solicitud a la API. Código de estado HTTP: ' . $httpCode);
-    }
-    
-    // Cerrar cURL
-    curl_close($ch);
-    
-    // Decodificar la respuesta JSON
+// Verificar si se enviaron parámetros de búsqueda
+if(isset($_GET['property_types']) && isset($_GET['operation_types'])) {
+    // Construir los parámetros de búsqueda
+    $search_params = array(
+        "current_localization_id" => 0,
+        "current_localization_type" => "country",
+        "price_from" => 0,
+        "price_to" => 999999999,
+        "operation_types" => array($_GET['operation_types']), // Obtener el tipo de operación
+        "property_types" => array($_GET['property_types']), // Obtener el tipo de propiedad
+        "currency" => "ANY",
+        "filters" => array()
+    );
+
+    // Construir la URL de la API con los parámetros de búsqueda
+    $api_url = "https://www.tokkobroker.com/api/v1/property/search/?lang=es_ar&format=json&key=afc6818db3d1bc5b3ae1e77169f5cb2aae4542f3&data=" . urlencode(json_encode($search_params));
+
+    // Realizar la solicitud a la API de Tokko Broker
+    $response = file_get_contents($api_url);
+
+    // Procesar la respuesta de la API y mostrar los resultados
     $data = json_decode($response, true);
-    if (json_last_error() !== JSON_ERROR_NONE) {
-        throw new Exception('Error al decodificar la respuesta JSON.');
-    }
-    
-    return $data;
-}
 
-// Función para construir la URL de la API
-function buildAPIUrl($baseUrl, $searchParams) {
-    // Construir la URL completa con todos los parámetros
-    $url = $baseUrl . '?' . http_build_query(['data' => json_encode($searchParams)]);
-    return $url;
-}
-
-// Función para procesar los resultados de la API
-function processAPIResponse($data) {
-    if (isset($data['objects']) && is_array($data['objects'])) {
-        echo '<ul>';
+    if ($data && isset($data['objects'])) {
         foreach ($data['objects'] as $property) {
-            echo '<li>';
-            echo '<strong>Título:</strong> ' . $property['publication_title'] . '<br>';
-            echo '<strong>Dormitorios:</strong> ' . $property['suite_amount'] . '<br>';
-            echo '<strong>Superficie:</strong> ' . $property['surface'] . ' m²<br>';
-            echo '<strong>Precio:</strong> ' . $property['operations'][0]['prices'][0]['price'] . ' ' . $property['operations'][0]['prices'][0]['currency'];
-            echo '</li>';
+            echo "<p>ID de Propiedad: " . $property['id'] . "</p>";
+            echo "<p>Título de la Publicación: " . $property['publication_title'] . "</p>";
+            // Aquí puedes mostrar más detalles de la propiedad según tus necesidades
         }
-        echo '</ul>';
     } else {
-        echo 'No se encontraron propiedades.';
+        echo "No se encontraron resultados.";
     }
+} else {
+    echo "No se han proporcionado parámetros de búsqueda.";
 }
 
-// Construir los parámetros de búsqueda específicos
-$searchParams = [
-    'current_localization_id' => 0,
-    'current_localization_type' => 'country',
-    'price_from' => 1,
-    'price_to' => 1000000,
-    'currency' => 'ANY',
-    'filters' => []
-];
-
-// Construir la URL base de la API
-$baseUrl = 'http://www.tokkobroker.com/api/v1/property/?limit=20&offset=0&lang=es_ar&format=json&key=afc6818db3d1bc5b3ae1e77169f5cb2aae4542f3';
-
-
-// Construir la URL completa de la API
-$url = buildAPIUrl($baseUrl, $searchParams);
-
-try {
-    // Realizar la solicitud a la API
-    $data = requestTokkoAPI($url);
-    
-    // Procesar los resultados
-    processAPIResponse($data);
-} catch (Exception $e) {
-    // Manejar errores
-    echo 'Error: ' . $e->getMessage();
-}

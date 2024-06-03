@@ -56,15 +56,15 @@
   <main>
 
     <aside>
-        <div class="container">
-          <div class="whatsapp-container">
-            <a href="https://wa.me/543512010010" class="whatsapp-logo" target="_blank">
-              <div class="tooltip">¿Necesitás asesoramiento?</div>
-              <img src="../brucker2.0/img/logo/whatsapp-icon-green.png" alt="WhatsApp Logo">
-            </a>
-          </div>
+      <div class="container">
+        <div class="whatsapp-container">
+          <a href="https://wa.me/543512010010" class="whatsapp-logo" target="_blank">
+            <div class="tooltip">¿Necesitás asesoramiento?</div>
+            <img src="../brucker2.0/img/logo/whatsapp-icon-green.png" alt="WhatsApp Logo">
+          </a>
         </div>
-      </aside>
+      </div>
+    </aside>
 
     <section>
 
@@ -76,34 +76,43 @@
         </div>
       </div>
 
-    
 
 
-    <div class="container p-4 mb-5 mt-5 bg-opacity-10 bg-info shadow rounded form-select" multiple aria-label="multiple select example">
-      <h3 class="mb-4">Buscar Propiedades</h3>
-      <form action="search_properties.php" method="get">
-        <div class="form-group mb-3">
-            <label for="property_type">Tipo de Propiedad:</label>
-            <select id="property_type" name="property_type" class="form-control">
-              <option value="house">Casa</option>
-              <option value="apartment">Apartamento</option>
-              <option value="land">Terreno</option>
+
+      <div class="container p-4 mb-5 mt-5 bg-opacity-10 bg-info shadow rounded form-select" multiple aria-label="multiple select example">
+        <h3 class="mb-4">Buscar Propiedades</h3>
+        <form action="search_properties.php" method="get">
+        
+          <div class="form-group mb-3">
+            <label for="operation_types">Tipo de Operación:</label>
+            <select id="operation_types" name="operation_types" class="form-control">
+              <option value="1">Venta</option>
+              <option value="2">Alquiler</option>
+              <option value="3">Alquiler Temporal</option>
               <!-- Agrega más opciones según sea necesario -->
             </select>
-        </div>
-        <div class="form-group mb-3">
-          <label for="operation_type">Tipo de Operación:</label>
-          <select id="operation_type" name="operation_type" class="form-control">
-            <option value="sale">Venta</option>
-            <option value="rent">Alquiler</option>
-            <!-- Agrega más opciones según sea necesario -->
-          </select>
-        </div>
-        <div class="form-group mt-4">
-          <button type="submit" class="btn btn-outline-primary">Buscar</button>
-        </div>
-      </form>
-    </div>
+          </div>
+          <div class="form-group mb-3">
+            <label for="property_types">Tipo de Propiedad:</label>
+            <select id="property_types" name="property_types" class="form-control">
+              <option value='-1'>Select a Property Type</option>
+              <option value='1'>Land / Terreno</option>
+              <option value='2'>Appartment / Departamento</option>
+              <option value='3'>House / Casa</option>
+              <option value='4'>Weekend House</option>
+              <option value='5'>Office / Oficina</option>
+              <option value='6'>Mooring</option>
+              <option value='7'>Bussiness Premises</option>
+              <option value='8'>Commercial Building</option>
+              <!-- Agrega más opciones según sea necesario -->
+            </select>
+          </div>
+          <div class="form-group mt-4">
+            <button type="submit" class="btn btn-outline-primary">Buscar</button>
+          </div>
+        </form>
+
+      </div>
 
 
 
