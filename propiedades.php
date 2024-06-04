@@ -13,124 +13,11 @@
   <link rel="stylesheet" href="../brucker2.0/css/propiedades.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      padding-top: 70px;
-      /* Ajusta según la altura del navbar */
-    }
-
-    .portada-propiedades {
-      background-image: url('../brucker2.0/img/img-portadas/Cordoba1.jpg');
-      background-size: cover;
-      height: 650px;
-      position: relative;
-      z-index: 0;
-      background-attachment: fixed;
-    }
-
-
-    .card {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-            transform: scale(1.05);
-        }
-    .card-img-top {
-      object-fit: cover;
-      /* Ajusta el tamaño de la imagen */
-      height: 200px;
-      /* Ajusta la altura de la imagen */
-    }
-
-    .card-body {
-      padding: 20px;
-      background-color: #f8f9fa;
-      /* Fondo del cuerpo de la card */
-    }
-
-    .card-title {
-      color: #fff;
-      /* Color del texto */
-      background-color: #002244;
-      /* Color de fondo del título */
-      padding: 10px;
-      margin-bottom: 10;
-      border-radius: 0 0 10px 10px;
-      /* Borde inferior redondeado */
-
-    }
-
-    .btn {
-      background-color: #002244;
-      color: #fff;
-      border-color: #002244;
-      text-align: center;
-    }
-
-
-    .title-filtro {
-      text-align: center;
-      background-color: #002244;
-      color: #fff;
-      padding: 5px;
-    }
-
-
-    .title-propiedades {
-      color: #002244;
-      text-align: center;
-      font-size: 80px;
-      margin-left: 20%;
-      margin-top: 5%;
-    }
-
-    .icon {
-    width: 35px; /* Tamaño deseado para los iconos */
-    height: 30px;
-}
-.precio-propiedad {
-  background-color: #C9C2B2;
-  text-align: center;
-  color: #fff;
-  margin-bottom: 0; /* Eliminar el margen inferior */
-  padding: 3px; /* Reducir el padding del contenedor del precio */
-}
-
-.fondo-precio {
-  padding: 0px; /* Reducir el padding del contenedor del fondo */
-}
-
-
-
-    footer {
-      background-color: #C9C2B2;
-      font-size: small;
-      color: #002244;
-      font-family: 'Montserrat', sans-serif;
-      src: url(Montserrat-VariableFont_wght);
-      margin-top: 80px;
-    }
-
-    .cover-text h1 {
-    color: white;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    max-width: 90%;
-}
-  </style>
-
 </head>
 
 <body>
   <header>
-  <nav class=" navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg">
       <div class="col-lg-10 container-fluid">
         <!-- Logo aqui POSICIONADO A LA IZQUIERDA-->
         <a class="navbar-brand" href="../bruckerCopia/home.php">
@@ -295,10 +182,6 @@
     echo 'Error al obtener las propiedades.';
   }
 ?>
-
-
-
-
         </div>
       </div>
 
