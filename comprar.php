@@ -57,7 +57,7 @@
             </li>
             <!-- nav propiedades-novedades-contacto -->
             <li class="nav-item">
-              <a class="nav-link" href="../brucker2.0/propiedadesBrucker.php"><b>Propiedades</b></a>
+              <a class="nav-link" href="../brucker2.0/propiedades.php"><b>Propiedades</b></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../brucker2.0/novedades.php"><b>Novedades</b></a>
