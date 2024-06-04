@@ -98,7 +98,7 @@
 
         <div class="container-filtro-bg">
           <div class="container container-filtro p-4 mb-5 mt-5 shadow rounded form-select">
-            <h3 class="title-filtro mb-4">Filtro</h3>
+            <h3 class="title-filtro mb-4 rounded">Filtro</h3>
             <form action="search_properties.php" method="get">
               <div class="form-group mb-3">
                 <label for="operation_types">Tipo de Operación:</label>
