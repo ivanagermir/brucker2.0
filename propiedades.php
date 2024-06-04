@@ -165,7 +165,7 @@
       echo '</div>';
 
       echo '<div class="card-body" style="padding-top: 10px;">'; // Aumentar el espacio entre el título y el cuerpo de la tarjeta
-      echo '<h5 class="card-title">' . $property['publication_title'] . '</h5>';
+      echo '<h5 class="card-title text-center">' . $property['publication_title'] . '</h5>';
       echo '<div class="d-flex justify-content-between align-items-center mb-3">';
       echo '<p class="card-icon"><img src="../brucker2.0/img/icons/dormitorios.jpg" alt="icono cama" class="icon"> ' .   $property['suite_amount'] . '  </p>';
       echo '<p class="card-text"><img src="../brucker2.0/img/icons/superficie.jpg" alt="icono superficie" class="icon"> ' .  $property['surface'] . '  m²</p>';
