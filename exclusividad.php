@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brücker</title>
-    <link rel="icon" href="/img/logo/PNG/fondoDorado.png" type="image/x-icon">
-    <link rel="shortcut icon" href="/img/logo/PNG/fondoDorado.png" type="image/x-icon">
+    <link rel="icon" href="../brucker2.0/img/logo/PNG/fondoDorado.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../brucker2.0/img/logo/PNG/fondoDorado.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="../brucker2.0/css/style.css">
@@ -102,29 +102,43 @@
         beneficios significativos para el cliente.
       </p>
 
-      <h3>Beneficios para el <strong>Cliente</strong>:</h3>
+      <h3 data-aos="zoom-in">Beneficios para el <strong>Cliente</strong>:</h3>
       <hr>
-      <div class="parrafos-exclusividad">
-        <p data-aos="fade-right">
+      <div class="row parrafos-exclusividad">
+        <div class="col-sm-8">
+        <p data-aos="zoom-in-right">
+          <img src="../brucker2.0/img/icons/check.png" style="width: 30px;" alt="Logo confianza">
           <strong>Transparencia y Compromiso:</strong> La Exclusiva garantiza total transparencia en la comercialización de la propiedad, 
           eliminando sorpresas desagradables. Al elegirnos mutuamente, ambas partes se comprometen plenamente a alcanzar 
           el objetivo de venta.
         </p>      
-        <p data-aos="fade-left"> <strong>Asesoramiento Profesional:</strong> El cliente es el protagonista en la toma de decisiones mientras que el profesional 
+        <p data-aos="zoom-in-left">
+        <img src="../brucker2.0/img/icons/check.png" style="width: 30px;" alt="Logo confianza">  
+        <strong>Asesoramiento Profesional:</strong> El cliente es el protagonista en la toma de decisiones mientras que el profesional 
           aporta conocimientos de mercado y garantiza seguridad jurídica, brindando así tranquilidad y confianza en todo 
           el proceso.
         </p>
-        <p data-aos="fade-right"><strong>Comunicación Eficiente:</strong> La Exclusiva establece un único canal de comunicación entre los interesados y el cliente, 
+        <p data-aos="zoom-in-right">
+          <img src="../brucker2.0/img/icons/check.png" style="width: 30px;" alt="Logo confianza">  
+          <strong>Comunicación Eficiente:</strong> La Exclusiva establece un único canal de comunicación entre los interesados y el cliente, 
           aprovechando la experiencia en negociación de la agencia para obtener los mejores resultados.
         </p>
-        <p data-aos="fade-left"><strong>Máxima Exposición:</strong> Desarrollamos un plan de marketing personalizado para cada propiedad, aprovechando los 
+        <p data-aos="zoom-in-left">
+        <img src="../brucker2.0/img/icons/check.png" style="width: 30px;" alt="Logo confianza">
+        <strong>Máxima Exposición:</strong> Desarrollamos un plan de marketing personalizado para cada propiedad, aprovechando los 
           principales portales de venta web, compartiendo cartera de propiedades con la red de colegas y socios 
           estratégicos, garantizando así una máxima exposición y alcance.
         </p>
-        <p data-aos="fade-right"><strong>Seguimiento y Resultados:</strong> Se proporcionan informes semanales que detallan la evolución de la propiedad en el 
+        <p data-aos="zoom-in-right">
+        <img src="../brucker2.0/img/icons/check.png" style="width: 30px;" alt="Logo confianza">
+        <strong>Seguimiento y Resultados:</strong> Se proporcionan informes semanales que detallan la evolución de la propiedad en el 
           mercado, junto con opiniones de interesados y ofertas concretas por escrito, brindando al cliente la información 
           necesaria para tomar decisiones informadas.
         </p>
+        </div>
+        <div data-aos="zoom-in" class="col-sm-4">
+          <img src="../brucker2.0/img/exclusividad/exclusividad.png" class="img-thumbnail shadow" alt="escudo de garantía">
+        </div>
       </div>
     </section>
       
@@ -171,7 +185,9 @@
   <script src="/js/app.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      duration: 1000,
+    });
   </script>
 </body>
 </html>
