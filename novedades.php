@@ -67,10 +67,10 @@
         </div>
       </div>
     </nav>
-  </header>
+</header>
 
-  <main>
-      <!--Portada-->
+<main>
+    <!--Portada-->
     <div class="img-fluid portada-novedades">
         <div class="container cover-text">
         <h1 class="display-4">NOVEDADES</h1>
@@ -78,20 +78,19 @@
         </div>
     </div>
 
-      <!-- ICONO DE WHATSAPP -->
-      <aside class="container">
-      <div class="whatsapp-container">
-        <a href="https://wa.me/543512010010" class="whatsapp-logo" target="_blank">
-          <div class="tooltip">¿Necesitás asesoramiento?</div>
-          <img src="../brucker2.0/img/logo/whatsapp-icon-green.png" alt="WhatsApp Logo">
-        </a>
-      </div>
+    <!-- ICONO DE WHATSAPP -->
+    <aside class="container">
+        <div class="whatsapp-container">
+            <a href="https://wa.me/543512010010" class="whatsapp-logo" target="_blank">
+                <div class="tooltip">¿Necesitás asesoramiento?</div>
+                <img src="../brucker2.0/img/logo/whatsapp-icon-green.png" alt="WhatsApp Logo">
+            </a>
+        </div>
     </aside>
+</main>
 
-  </main>
-
-  <div class="container">
-    <div class="row card-container gx-4">
+<div class="container mt-5">
+    <div class="row">
         <?php
         // Conexión a la base de datos
         $servername = "localhost";
@@ -100,7 +99,6 @@
         $dbname = "bd_de_prueba";
 
         $conn = new mysqli($servername, $username, $password, $dbname);
-        
 
         // Verificar conexión
         if ($conn->connect_error) {
@@ -108,24 +106,37 @@
         }
 
         // Consultar datos
-        $sql = "SELECT id, title, subtitle, content, image FROM noticia_prueba";
+        $sql = "SELECT id, title, subtitle, content, imagen, additional_content, additional_image FROM noticia_prueba";
         $result = $conn->query($sql);
-        
 
         if ($result->num_rows > 0) {
-            // Mostrar datos en la lista
+            // Contador para controlar el número de tarjetas por fila
+            $counter = 0;
+
             while ($row = $result->fetch_assoc()) {
-                echo "<div class='col-lg-4 col-md-6'>";
-                echo "<div class='card'>";
+                // Si es la primera tarjeta de la fila, abrir un nuevo row
+                if ($counter % 3 == 0) {
+                    echo '<div class="row">';
+                }
+
+                echo "<div class='col-md-4'>";
+                echo "<div class='card mb-4'>";
+                echo "<img src='" . $row['imagen'] . "' class='card-img-top' alt='Imagen'>";
                 echo "<div class='card-body'>";
-                echo "<h2>" . htmlspecialchars($row['title']) . "</h2>";
-                echo "<img src='/administratorPanel/noticias/uploads" . htmlspecialchars($row['image']) . "' class='card-img-top' alt='" . htmlspecialchars($row['title']) . "'>";
-                echo "</div>"; // Cierre de card-body
-                echo "<div class='card-footer'>";
-                echo "<a href='ver_noticia.php?id=" . $row['id'] . "' class='btn btn-outline-primary btn-sm float-end'>Leer Noticia...</a>";
-                echo "</div>"; // Cierre de card-footer
-                echo "</div>"; // Cierre de card
-                echo "</div>"; // Cierre de col
+                echo "<h5 class='card-title'>" . $row['title'] . "</h5>";
+                ?>
+                <a class="btn btn-primary blue-button" href="../brucker2.0/ver_noticia.php?id=<?php echo $row['id']; ?>" role="button">Leer más...</a>
+                <?php
+                echo "</div>";
+                echo "</div>";
+                echo "</div>";
+
+                // Si es la última tarjeta de la fila, cerrar el row
+                if ($counter % 3 == 2 || $counter == $result->num_rows - 1) {
+                    echo '</div>';
+                }
+
+                $counter++;
             }
         } else {
             echo "<p>No hay noticias disponibles</p>";
@@ -135,14 +146,9 @@
         ?>
     </div>
 </div>
-    
-</div>
 
-    
-</div>
-
- <!--Footer-->
- <footer class="footer py-5">
+<!--Footer-->
+<footer class="footer py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-4 text-center mb-3 mb-md-0">
@@ -160,11 +166,9 @@
         </div>
       </div>
     </div>
-  </footer>
-    
-    
-    <script>
+</footer>
 
+<script>
 document.addEventListener('DOMContentLoaded', function() {
     // Tu código aquí
      // JavaScript para mostrar y ocultar el detalle de las noticias al hacer clic
@@ -174,11 +178,8 @@ document.addEventListener('DOMContentLoaded', function() {
               
             });
         });
-   
 });
-    </script>
-     
+</script>
+
 </body>
 </html>
-
-

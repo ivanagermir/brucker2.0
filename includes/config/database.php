@@ -1,12 +1,14 @@
 <?php
 
-function conectarDB(): mysqli{
-    $db = mysqli_connect('localhost:3306', 'root', 'admin', 'bienesraices_crud');
-    
-    if(!$db){
-        echo "Error, no se pudo conectar";
-        exit;
-    }
+$servername = "localhost";
+$username = "root";
+$password = "1234";
+$dbname = "brucker_crud";
 
-    return $db;
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
 }
+
+?>
