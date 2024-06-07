@@ -1,0 +1,213 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.header{
+    padding: 15px 30px;
+    background-color: #002244;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-bar-left {
+    width: 250px;
+    min-height: 200vh;
+    transition: 500ms;
+    background-color: #C9C2B2;
+}
+
+#navbar {
+    display: inline-block;
+    margin-left: 1000px;
+    transition: 200ms color;
+    color: white;
+}
+
+
+.user-p .perfil {
+    width: 50%;
+    border-radius: 50%;
+
+}
+
+.user-p{
+    text-align: center;
+    padding-left: 15px;
+    padding-top: 17px;
+}
+
+.side-bar-left ul{
+    margin-left: 15px;
+    list-style: none;
+}
+
+.side-bar-left ul li{
+    padding-left: 15px;
+    padding:15px;
+    text-overflow: ellipsis;
+    transition: 500ms background;
+    white-space: nowrap;
+    overflow: hidden;
+
+
+}
+
+.side-bar-left ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+.side-bar-left ul li:hover{
+    background-color: #d9d9d9;
+}
+
+.side-bar-left ul li a i{
+    display: inline-block;
+    padding: 15px;
+    cursor:pointer;
+    color:#002244;
+}
+
+.u-name{
+    padding-left: 15px;
+    color:white;
+
+}
+
+
+
+
+#checkbox{
+    display: none;
+}
+
+#checkbox:checked ~ .body .side-bar-left{
+    width: 100px;
+}
+
+
+#checkbox:checked ~ .body .side-bar-left .user-p{
+    visibility: hidden;
+}
+
+#checkbox:checked ~ .body .side-bar-left a span{
+    display: none;
+}
+
+/* Estilos para los formularios */
+.body {
+    display: flex;
+}
+
+.side-bar-left {
+    width: 250px;
+    min-height: 200vh;
+    transition: 500ms;
+    background-color: #C9C2B2;
+}
+
+.form-container {
+    margin-left: 20px; /* Esto empuja el contenedor hacia la derecha */
+    margin-top: 20px; /* Ajusta la distancia desde la parte superior */
+    padding: 20px;
+    max-width: 400px; /* Ancho máximo de los formularios */
+}
+
+
+form {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #002244;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #001833;
+}
+
+
+
+
+.cargar a {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    
+    flex: 1; /* Distribuye el espacio disponible entre los enlaces */
+}
+
+.cargar a:hover {
+    background-color: #C9C2B2;
+}
+
+
+.cargar {
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    width: 60rem;
+    height: 30rem;
+    margin: 2rem auto;
+    padding: 20px;
+    background-image: url('../../panelAdministrador/img/cba-general.jpg');
+    background-size: cover; /* La imagen cubre todo el fondo */
+    background-position: center; /* La imagen se posiciona en el centro */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-color: #ccc; /* Color de fondo con transparencia */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cargar-videos,
+.cargar-noticias {
+    width: 100px;
+    height: 100px;
+    display: inline-flex; /* Para que los elementos se alineen en línea */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    margin: 10px; /* Espacio entre los cuadrados */
+    background-color: #002244;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.cargar-videos h2,
+.cargar-noticias h2 {
+    color: #ccc;
+}
+.cargar-videos:hover,
+.cargar-noticias:hover {
+    background-color: #e0e0e0;
+    
+}
+
+.cargar-videos:hover h2,
+.cargar-noticias:hover h2 {
+    color: #002244; /* Cambia el color del texto a azul al hacer hover */
+}
+
+

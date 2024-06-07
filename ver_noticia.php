@@ -13,8 +13,80 @@
     <title>News</title>
 </head>
 <body>
-    
 
+
+
+<style>
+  /*Espacio para la fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+
+
+.news-title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+h3 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: gray; /* Color gris */
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.news-content {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 10px;
+    text-align: left;
+    text-justify: auto;
+}
+.news-additional-content{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 10px;
+    text-align: left;
+    text-justify: auto;
+}
+
+.news-article {
+    margin-bottom: 50px; 
+}
+
+
+.container-new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+  
+}
+
+/* ver_noticia.css */
+
+.image-text-container {
+    max-width: 100%;
+    max-height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+
+</style>
 <header>
     <nav class=" navbar navbar-expand-lg">
       <div class="col-lg-10 container-fluid">
@@ -79,10 +151,14 @@
         </a>
       </div>
     </aside>
+<section class="container container-new">
+<?php
+// Verificar si se proporcionó un ID de noticia en la URL
+if(isset($_GET['id'])) {
+    // Obtener el ID de la noticia de la URL
+    $id = $_GET['id'];
 
-    <section class="container container-new">
-    <?php
-    // Tu código PHP para obtener la noticia desde la base de datos
+    // Conexión a la base de datos
     $servername = "localhost";
     $username = "root";
     $password = "1234";
@@ -90,70 +166,74 @@
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
+    // Verificar la conexión
     if ($conn->connect_error) {
         die("Conexión fallida: " . $conn->connect_error);
     }
 
-    $id = $_GET['id'];
-    $sql = "SELECT title, subtitle, content, image FROM noticia_prueba WHERE id = $id";
+    // Consultar la base de datos para obtener la información de la noticia
+    $sql = "SELECT * FROM noticia_prueba WHERE id = $id";
     $result = $conn->query($sql);
 
+    // Verificar si se encontró la noticia
     if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo "<h1 class='title'>" . htmlspecialchars($row['title']) . "</h1>";
-            echo "<h3 class='subtitle text-muted'>" . htmlspecialchars($row['subtitle']) . "</h3>";
-            echo "<div class='row'>";
-            echo "<div class='content_image col-md-6'>";
-            echo "<img src='/administratorPanel/noticias/uploads" . htmlspecialchars($row['image']) . "' alt='Imagen de la noticia'>";
-            echo "</div>";
-            echo "<div class='content_new col-md-6'>";
-            echo "<p class='content'>" . htmlspecialchars($row['content']) . "</p>";
-            echo "</div>";
-            echo "</div>";
-        }
+        // Mostrar la información de la noticia
+        $row = $result->fetch_assoc();
+        echo "<div class='news-article'>";
+        echo "<h2 class='news-title mb-4'>" . $row['title'] . "</h2>";
+        echo "<img src='" . $row['imagen'] . "' class='image-text-container mb-4' alt='Imagen'>";
+        
+        echo "<h3 class='news-subtitle mb-4'>" . $row['subtitle'] . "</h3>";
+        echo "<p class='news-content mb-4'>" . $row['content'] . "</p>";
+        echo "<img src='" . $row['additional_image'] . "' class='img-fluid mb-4' alt='Imagen adicional'>";
+        echo "<p class='news-additional-content'>" . $row['additional_content'] . "</p>";
+        echo "</div>";
     } else {
-        echo "<p>No se encontró la noticia</p>";
+        // Mostrar un mensaje si no se encuentra la noticia
+        echo "<p>No se encontró la noticia.</p>";
     }
-    ?>
 
-    <figure>
-        <blockquote class="blockquote">
-            <p>Damián Gari</p>
-        </blockquote>
-        <figcaption class="blockquote-footer">
-            Corredor Inmobiliario -<cite title="Source Title">Fundador - CEO de Brucker</cite>
-        </figcaption>
-    </figure>
+    // Cerrar la conexión a la base de datos
+    $conn->close();
+} else {
+    // Mostrar un mensaje si no se proporciona un ID de noticia en la URL
+    echo "<p>No se proporcionó un ID de noticia.</p>";
+}
+?>
+
+
 </section>
+<figure>
+    <blockquote class="container blockquote">
+        <p>Damián Gari</p>
+    </blockquote>
+    <figcaption class="container blockquote-footer">
+        Corredor Inmobiliario -<cite title="Source Title">Fundador - CEO de Brucker</cite>
+    </figcaption>
+</figure>
 
- <!--Footer-->
- <footer class="footer py-5">
+
+<!--Footer-->
+<footer class="footer py-5">
     <div class="container">
-      <div class="row">
-        <div class="col-md-4 text-center mb-3 mb-md-0">
-          <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo de la empresa" class="img-fluid" style="max-height: 70px;">
-          <p class="mt-3">© 2024 Brücker. Todos los derechos reservados.</p>
+        <div class="row">
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+                <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo de la empresa" class="img-fluid" style="max-height: 70px;">
+                <p class="mt-3">© 2024 Brücker. Todos los derechos reservados.</p>
+            </div>
+            <div class="col-md-4 text-center mb-3 mb-md-0"></div>
+            <div class="col-md-4 text-center">
+                <ul class="list-inline social-icons mt-3">
+                    <li class="list-inline-item"><a href="https://wa.me/543512010010"><i class="bi bi-whatsapp"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com/brucker.ok?igsh=MWI0Z2U3OHpoajBjeQ=="><i class="bi bi-instagram"></i></a></li>
+                </ul>
+                <h5>Síguenos</h5>
+            </div>
         </div>
-        <div class="col-md-4 text-center mb-3 mb-md-0">
-        </div>
-        <div class="col-md-4 text-center">
-          <ul class="list-inline social-icons mt-3">
-            <li class="list-inline-item"><a href="https://wa.me/543512010010"><i class="bi bi-whatsapp"></i></a></li>
-            <li class="list-inline-item"><a href="https://www.instagram.com/brucker.ok?igsh=MWI0Z2U3OHpoajBjeQ=="><i class="bi bi-instagram"></i></a></li>
-          </ul>
-          <h5>Síguenos</h5>
-        </div>
-      </div>
     </div>
-  </footer>
+</footer>
 
-
-  
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="js/app.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
-
-
-
-
