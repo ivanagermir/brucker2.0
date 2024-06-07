@@ -20,7 +20,7 @@ if(isset($_FILES['video'])){
     $conn->close();
     
     // Redireccionar a la página de la galería de videos
-    header('Location: galleryVideo.php');
+    header('Location: cargarVideos.php');
     exit();
 }
 ?>
