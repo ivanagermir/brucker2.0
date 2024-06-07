@@ -37,6 +37,9 @@ form {
 
         <label for="video">Video:</label><br>
         <input type="file" id="video" name="video" accept="video/*" required><br><br>
+
+        
+        <button type="submit" class="btn btn-primary">Subir Video</button>
       </form>
   
     </main>
