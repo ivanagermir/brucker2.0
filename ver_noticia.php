@@ -61,6 +61,8 @@ h3 {
 
 .news-article {
     margin-bottom: 50px; 
+    margin-top: 130px;
+    
 }
 
 
