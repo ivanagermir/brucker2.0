@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost"; // Cambia esto si tu servidor no está en localhost
 $username = "root";
-$password = "1234";
+$password = "admin";
 $dbname = "bd_de_prueba";
 
 // Crear conexión

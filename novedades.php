@@ -95,7 +95,7 @@
         // Conexión a la base de datos
         $servername = "localhost";
         $username = "root";
-        $password = "1234";
+        $password = "admin";
         $dbname = "bd_de_prueba";
 
         $conn = new mysqli($servername, $username, $password, $dbname);

@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="/img/logo/PNG/fondoDorado.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../brucker2.0/css/style.css">
     <link rel="stylesheet" href="../brucker2.0/css/quienesSomos.css">
     <link rel="stylesheet" href="../brucker2.0/css/quienesSomos.css">
@@ -91,6 +92,8 @@
       </div>
     </aside>  
 
+    
+
     <!--Mision Vision-->
       <section class="container-fluid values-section">      
       
@@ -102,58 +105,58 @@
             sueños, brindándoles una nueva forma de vivir la experiencia inmobiliaria.
           </h6>
           <div class="container text-center">
-            <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1">
-              <div class="col">
-                <img src="../brucker2.0/img/img-valores/compromiso.png" alt="Logo compromiso">
-                <h6 class="text-uppercase" data-aos="flip-right">compromiso</h6>
-                <p>Trabajamos con dedicación y esmero para cumplir con las necesidades y 
-                  expectativas de nuestros clientes, garantizando un servicio de calidad.
-                </p>
-              </div>
-              <div class="col">
-                <img src="../brucker2.0/img/img-valores/lealtad.png" alt="Logo Lealtad">
-                <h6 class="text-uppercase" data-aos="flip-right">lealtad</h6>
-                <p>Establecemos relaciones duraderas y de confianza con nuestros clientes, 
-                  siendo fieles a nuestros compromisos y valores.</p>
-              </div>
-              <div class="col">
-                <img src="../brucker2.0/img/img-valores/transparencia.png" alt="Logo Transparencia">
-                <h6 class="text-uppercase" data-aos="flip-right">transparencia</h6>
-                <p>Actuamos con honestidad y sinceridad en todas nuestras interacciones, 
-                  asegurando la claridad en los procesos y la información.</p>
-              </div>
-              <div class="col">
-                <img src="../brucker2.0/img/img-valores/seguridad.png" alt="Logo seguridad">
-                <h6 class="text-uppercase" data-aos="flip-right">seguridad</h6>
-                <p>Proporcionamos soluciones confiables y seguras a nuestros clientes, 
-                  cuidando su patrimonio y sus intereses.</p>
-              </div>
-              <div class="col">
-                <img src="../brucker2.0/img/img-valores/confianza.png" alt="Logo confianza">
-                <h6 class="text-uppercase" data-aos="flip-right">confianza</h6>
-                <p>Fomentamos un ambiente de confianza y respeto, basado en la honestidad, 
-                  la integridad y el compromiso con nuestros clientes.</p>
-              </div>
-              <div class="col">
-                <img src="../brucker2.0/img/img-valores/proactividad.png" alt="Logo proactividad">
-                <h6 class="text-uppercase" data-aos="flip-right">proactividad</h6>
-                <p>Nos adelantamos a las necesidades de nuestros clientes, ofreciendo 
-                  soluciones creativas e innovadoras, y mejorando continuamente nuestros procesos.</p>
-              </div>
-              <div class="col">
-                <img src="../brucker2.0/img/img-valores/esfuerzo.png" alt="Logo esfuerzo">
-                <h6 class="text-uppercase" data-aos="flip-right">esfuerzo</h6>
-                <p>Trabajamos con perseverancia y dedicación, buscando siempre superar las 
-                  expectativas de nuestros clientes y alcanzar la excelencia en nuestro servicio.</p>
-              </div>
-              <div class="col">
-                <img class="image-logo" data-aos="flip-right" src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker">
-                <p>Únete a nosotros en la construcción de tus sueños. <strong>¡Descubre cómo Brücker puede ser 
+          <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1">
+            <div class="col">
+              <img src="../brucker2.0/img/img-valores/compromiso.png" alt="Logo compromiso">
+              <h6 class="text-uppercase" data-aos="flip-right">compromiso</h6>
+              <p>Trabajamos con dedicación y esmero para cumplir con las necesidades y
+                expectativas de nuestros clientes, garantizando un servicio de calidad.
+              </p>
+            </div>
+            <div class="col">
+              <img src="../brucker2.0/img/img-valores/lealtad.png" alt="Logo Lealtad">
+              <h6 class="text-uppercase" data-aos="flip-right">lealtad</h6>
+              <p>Establecemos relaciones duraderas y de confianza,
+                siendo fieles a nuestros compromisos y valores.</p>
+            </div>
+            <div class="col">
+              <img src="../brucker2.0/img/img-valores/transparencia.png" alt="Logo Transparencia">
+              <h6 class="text-uppercase" data-aos="flip-right">transparencia</h6>
+              <p>Actuamos con honestidad y sinceridad en todas nuestras interacciones,
+                asegurando la claridad en los procesos y la información.</p>
+            </div>
+            <div class="col">
+              <img src="../brucker2.0/img/img-valores/seguridad.png" alt="Logo seguridad">
+              <h6 class="text-uppercase" data-aos="flip-right">seguridad</h6>
+              <p>Proporcionamos soluciones confiables y seguras a quienes confian en nosotros,
+                cuidando su patrimonio y sus intereses.</p>
+            </div>
+            <div class="col">
+              <img src="../brucker2.0/img/img-valores/confianza.png" alt="Logo confianza">
+              <h6 class="text-uppercase" data-aos="flip-right">confianza</h6>
+              <p>Fomentamos un ambiente de confianza y respeto, basado en la honestidad,
+                la integridad y el compromiso.</p>
+            </div>
+            <div class="col">
+              <img src="../brucker2.0/img/img-valores/proactividad.png" alt="Logo proactividad">
+              <h6 class="text-uppercase" data-aos="flip-right">proactividad</h6>
+              <p>Nos adelantamos a las necesidades de nuestros clientes, ofreciendo
+                soluciones creativas e innovadoras, y mejorando continuamente nuestros procesos.</p>
+            </div>
+            <div class="col">
+              <img src="../brucker2.0/img/img-valores/esfuerzo.png" alt="Logo esfuerzo">
+              <h6 class="text-uppercase" data-aos="flip-right">esfuerzo</h6>
+              <p>Trabajamos con perseverancia y dedicación, buscando siempre superar las
+                expectativas de quienes confían en nosotros y alcanzar la excelencia en nuestro servicio.</p>
+            </div>
+            <div class="col">
+              <img class="image-logo" data-aos="flip-right" src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker">
+              <p>Únete a nosotros en la construcción de tus sueños. <strong>¡Descubre cómo Brücker puede ser
                   tu puente hacia una experiencia inmobiliaria única y satisfactoria!</strong></p>
-              </div>
             </div>
           </div>
-        </div>    
+        </div>
+      </div>
       </section>    
 
       <!--Card-->
@@ -269,5 +272,14 @@
     
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <script src="/js/app.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init();
+    });
+    AOS.init({
+      duration: 1500,
+      once: false
+    });</script>
 </body>
 </html>

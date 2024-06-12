@@ -44,43 +44,38 @@
   border-radius: 25% 10%;
 }
 
-/* Valores-home*/
-.values-section{
+/* proposito-home*/
+.proposito-section{
   font-family: 'Montserrat', sans-serif;
   src: url(Montserrat-VariableFont_wght);
   margin-bottom: 50px;
+  background-image: url(../img/img-background/background01.png)
 }
   
-.values-title {
+.proposito-title {
   text-align: center;
-  font-weight: bold;
   color: #002244;
   margin-bottom: 50px;
 }
   
-.value-image {
+.proposito-image {
   align-content: center;
   margin-bottom: -150px;
 }
 
-.list-values .text-principal {
+.proposito-content .text-principal {
   align-items: center;
   margin-bottom: 50px;
   border: none;
 }
   
-.list-values {
+.proposito-content {
   background-color: #EFF0F0;
   text-align: center;
   padding-top: 15%;
 }
   
-.list-values ul li{
-  list-style-type: none;
-  margin: 30px;
-}
-  
-.list-values h6 {
+.proposito-content h6 {
   color: #002244;
   font-weight: bold;
   margin-top: 10px;
@@ -89,7 +84,7 @@
   border-radius: 20px;
 }
 
-.list-values p {
+.proposito-content p {
   font-weight: bold;
   color: #105498;
   font-size: 14px;
