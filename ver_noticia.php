@@ -90,11 +90,11 @@ h3 {
 
 </style>
 <header>
-    <nav class=" navbar navbar-expand-lg">
+<nav class=" navbar navbar-expand-lg">
       <div class="col-lg-10 container-fluid">
         <!-- Logo aqui POSICIONADO A LA IZQUIERDA-->
         <a class="navbar-brand" href="../brucker2.0/home.php">
-          <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker" height="70">
+          <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker" height="100">
         </a>
         <!-- Botón de colapsar para pantallas pequeñas -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -113,7 +113,7 @@ h3 {
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="../brucker2.0/quienesSomos.php">Quiénes somos</a></li>
-                <li><a class="dropdown-item" href="../brucker2.0/exclusividad.php">La exclusividad</a></li>
+<!--                <li><a class="dropdown-item" href="../brucker2.0/exclusividad.php">La exclusividad</a></li> -->
               </ul>
             </li>
             <!-- desplegable servicios -->
@@ -163,7 +163,7 @@ if(isset($_GET['id'])) {
     // Conexión a la base de datos
     $servername = "localhost";
     $username = "root";
-    $password = "1234";
+    $password = "admin";
     $dbname = "bd_de_prueba";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -210,7 +210,7 @@ if(isset($_GET['id'])) {
         <p>Damián Gari</p>
     </blockquote>
     <figcaption class="container blockquote-footer">
-        Corredor Inmobiliario -<cite title="Source Title">Fundador - CEO de Brucker</cite>
+        Corredor Inmobiliario - <cite title="Source Title">Fundador - CEO de BRÜCKER</cite>
     </figcaption>
 </figure>
 
@@ -236,6 +236,7 @@ if(isset($_GET['id'])) {
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

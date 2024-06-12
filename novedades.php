@@ -19,7 +19,7 @@
       <div class="col-lg-10 container-fluid">
         <!-- Logo aqui POSICIONADO A LA IZQUIERDA-->
         <a class="navbar-brand" href="../brucker2.0/home.php">
-          <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker" height="70">
+          <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker" height="100">
         </a>
         <!-- Botón de colapsar para pantallas pequeñas -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +38,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="../brucker2.0/quienesSomos.php">Quiénes somos</a></li>
-                <li><a class="dropdown-item" href="../brucker2.0/exclusividad.php">La exclusividad</a></li>
+<!--                <li><a class="dropdown-item" href="../brucker2.0/exclusividad.php">La exclusividad</a></li> -->
               </ul>
             </li>
             <!-- desplegable servicios -->
