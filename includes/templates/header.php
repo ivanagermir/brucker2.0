@@ -37,7 +37,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="../brucker2.0/quienesSomos.php">Quiénes somos</a></li>
-                <li><a class="dropdown-item" href="../brucker2.0/exclusividad.php">La exclusividad</a></li>
+<!--                <li><a class="dropdown-item" href="../brucker2.0/exclusividad.php">La exclusividad</a></li> -->
               </ul>
             </li>
             <!-- desplegable servicios -->

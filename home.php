@@ -22,7 +22,7 @@
       <div class="col-lg-10 container-fluid">
         <!-- Logo aqui POSICIONADO A LA IZQUIERDA-->
         <a class="navbar-brand" href="../brucker2.0/home.php">
-          <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker" height="70">
+          <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker" height="100">
         </a>
         <!-- Botón de colapsar para pantallas pequeñas -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="../brucker2.0/quienesSomos.php">Quiénes somos</a></li>
-                <li><a class="dropdown-item" href="../brucker2.0/exclusividad.php">La exclusividad</a></li>
+<!--                <li><a class="dropdown-item" href="../brucker2.0/exclusividad.php">La exclusividad</a></li> -->
               </ul>
             </li>
             <!-- desplegable servicios -->
@@ -72,15 +72,18 @@
     </nav>
   </header>
 
-
-
   <main>
+    <style>
+    p {
+      font-size: 16px;
+    }
+    </style>
 
     <!--Portada-->
     <div class="jumbotron jumbotron-fluid">
       <div class="container cover-text">
         <p class="lead ">LOGRAMOS TU OBJETIVO JUNTOS</p>
-        <h1 class="display-4">Brücker es el puente entre vos y tus metas y objetivos inmobiliarios</h1>
+        <h1 class="display-4">BRÜCKER es el puente entre vos y tus metas y objetivos inmobiliarios</h1>
       </div>
     </div>
 
@@ -111,15 +114,18 @@
           </div>
         </div>
         <div class="col">
-          <div class="card h-100" data-aos="fade-up">
-            <img src="../brucker2.0/img/img-cards/card-comprar.png" class="card-img-top" alt="Mudanza">
-            <div class="card-body">
-              <h5 class="card-title">QUIERO COMPRAR</h5>
-              <a class="btn btn-primary blue-button" href="../brucker2.0/comprar.php" role="button">Más</a>
+          <a href="../brucker2.0/comprar.php" class="card-link">
+            <div class="card h-100" data-aos="fade-up">
+              <img src="../brucker2.0/img/img-cards/card-comprar.png" class="card-img-top" alt="Mudanza">
+              <div class="card-body">
+                <h5 class="card-title">QUIERO COMPRAR</h5>
+                <a class="btn btn-primary blue-button" href="../brucker2.0/comprar.php" role="button">Más</a>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="col">
+          <a href="../brucker2.0/vender.php" class="card-link">
           <div class="card h-100" data-aos="fade-up">
             <img src="../brucker2.0/img/img-cards/card-vender.png" class="card-img-top" alt="Llaves">
             <div class="card-body">
@@ -127,6 +133,7 @@
               <a class="btn btn-primary blue-button" href="../brucker2.0/vender.php" role="button">Más</a>
             </div>
           </div>
+          </a>
         </div>
         <div class="col">
           <div class="card h-100 justify-content-center" data-aos="fade-up">
@@ -134,6 +141,7 @@
           </div>
         </div>
         <div class="col">
+          <a href="../brucker2.0/tasar.php" class="card-link">
           <div class="card h-100" data-aos="fade-up">
             <img src="../brucker2.0/img/img-cards/card-tasar.png" class="card-img-top" alt="Tramites">
             <div class="card-body">
@@ -141,8 +149,10 @@
               <a class="btn btn-primary blue-button" href="../brucker2.0/tasar.php" role="button">Más</a>
             </div>
           </div>
+          </a>
         </div>
         <div class="col">
+          <a href="../brucker2.0/invertir.php" class="card-link">
           <div class="card h-100" data-aos="fade-up">
             <img src="../brucker2.0/img/img-cards/card-invertir.png" class="card-img-top" alt="Trámites">
             <div class="card-body">
@@ -150,6 +160,7 @@
               <a class="btn btn-primary blue-button" href="../brucker2.0/invertir.php" role="button">Más</a>
             </div>
           </div>
+          </a>
         </div>
       </div>
     </section>
@@ -160,7 +171,6 @@
         <h2 class="proposito-title fs-2" data-aos="zoom-in">¿Por qué <strong>ELEGIRNOS</strong>?</h2>
         <img src="../brucker2.0/img/img-valores/valores.png" class="proposito-image rounded mx-auto d-none d-md-block" data-aos="zoom-in" alt="Pareja feliz">
       </div>
-
       <div class="container-fluid proposito-content">
         <h6 class="container text-principal text-center">
           Nuestro PROPÓSITO es poner al cliente como protagonista, ofreciendo un servicio diferente,
@@ -172,47 +182,46 @@
 
     <!-- TESTIMONIOS -->
     <?php
-// Conectar a la base de datos
-$conn = new mysqli('localhost', 'root', 'admin', 'bd_de_prueba');
+      // Conectar a la base de datos
+      $conn = new mysqli('localhost', 'root', 'admin', 'bd_de_prueba');
 
-// Obtener los testimonios de la base de datos
-$query = "SELECT * FROM comentarios";
-$result = $conn->query($query);
+      // Obtener los testimonios de la base de datos
+      $query = "SELECT * FROM comentarios";
+      $result = $conn->query($query);
 
-// Verificar si hay testimonios
-if ($result->num_rows > 0) {
-    // Imprimir la sección de testimonios
-    echo "<section class='container section-testimonials'>";
-    echo "<div class='testimonials-title'>";
-    echo "<h3>Nuestros clientes <strong class='text-uppercase'>dicen...</strong></h3>";
-    echo "</div>";
-    echo "<div class='row'>";
+      // Verificar si hay testimonios
+      if ($result->num_rows > 0) {
+          // Imprimir la sección de testimonios
+          echo "<section class='container section-testimonials'>";
+          echo "<div class='testimonials-title'>";
+          echo "<h3>Nuestros clientes <strong class='text-uppercase'>dicen...</strong></h3>";
+          echo "</div>";
+          echo "<div class='row'>";
 
-    // Iterar sobre los testimonios y generar las tarjetas
-    while ($row = $result->fetch_assoc()) {
-        echo "<div class='col-sm-6'>";
-        echo "<div class='card' data-aos='fade-right'>";
-        echo "<div class='card-body'>";
-        echo "<p class='card-text'>" . $row['comment'] . "</p>";
-        echo "<h5 class='card-title text-uppercase'>" . $row['name'] . "</h5>";
-        echo "</div>";
-        echo "</div>";
-        echo "</div>";
-    }
+          // Iterar sobre los testimonios y generar las tarjetas
+          while ($row = $result->fetch_assoc()) {
+              echo "<div class='col-sm-6'>";
+              echo "<div class='card' data-aos='fade-right'>";
+              echo "<div class='card-body'>";
+              echo "<p class='card-text'>" . $row['comment'] . "</p>";
+              echo "<h5 class='card-title text-uppercase'>" . $row['name'] . "</h5>";
+              echo "</div>";
+              echo "</div>";
+              echo "</div>";
+          }
 
-    echo "</div>";
-    echo "</section>";
-} else {
-    echo "No hay testimonios disponibles";
-}
+          echo "</div>";
+          echo "</section>";
+      } else {
+          echo "No hay testimonios disponibles";
+      }
 
-// Cerrar la conexión
-$conn->close();
-?>
+      // Cerrar la conexión
+      $conn->close();
+  ?>
 
-
-    <!-- PROPIEDADES -->
-    <?php
+  <!-- PROPIEDADES -->
+  <?php
     // Conectar a la base de datos
     $conn = new mysqli('localhost', 'root', 'admin', 'bd_de_prueba');
 
@@ -223,7 +232,7 @@ $conn->close();
     // Almacenar los nombres de los videos en un array
     $videos = array();
     while ($row = $result->fetch_assoc()) {
-      $videos[] = $row['video'];
+        $videos[] = $row['video'];
     }
 
     // Seleccionar un video al azar
@@ -231,7 +240,7 @@ $conn->close();
 
     // Cerrar la conexión
     $conn->close();
-    ?>
+  ?>
     <section class="container properties text-center">
       <div class="row align-items-center">
         <div class="col">
@@ -247,8 +256,6 @@ $conn->close();
         </div>
       </div>
     </section>
-
-
   </main>
 
   <!--Turnero-->
