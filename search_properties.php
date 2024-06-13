@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propiedades/Filtro</title>
-    <link rel="icon" href="/img/logo/PNG/fondoDorado.png" type="image/x-icon">
-    <link rel="shortcut icon" href="/img/logo/PNG/fondoDorado.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="../brucker2.0/css/style.css">
-    <link rel="stylesheet" href="../brucker2.0/css/propiedades.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Somos el PUENTE que conecta a las personas con sus sueños inmobiliarios, ofreciendo un servicio profesional y comprometido. Descubre una nueva forma de vivir la experiencia inmobiliaria.">
+  <title>BRÜCKER</title>
+  <link rel="icon" href="./img/logo/PNG/logo-redondo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../brucker2.0/css/propiedades.css">
+  <link rel="stylesheet" href="../brucker2.0/css/style.css">
+
     <style>
         body {
             margin-top: 10%;
@@ -121,185 +122,179 @@
         }
         
     </style>
-    </style>
 
 </head>
- <!-- ICONO DE WHATSAPP -->
- <aside class="container">
+<body>
+  <!-- ICONO DE WHATSAPP -->
+<aside class="container">
+  <div class="whatsapp-container">
+    <a href="https://wa.me/543512010010" class="whatsapp-logo" target="_blank">
+      <div class="tooltip">¿Necesitás asesoramiento?</div>
+      <img src="../brucker2.0/img/logo/whatsapp-icon-green.png" alt="WhatsApp Logo">
+    </a>
+  </div>
+</aside>
+
+<header>
+  <nav class="navbar navbar-expand-lg">
+    <div class="col-lg-10 container-fluid">
+      <!-- Logo aqui POSICIONADO A LA IZQUIERDA -->
+      <a class="navbar-brand" href="../bruckerCopia/home.php">
+        <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker" height="70">
+      </a>
+      <!-- Botón de colapsar para pantallas pequeñas -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Menú POSICIONADO A LA DERECHA -->
+      <div class="collapse navbar-collapse navbar-style" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../brucker2.0/home.php"><b>Home</b></a>
+          </li>
+          <!-- desplegable nosotros -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <b>Nosotros</b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../brucker2.0/quienesSomos.php">Quiénes somos</a></li>
+              <!-- <li><a class="dropdown-item" href="../brucker2.0/exclusividad.php">La exclusividad</a></li> -->
+            </ul>
+          </li>
+          <!-- desplegable servicios -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <b>Servicios</b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="../brucker2.0/comprar.php">Comprar</a></li>
+              <li><a class="dropdown-item" href="../brucker2.0/vender.php">Vender</a></li>
+              <li><a class="dropdown-item" href="../brucker2.0/tasar.php">Tasar</a></li>
+              <li><a class="dropdown-item" href="../brucker2.0/invertir.php">Invertir</a></li>
+            </ul>
+          </li>
+          <!-- nav propiedades-novedades-contacto -->
+          <li class="nav-item">
+            <a class="nav-link" href="../brucker2.0/propiedades.php"><b>Propiedades</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../brucker2.0/novedades.php"><b>Novedades</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../brucker2.0/contacto.php"><b>Contacto</b></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <aside>
+    <div class="container">
       <div class="whatsapp-container">
         <a href="https://wa.me/543512010010" class="whatsapp-logo" target="_blank">
           <div class="tooltip">¿Necesitás asesoramiento?</div>
           <img src="../brucker2.0/img/logo/whatsapp-icon-green.png" alt="WhatsApp Logo">
         </a>
       </div>
-    </aside>
+    </div>
+  </aside>
+</main>
 
-    <header>
-    <nav class=" navbar navbar-expand-lg">
-      <div class="col-lg-10 container-fluid">
-        <!-- Logo aqui POSICIONADO A LA IZQUIERDA-->
-        <a class="navbar-brand" href="../bruckerCopia/home.php">
-          <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker" height="70">
-        </a>
-        <!-- Botón de colapsar para pantallas pequeñas -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Menú POSICIONADO A LA DERECHA-->
-        <div class="collapse navbar-collapse navbar-style" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto justify-content-end">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="../brucker2.0/home.php"><b>Home</b></a>
-            </li>
-            <!-- desplegable nosotros -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <b>Nosotros</b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../brucker2.0/quienesSomos.php">Quiénes somos</a></li>
-<!--                <li><a class="dropdown-item" href="../brucker2.0/exclusividad.php">La exclusividad</a></li> -->
-              </ul>
-            </li>
-            <!-- desplegable servicios -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <b>Servicios</b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../brucker2.0/comprar.php">Comprar</a></li>
-                <li><a class="dropdown-item" href="../brucker2.0/vender.php">Vender</a></li>
-                <li><a class="dropdown-item" href="../brucker2.0/tasar.php">Tasar</a></li>
-                <li><a class="dropdown-item" href="../brucker2.0/invertir.php">Invertir</a></li>
-              </ul>
-            </li>
-            <!-- nav propiedades-novedades-contacto -->
-            <li class="nav-item">
-              <a class="nav-link" href="../brucker2.0/propiedades.php"><b>Propiedades</b></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../brucker2.0/novedades.php"><b>Novedades</b></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../brucker2.0/contacto.php"><b>Contacto</b></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    </header>
+<section>
+  <div class="container">
+    <?php
+    // Verificar si se enviaron parámetros de búsqueda
+    if (isset($_GET['property_types']) && isset($_GET['operation_types'])) {
+        // Construir los parámetros de búsqueda
+        $search_params = array(
+            "current_localization_id" => 0,
+            "current_localization_type" => "country",
+            "price_from" => 0,
+            "price_to" => 999999999,
+            "operation_types" => array($_GET['operation_types']), // Obtener el tipo de operación
+            "property_types" => array($_GET['property_types']), // Obtener el tipo de propiedad
+            "currency" => "ANY",
+            "filters" => array()
+        );
 
-    <main>
+        // Construir la URL de la API con los parámetros de búsqueda
+        $api_url = "https://www.tokkobroker.com/api/v1/property/search/?lang=es_ar&format=json&key=afc6818db3d1bc5b3ae1e77169f5cb2aae4542f3&data=" . urlencode(json_encode($search_params));
 
-        <aside>
-            <div class="container">
-                <div class="whatsapp-container">
-                    <a href="https://wa.me/543512010010" class="whatsapp-logo" target="_blank">
-                        <div class="tooltip">¿Necesitás asesoramiento?</div>
-                        <img src="../brucker2.0/img/logo/whatsapp-icon-green.png" alt="WhatsApp Logo">
-                    </a>
-                </div>
-            </div>
-        </aside>
-    </main>
+        // Realizar la solicitud a la API de Tokko Broker
+        $response = file_get_contents($api_url);
 
-
-    <section>
+        // Procesar la respuesta de la API y mostrar los resultados
+        $data = json_decode($response, true);
+    ?>
         <div class="container">
-            <?php
-            // Verificar si se enviaron parámetros de búsqueda
-            if (isset($_GET['property_types']) && isset($_GET['operation_types'])) {
-                // Construir los parámetros de búsqueda
-                $search_params = array(
-                    "current_localization_id" => 0,
-                    "current_localization_type" => "country",
-                    "price_from" => 0,
-                    "price_to" => 999999999,
-                    "operation_types" => array($_GET['operation_types']), // Obtener el tipo de operación
-                    "property_types" => array($_GET['property_types']), // Obtener el tipo de propiedad
-                    "currency" => "ANY",
-                    "filters" => array()
-                );
-
-                // Construir la URL de la API con los parámetros de búsqueda
-                $api_url = "https://www.tokkobroker.com/api/v1/property/search/?lang=es_ar&format=json&key=afc6818db3d1bc5b3ae1e77169f5cb2aae4542f3&data=" . urlencode(json_encode($search_params));
-
-                // Realizar la solicitud a la API de Tokko Broker
-                $response = file_get_contents($api_url);
-
-                // Procesar la respuesta de la API y mostrar los resultados
-                $data = json_decode($response, true);
-            ?>
-                <div class="container">
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                        <?php
-                        if ($data && isset($data['objects'])) {
-                            foreach ($data['objects'] as $property) {
-                        ?>
-                                <div class="col">
-                                    <div class="card">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <?php
+                if ($data && isset($data['objects'])) {
+                    foreach ($data['objects'] as $property) {
+                ?>
+                        <div class="col">
+                            <div class="card">
+                                <?php
+                                if (isset($property['photos']) && is_array($property['photos']) && !empty($property['photos'])) {
+                                    $first_photo = reset($property['photos']);
+                                ?>
+                                    <img src="<?php echo $first_photo['image']; ?>" class="card-img-top" alt="<?php echo $first_photo['description']; ?>">
+                                <?php
+                                } else {
+                                ?>
+                                    <img src="default-image.jpg" class="card-img-top" alt="Imagen no disponible">
+                                <?php
+                                }
+                                ?>
+                                <div class="card-body">
+                                    <h5 class="card-title"><?php echo $property['publication_title']; ?></h5>
+                                    <p class="card-text">Dormitorios: <?php echo $property['suite_amount']; ?></p>
+                                    <p class="card-text">Superficie: <?php echo $property['surface']; ?> m²</p>
+                                    <?php
+                                    echo '<div class="fondo-precio position-relative bottom-0 start-0 w-100 p-3;">';
+                                    ?>
+                                    <div class="precio-propiedad">
                                         <?php
-                                        if (isset($property['photos']) && is_array($property['photos']) && !empty($property['photos'])) {
-                                            $first_photo = reset($property['photos']);
-                                        ?>
-                                            <img src="<?php echo $first_photo['image']; ?>" class="card-img-top" alt="<?php echo $first_photo['description']; ?>">
-                                        <?php
-                                        } else {
-                                        ?>
-                                            <img src="default-image.jpg" class="card-img-top" alt="Imagen no disponible">
-                                        <?php
+                                        foreach ($property['operations'] as $operation) {
+                                            foreach ($operation['prices'] as $price) {
+                                                echo '<p> ' . $price['price'] . ' ' . $price['currency'] . '</p>';
+                                            }
                                         }
                                         ?>
-                                        <div class="card-body">
-                                            <h5 class="card-title"><?php echo $property['publication_title']; ?></h5>
-                                            <p class="card-text">Dormitorios: <?php echo $property['suite_amount']; ?></p>
-                                            <p class="card-text">Superficie: <?php echo $property['surface']; ?> m²</p>
-
-                                            <?php
-
-                                            echo '<div class="fondo-precio position-relative bottom-0 start-0 w-100 p-3;">';
-                                            ?>
-
-                                            <div class="precio-propiedad">
-                                                <?php
-                                                foreach ($property['operations'] as $operation) {
-                                                    foreach ($operation['prices'] as $price) {
-                                                        echo '<p> ' . $price['price'] . ' ' . $price['currency'] . '</p>';
-                                                    }
-                                                }
-                                                ?>
-                                            </div>
-
-                                            <?php
-                                            echo '</div>';
-                                            ?>
-                                            <a href="detallePropiedades.php?id=<?php echo $property['id']; ?>" class="btn btn-primary">Ver Propiedad</a>
-                                        </div>
                                     </div>
+                                    <?php
+                                    echo '</div>';
+                                    ?>
+                                    <a href="detallePropiedades.php?id=<?php echo $property['id']; ?>" class="btn btn-primary">Ver Propiedad</a>
                                 </div>
-                        <?php
-                            }
-                        } else {
-                            echo 'No se encontraron resultados.';
-                        }
-                        ?>
-                    </div>
-                </div>
-            <?php
-            } else {
-                echo "No se han proporcionado parámetros de búsqueda.";
-            }
-            ?>
+                            </div>
+                        </div>
+                <?php
+                    }
+                } else {
+                    echo 'No se encontraron resultados.';
+                }
+                ?>
+            </div>
         </div>
-    </section>
+    <?php
+    } else {
+        echo "No se han proporcionado parámetros de búsqueda.";
+    }
+    ?>
+  </div>
+</section>
 
-    <div class=" container boton-pie">
+  <div class="container boton-pie">
     <?php
     echo '<a href="propiedades.php?id=' . $property['id'] . '" class="boton-atras">Volver a Propiedades</a>';
     ?>
-    </div>
+  </div>
 
-     <!--Footer-->
+  <!-- Footer -->
   <footer class="footer py-5">
     <div class="container">
       <div class="row">
@@ -318,10 +313,10 @@
         </div>
       </div>
     </div>
-  </footer> 
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <script src="/js/app.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  </body>
-
+</body>
 </html>
