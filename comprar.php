@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brücker</title>
+    <title>BRÜCKER</title>
     <link rel="icon" href="/img/logo/PNG/fondoDorado.png" type="image/x-icon">
     <link rel="shortcut icon" href="/img/logo/PNG/fondoDorado.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -74,9 +74,10 @@
   <main>
     <!--Portada-->
     <div class="img-fluid portada-comprar">
-        <div class="container cover-text">
-        <h1 class="display-4">QUIERO COMPRAR</h1>
-        <hr style="border-top: 5px solid #000000; width: 10%; margin: 1rem 0;">
+        <div class="cover-text">
+        <h1 class="container display-4">QUIERO COMPRAR
+          <hr style="border-top: 5px solid #000000; width: 10%; margin: 1rem 0;">
+        </h1>
         </div>
     </div>
     
@@ -92,18 +93,18 @@
       </div>  
     </aside>
     
-    <section class="title">
+    <section class="container title text-center mb-3">
       <h3 class="title-comprar">¿Querés <strong>COMPRAR</strong> una propiedad?</h3>
       <h3 class="subtitle-comprar">TE EXPLICO CÓMO TE AYUDAMOS</h3>
     </section>
 
     <!-- Tarjetas con pasos para comprar-->
-    <section>
-      <div class="container-cards-comprar">
+    <section class="container mb-5">
+      <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col">
             <div class="card h-100" data-aos="fade-down">
-              <img src="../brucker2.0/img/img-comprar/paso1.jpg" class="card-img-top" alt="Persona en notebook">
+              <img src="../brucker2.0/img/img-comprar/paso1.jpg" class="card-img-top card-img" alt="Persona en notebook">
               <div class="card-body">
                 <h5 class="card-title">1</h5>
                 <p class="card-text">¿Qué estas buscando? Tomamos en cuenta tu objetivo de manera personalizada.</p>
@@ -112,7 +113,7 @@
           </div>
           <div class="col">
             <div class="card h-100" data-aos="fade-down">
-              <img src="../brucker2.0/img/img-comprar/paso2.jpg" class="card-img-top" alt="Análisis y cálculos">
+              <img src="../brucker2.0/img/img-comprar/paso2.jpg" class="card-img-top card-img" alt="Análisis y cálculos">
               <div class="card-body">
                 <h5 class="card-title">2</h5>
                 <p class="card-text">Analizamos el mercado seleccionamos propiedades que puedan ser de tu interés.</p>
@@ -123,7 +124,7 @@
             <div class="card h-100" data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1500">
-              <img src="../brucker2.0/img/img-comprar/paso3.jpg" class="card-img-top" alt="Personas analizando">
+              <img src="../brucker2.0/img/img-comprar/paso3.jpg" class="card-img-top card-img" alt="Personas analizando">
               <div class="card-body">
                 <h5 class="card-title">3</h5>
                 <p class="card-text">Juntos analizamos cada una de las opciones. Definiendo según tu orden de propiedades.</p>
@@ -132,7 +133,7 @@
           </div>
           <div class="col">
             <div class="card h-100" data-aos="fade-down">
-              <img src="../brucker2.0/img/img-comprar/paso4.jpg" class="card-img-top" alt="Visitas guiadas">
+              <img src="../brucker2.0/img/img-comprar/paso4.png" class="card-img-top card-img" alt="Visitas guiadas">
               <div class="card-body">
                 <h5 class="card-title">4</h5>
                 <p class="card-text">Coordinaremos juntos visitas a las propiedades seleccionadas. Te ayudamos a tomar la mejor decisión.</p>
@@ -141,7 +142,7 @@
           </div>
           <div class="col">
             <div class="card h-100" data-aos="fade-down">
-              <img src="../brucker2.0/img/img-comprar/paso5.jpg" class="card-img-top" alt="Manos estrechadas">
+              <img src="../brucker2.0/img/img-comprar/paso5.jpg" class="card-img-top card-img" alt="Manos estrechadas">
               <div class="card-body">
                 <h5 class="card-title">5</h5>
                 <p class="card-text">“La Negociación”  Nos ocupamos de obtener el mejor acuerdo para vos.</p>
@@ -152,7 +153,7 @@
             <div class="card h-100" data-aos="fade-down"
             data-aos-easing="linear"
             data-aos-duration="1500">
-              <img src="../brucker2.0/img/img-comprar/paso6.jpg" class="card-img-top" alt="Buscando en carpetas">
+              <img src="../brucker2.0/img/img-comprar/paso6.jpg" class="card-img-top card-img" alt="Buscando en carpetas">
               <div class="card-body">
                 <h5 class="card-title">6</h5>
                 <p class="card-text">Armamos la carpeta, revisamos la documentación. Brindándote tranquilidad jurídica. </p>
@@ -161,7 +162,7 @@
           </div>
           <div class="col">
             <div class="card h-100" data-aos="fade-down">
-              <img src="../brucker2.0/img/img-comprar/paso7.jpg" class="card-img-top" alt="firma">
+              <img src="../brucker2.0/img/img-comprar/paso7.png" class="card-img-top card-img" alt="firma">
               <div class="card-body">
                 <h5 class="card-title">7</h5>
                 <p class="card-text">Vamos juntos a escribanía.</p>
@@ -170,7 +171,7 @@
           </div>
           <div class="col">
             <div class="card h-100" data-aos="fade-down">
-              <img src="../brucker2.0/img/img-comprar/paso8.jpg" class="card-img-top" alt="Mudanza">
+              <img src="../brucker2.0/img/img-comprar/paso8.jpg" class="card-img-top card-img" alt="Mudanza">
               <div class="card-body">
                 <h5 class="card-title">8</h5>
                 <p class="card-text">Es tuyo! A disfrutarlo!</p>
@@ -178,10 +179,10 @@
             </div>
           </div>
           <div class="col">
-            <div class="card h-100" data-aos="fade-down"
-            data-aos-easing="linear"
-            data-aos-duration="1500" >
-              <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" class="card-img-top" alt="Logo de Brücker">           
+            <div class="card h-100 p-5" data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="1500" >
+              <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" class="card-logo" alt="Logo de Brücker">           
             </div>
           </div>
         </div>
@@ -209,7 +210,7 @@
       <div class="row">
         <div class="col-md-4 text-center mb-3 mb-md-0">
           <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo de la empresa" class="img-fluid" style="max-height: 70px;">
-          <p class="mt-3">© 2024 Brücker. Todos los derechos reservados.</p>
+          <p class="mt-3">© 2024 BRÜCKER. Todos los derechos reservados.</p>
         </div>
         <div class="col-md-4 text-center mb-3 mb-md-0">
         </div>

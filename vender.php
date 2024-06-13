@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brücker</title>
+    <title>BRÜCKER</title>
     <link rel="icon" href="/img/logo/PNG/fondoDorado.png" type="image/x-icon">
     <link rel="shortcut icon" href="/img/logo/PNG/fondoDorado.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -75,9 +75,10 @@
   <main>
     <!--Portada-->
     <div class="img-fluid portada-vender">
-        <div class="container cover-text">
-        <h1 class="display-4">QUIERO VENDER</h1>
-        <hr style="border-top: 5px solid #002244; width: 10%; margin: 1rem 0;">
+        <div class="cover-text">
+        <h1 class="container display-4">QUIERO VENDER
+          <hr style="border-top: 5px solid #002244; width: 10%; margin: 1rem 0;">
+        </h1>
         </div>
     </div>
 
@@ -93,14 +94,14 @@
       </div>
     </aside>
     
-    <section class="title">
+    <section class="container title text-center mb-3">
       <h3 class="title-vender">¿Querés <strong>VENDER</strong> una propiedad?</h3>
       <h3 class="subtitle-vender">TE EXPLICO CÓMO TE AYUDAMOS</h3>
     </section>
 
     <!-- Tarjetas con pasos para vender -->
-    <section>
-      <div class="container-cards-vender">
+    <section class="container">
+      <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col">
             <div class="card h-100" data-aos="fade-down">
@@ -183,7 +184,7 @@
           </div>
           <div class="col">
             <div class="card h-100" data-aos="fade-down">
-              <img src="../brucker2.0/img/img-vender/paso9.jpg" class="card-img-top" alt="Firma">
+              <img src="../brucker2.0/img/img-vender/paso9.png" class="card-img-top" alt="Firma">
               <div class="card-body">
                 <h5 class="card-title">9</h5>
                 <p class="card-text">Te acompañamos a escribanía
@@ -217,7 +218,7 @@
       <div class="row">
         <div class="col-md-4 text-center mb-3 mb-md-0">
           <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo de la empresa" class="img-fluid" style="max-height: 70px;">
-          <p class="mt-3">© 2024 Brücker. Todos los derechos reservados.</p>
+          <p class="mt-3">© 2024 BRÜCKER. Todos los derechos reservados.</p>
         </div>
         <div class="col-md-4 text-center mb-3 mb-md-0">
         </div>

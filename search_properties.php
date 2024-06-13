@@ -305,7 +305,7 @@
       <div class="row">
         <div class="col-md-4 text-center mb-3 mb-md-0">
           <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo de la empresa" class="img-fluid" style="max-height: 70px;">
-          <p class="mt-3">© 2024 Brücker. Todos los derechos reservados.</p>
+          <p class="mt-3">© 2024 BRÜCKER. Todos los derechos reservados.</p>
         </div>
         <div class="col-md-4 text-center mb-3 mb-md-0">
         </div>

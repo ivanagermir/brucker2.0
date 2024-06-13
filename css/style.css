@@ -64,30 +64,31 @@ nav{
 /* FIN DEL CÓDIGO PARA BOTÓN DE WHATSAPP*/
 
 /* Estilo para las portadas, class cover-text*/
-.cover-text {  
+.cover-text {
   position: absolute;
   bottom: 30%;
-  left: 60px;
-}
-
-.cover-text .container {
-  margin-left: 20px;
-  max-width: 50%;
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  left: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
 }
 
 .cover-text h1 {
   color: white;
   font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  max-width: 90%;
 }
-.cover-text p{
+
+.cover-text h4 {
   background-color: #002244;
   color: white;
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
-  max-width: 29%;
+  display: inline-block;
+  margin-inline-start: 100px;
 }
+
 
 /* Botones a usar: de bootstrap usar el "btn-primary" */
 
@@ -145,6 +146,9 @@ footer{
     padding: 10px;
     padding-left: 10px;
   }
+  .cover-text h4{
+    margin-left: 10px;
+  }
 }
 
 
@@ -182,4 +186,8 @@ footer{
   background-color: #007bff;
   color: white;
   text-decoration: none;
+}
+
+p {
+  font-size: 16px;
 }
