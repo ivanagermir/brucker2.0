@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Somos el PUENTE que conecta a las personas con sus sueños inmobiliarios, ofreciendo un servicio profesional y comprometido. Descubre una nueva forma de vivir la experiencia inmobiliaria.">
   <title>BRÜCKER</title>
-  <link rel="icon" href="/img/logo/PNG/fondoDorado.png" type="image/x-icon">
-  <link rel="shortcut icon" href="/img/logo/PNG/fondoDorado.png" type="image/x-icon">
+  <link rel="icon" href="./img/logo/PNG/logo-redondo.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <link rel="stylesheet" href="../brucker2.0/css/style.css">
-  <link rel="stylesheet" href="../brucker2.0/css/propiedades.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../brucker2.0/css/propiedades.css">
+  <link rel="stylesheet" href="../brucker2.0/css/style.css">
 </head>
 
 <body>
@@ -94,45 +94,45 @@
 
     <section>
 
-      <section class="container">
-
-
-        <div class="container-filtro-bg">
-          <div class="container container-filtro p-4 mb-5 mt-5 shadow rounded form-select">
-            <h3 class="title-filtro mb-4 rounded">Filtro</h3>
-            <form action="search_properties.php" method="get">
-              <div class="form-group mb-3">
-                <label for="operation_types">Tipo de Operación:</label>
-                <select id="operation_types" name="operation_types" class="form-control">
-                <option value='-1'>Seleccionar tipo de operación</option>
-                  <option value="1">Venta</option>
-                  <option value="2">Alquiler</option>
-                  <option value="3">Alquiler Temporal</option>
-                  <!-- Agrega más opciones según sea necesario -->
-                </select>
-              </div>
-              <div class="form-group mb-3">
-                <label for="property_types">Tipo de Propiedad:</label>
-                <select id="property_types" name="property_types" class="form-control">
-                  <option value='-1'>Seleccionar tipo de propiedad</option>
-                  <option value='1'>Land / Terreno</option>
-                  <option value='2'>Appartment / Departamento</option>
-                  <option value='3'>House / Casa</option>
-                  <option value='4'>Weekend House</option>
-                  <option value='5'>Office / Oficina</option>
-                  <option value='6'>Mooring</option>
-                  <option value='7'>Bussiness Premises</option>
-                  <option value='8'>Commercial Building</option>
-                  <!-- Agrega más opciones según sea necesario -->
-                </select>
-              </div>
-              <div class="form-group mt-4">
-                <button type="submit" class="btn btn-outline-primary">Buscar</button>
-              </div>
-            </form>
+    <section class="container">
+  <div class="container-filtro-bg">
+    <div class="container container-filtro p-4 mb-5 mt-5 shadow rounded form-select">
+      <form action="search_properties.php" method="get">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="input-group mb-3 me-3">
+            <label class="input-group-text" for="operation_types">Tipo de Operación</label>
+            <select class="form-select" id="operation_types" name="operation_types">
+              <option value='-1'>Seleccionar</option>
+              <option value="1">Venta</option>
+              <option value="2">Alquiler</option>
+              <option value="3">Alquiler Temporal</option>
+              <!-- Agrega más opciones según sea necesario -->
+            </select>
+          </div>
+          <div class="input-group mb-3 me-3">
+            <label class="input-group-text" for="property_types">Tipo de Propiedad</label>
+            <select class="form-select" id="property_types" name="property_types">
+              <option value='-1'>Seleccionar</option>
+              <option value='1'>Land / Terreno</option>
+              <option value='2'>Appartment / Departamento</option>
+              <option value='3'>House / Casa</option>
+              <option value='4'>Weekend House</option>
+              <option value='5'>Office / Oficina</option>
+              <option value='6'>Mooring</option>
+              <option value='7'>Bussiness Premises</option>
+              <option value='8'>Commercial Building</option>
+              <!-- Agrega más opciones según sea necesario -->
+            </select>
+          </div>
+          <div class="input-group mb-3">
+            <button type="submit" class="btn btn-outline-primary">Buscar</button>
           </div>
         </div>
-      </section>
+      </form>
+    </div>
+  </div>
+</section>
+
 
 
 

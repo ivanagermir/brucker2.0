@@ -47,7 +47,8 @@
 }
   
 .list-values h6 {
-  color: #002244;
+  background-color: #002244;
+  color: #f1f2f3;
   font-weight: bold;
   margin-top: 10px;
   border: 2px solid #002244;
@@ -56,8 +57,8 @@
 }
 
 .list-values p {
-  font-weight: bold;
-  color: #105498;
+  font-weight: 400;
+  color: #002244;
   font-size: 14px;
 }
 

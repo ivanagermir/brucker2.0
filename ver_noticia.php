@@ -1,96 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/ver_noticia.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
-    <title>News</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Somos el PUENTE que conecta a las personas con sus sueños inmobiliarios, ofreciendo un servicio profesional y comprometido. Descubre una nueva forma de vivir la experiencia inmobiliaria.">
+  <title>BRÜCKER</title>
+  <link rel="icon" href="./img/logo/PNG/logo-redondo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../brucker2.0/css/ver_noticia.css">
+  <link rel="stylesheet" href="../brucker2.0/css/style.css">
 </head>
 <body>
-
-
-
-<style>
-  /*Espacio para la fuente*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
-
-
-
-.news-title {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-top: 20px;
-    text-align: center;
-}
-
-
-h3 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1.25rem;
-    font-style: italic;
-    color: gray; /* Color gris */
-    margin-top: 10px;
-    text-align: center;
-}
-
-
-.news-content {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-top: 10px;
-    text-align: left;
-    text-justify: auto;
-}
-.news-additional-content{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-top: 10px;
-    text-align: left;
-    text-justify: auto;
-}
-
-.news-article {
-    margin-bottom: 50px; 
-    margin-top: 130px;
-    
-}
-
-
-.container-new {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.5;
-  
-}
-
-/* ver_noticia.css */
-
-.image-text-container {
-    max-width: 100%;
-    max-height: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-}
-
-
-
-</style>
-<header>
-<nav class=" navbar navbar-expand-lg">
+  <header>
+    <nav class=" navbar navbar-expand-lg">
       <div class="col-lg-10 container-fluid">
         <!-- Logo aqui POSICIONADO A LA IZQUIERDA-->
         <a class="navbar-brand" href="../brucker2.0/home.php">
