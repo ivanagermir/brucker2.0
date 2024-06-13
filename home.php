@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brücker</title>
+  <title>BRÜCKER</title>
   <link rel="icon" href="./img/logo/PNG/fondoDorado.png" type="image/x-icon">
   <link rel="shortcut icon" href="../img/logo/PNG/fondoDorado.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -73,17 +73,11 @@
   </header>
 
   <main>
-    <style>
-    p {
-      font-size: 16px;
-    }
-    </style>
-
     <!--Portada-->
     <div class="jumbotron jumbotron-fluid">
-      <div class="container cover-text">
-        <p class="lead ">LOGRAMOS TU OBJETIVO JUNTOS</p>
-        <h1 class="display-4">BRÜCKER es el puente entre vos y tus metas y objetivos inmobiliarios</h1>
+      <div class="cover-text">
+        <h4>LOGRAMOS TU OBJETIVO JUNTOS</h4>
+        <h1 class="container display-4">BRÜCKER es el puente entre vos y tus metas y objetivos inmobiliarios</h1>
       </div>
     </div>
 
@@ -136,7 +130,7 @@
           </a>
         </div>
         <div class="col">
-          <div class="card h-100 justify-content-center" data-aos="fade-up">
+          <div class="card h-100 justify-content-center p-5" data-aos="fade-up">
             <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo">
           </div>
         </div>
@@ -278,7 +272,7 @@
       <div class="row">
         <div class="col-md-4 text-center mb-3 mb-md-0">
           <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo de la empresa" class="img-fluid" style="max-height: 70px;">
-          <p class="mt-3">© 2024 Brücker. Todos los derechos reservados.</p>
+          <p class="mt-3">© 2024 BRÜCKER. Todos los derechos reservados.</p>
         </div>
         <div class="col-md-4 text-center mb-3 mb-md-0">
         </div>

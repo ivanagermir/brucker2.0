@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brücker</title>
+  <title>BRÜCKER</title>
   <link rel="icon" href="/img/logo/PNG/fondoDorado.png" type="image/x-icon">
   <link rel="shortcut icon" href="/img/logo/PNG/fondoDorado.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -74,9 +74,10 @@
   <main>
     <!--Portada-->
     <div class="img-fluid portada-propiedades">
-      <div class="container cover-text">
-        <h1 class="display-4">PROPIEDADES</h1>
+      <div class="cover-text">
+        <h1 class="container display-4">PROPIEDADES
         <hr style="border-top: 5px solid #000000; width: 10%; margin: 1rem 0;">
+        </h1>
       </div>
     </div>
 
@@ -194,7 +195,7 @@
       <div class="row">
         <div class="col-md-4 text-center mb-3 mb-md-0">
           <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo de la empresa" class="img-fluid" style="max-height: 70px;">
-          <p class="mt-3">© 2024 Brücker. Todos los derechos reservados.</p>
+          <p class="mt-3">© 2024 BRÜCKER. Todos los derechos reservados.</p>
         </div>
         <div class="col-md-4 text-center mb-3 mb-md-0">
         </div>
