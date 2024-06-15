@@ -154,13 +154,14 @@
                   echo '<img src="' . $first_photo['image'] . '" class="card-img-top" alt="' . $first_photo['description'] . '">';
               } else {
                   echo '<img src="default-image.jpg" class="card-img-top" alt="Imagen no disponible">';
+                  
               }
       
               echo '<div class="overlay">';
-              echo '<div class="icon-text">'; 
+              echo '<div class="icon-text-bed">'; 
               echo '<img src="../brucker2.0/img/icons/bed.png" alt="icono cama" class="icon"> ' . $property['suite_amount'];
               echo '</div>';
-              echo '<div class="icon-text">'; 
+              echo '<div class="icon-text-house">'; 
               echo '<img src="../brucker2.0/img/icons/house.png" alt="icono superficie" class="icon"> ' . $property['surface'] . ' m²</p>';
               echo '</div>';
               echo '</div>';
