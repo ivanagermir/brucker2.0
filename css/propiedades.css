@@ -35,165 +35,95 @@ body {
   text-align: center;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8); /* Opacidad del contenido */
-  border-radius: 10px; /* Bordes redondeados para el contenido */
+
 }
+
+
+
+/* Other card styles remain the same... */
+
+/*
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+} */
 
 .card {
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.overlay {
+  position: relative;
+  bottom: 34px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px;
+  color: white;
+  width: 50%; /* Ajusta el ancho para ocupar la mitad del espacio */
+}
+
+.icon-text img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.icon-text:first-child {
+  border-right: 1px solid white; /* Línea divisoria entre los dos iconos */
+}
+
+.card-content {
+  padding: 5px 5px; 
+}
+
+.card-content h3 {
+  margin-top: -20px;
+  font-size: 17px;
+  color: #000000;
+  text-align: center;
+}
+
+.card-content hr {
   border: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  border-top: 1px solid #a09c9c;
+  margin: 10px 0;
 }
+
+.card-content p {
+  margin-bottom: 10px;
+  color: #000000;
+  text-align: center;
   
-
-.card-img-custom {
-  width: 100%; /* Ajusta el ancho de la imagen para que ocupe toda la tarjeta */
-  height: 100%; /* Ajusta la altura de la imagen para que ocupe toda la tarjeta */
-  object-fit: cover; /* Escala la imagen para que cubra toda la tarjeta */
-  position: relative; /* Establece la posición relativa para que los elementos secundarios se posicionen correctamente */
 }
 
-.card-img-custom img {
-  position: absolute; /* Establece la posición absoluta para que la imagen se superponga al fondo de la tarjeta */
-  top: 0; /* Alinea la imagen en la parte superior de la tarjeta */
-  left: 0; /* Alinea la imagen en la parte izquierda de la tarjeta */
-  width: 100%; /* Ajusta el ancho de la imagen para que ocupe toda la tarjeta */
-  height: 100%; /* Ajusta la altura de la imagen para que ocupe toda la tarjeta */
-  object-fit: cover; /* Escala la imagen para que cubra toda la tarjeta */
-  z-index: -1; /* Coloca la imagen detrás del contenido de la tarjeta */
+.precio {
+  color: #002244;
+  text-align: center;
+  font-size: 19px;
 }
 
 
-
-
-  .card-body {
-    padding: 20px;
-  }
   
-  .smaller-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-
-  .property-details {
-    margin-top: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding: 10px;
-  }
-  
-  .property-details p {
-    margin: 5px 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .property-details p svg {
-    margin-right: 8px;
-  }
-  
-  .property-image img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .precio-propiedad {
-    font-size: 1.5rem;
-    color: #28a745;
-    margin-top: 10px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    padding: 10px;
-  }
-  
-  .btn-container {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .btn-container .btn {
-    background-color: #002244;
-    border: none;
-    color: #fff;
-  }
-
-  .card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-
-  .card:hover {
-          transform: scale(1.05);
-      }
-  .card-img-top {
-    object-fit: cover;
-    /* Ajusta el tamaño de la imagen */
-    height: 200px;
-    /* Ajusta la altura de la imagen */
-  }
-
-  .card-body {
-    padding: 20px;
-    background-color: #f8f9fa;
-    /* Fondo del cuerpo de la card */
-  }
-
-  .card-title {
-    color: #fff;
-    /* Color del texto */
-    background-color: #002244;
-    /* Color de fondo del título */
-    padding: 10px;
-    margin-bottom: 10;
-    border-radius: 0 0 10px 10px;
-    /* Borde inferior redondeado */
-
-  }
-
-  .btn {
-    background-color: #002244;
-    color: #fff;
-    border-color: #002244;
-    text-align: center;
-  }
-
-
-  .title-filtro {
-    text-align: center;
-    background-color: #002244;
-    color: #fff;
-    padding: 5px;
-  }
-
-
-  .title-propiedades {
-    color: #002244;
-    text-align: center;
-    font-size: 80px;
-    margin-left: 20%;
-    margin-top: 5%;
-  }
-
-  .icon {
-  width: 35px; /* Tamaño deseado para los iconos */
-  height: 30px;
-}
-.precio-propiedad {
-background-color: #3b8bdb;
-text-align: center;
-color: #fff;
-margin-bottom: 0; /* Eliminar el margen inferior */
-padding: 3px; /* Reducir el padding del contenedor del precio */
-}
-
-.fondo-precio {
-padding: 0px; /* Reducir el padding del contenedor del fondo */
-}

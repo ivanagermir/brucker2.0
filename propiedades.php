@@ -96,7 +96,7 @@
 
     <section class="container">
   <div class="container-filtro-bg">
-    <div class="container container-filtro p-4 mb-5 mt-5 shadow rounded form-select">
+    <div class="container container-filtro p-4 mb-5 mt-5 shadow rounded">
       <form action="search_properties.php" method="get">
         <div class="d-flex justify-content-between align-items-center">
           <div class="input-group mb-3 me-3">
@@ -135,54 +135,68 @@
 
 
 
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-3">
+    <?php
+        // Realizar la solicitud a la API de Tokko Broker para obtener los datos de las propiedades
+        $url = 'http://www.tokkobroker.com/api/v1/property/?limit=10&offset=0&lang=es_ar&format=json&key=afc6818db3d1bc5b3ae1e77169f5cb2aae4542f3';
+        $response = file_get_contents($url);
+        $data = json_decode($response, true);
 
-      <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-        <?php
-  // Realizar la solicitud a la API de Tokko Broker para obtener los datos de las propiedades
-  $url = 'http://www.tokkobroker.com/api/v1/property/?limit=10&offset=0&lang=es_ar&format=json&key=afc6818db3d1bc5b3ae1e77169f5cb2aae4542f3';
-  $response = file_get_contents($url);
-  $data = json_decode($response, true);
-
-  if ($data && isset($data['objects'])) {
-    foreach ($data['objects'] as $property) {
-      echo '<div class="col">';
-      echo '<div class="card h-100 position-relative">';
-      if (isset($property['photos']) && is_array($property['photos']) && !empty($property['photos'])) {
-        $first_photo = reset($property['photos']);
-        echo '<img src="' . $first_photo['image'] . '" class="card-img-top" alt="' . $first_photo['description'] . '">';
+        if ($data && isset($data['objects'])) {
+          foreach ($data['objects'] as $property) {
+              echo '<div class="col">';
+              echo '<a href="detallePropiedades.php?id=' . $property['id'] . '" class="text-decoration-none">';
+              echo '<div class="card">';
+              
+              if (isset($property['photos']) && is_array($property['photos']) && !empty($property['photos'])) {
+                  $first_photo = reset($property['photos']);
+                  echo '<img src="' . $first_photo['image'] . '" class="card-img-top" alt="' . $first_photo['description'] . '">';
+              } else {
+                  echo '<img src="default-image.jpg" class="card-img-top" alt="Imagen no disponible">';
+              }
+      
+              echo '<div class="overlay">';
+              echo '<div class="icon-text">'; 
+              echo '<img src="../brucker2.0/img/icons/bed.png" alt="icono cama" class="icon"> ' . $property['suite_amount'];
+              echo '</div>';
+              echo '<div class="icon-text">'; 
+              echo '<img src="../brucker2.0/img/icons/house.png" alt="icono superficie" class="icon"> ' . $property['surface'] . ' m²</p>';
+              echo '</div>';
+              echo '</div>';
+              echo '<div class="card-content">';
+              
+              echo '<h3>';
+              // Obtener el título de la propiedad y limitar a 37 caracteres
+              $trimmed_title = mb_strimwidth($property['publication_title'], 0, 37, '...');
+              // Convertir la primera letra a mayúscula y el resto a minúscula
+              $formatted_title = ucfirst(strtolower($trimmed_title));
+              echo $formatted_title;
+              echo '</h3>';
+              
+              // Mostrar la ubicación en negrita
+              echo '<p><strong>' . $property['location']['short_location'] . '</strong></p>';
+              echo '<hr>';
+              
+              foreach ($property['operations'] as $operation) {
+                  foreach ($operation['prices'] as $price) {
+                      // Mostrar el precio en negrita
+                      echo '<div class="precio"><strong>' . $price['price'] . ' ' . $price['currency'] . '</strong></div>';
+                  }
+              }
+              echo '</div>';
+              echo '</div>';
+              echo '</a>';
+              echo '</div>';
+          }
       } else {
-        echo '<img src="default-image.jpg" class="card-img-top" alt="Imagen no disponible">';
+          echo 'Error al obtener las propiedades.';
       }
+      
+    ?>
+    </div>
+</div>
 
-      echo '<div class="fondo-precio position-relative bottom-0 start-0 w-100 p-3;">'; 
-      echo '<div class="precio-propiedad">';
-      foreach ($property['operations'] as $operation) {
-        foreach ($operation['prices'] as $price) {
-          echo '<p> ' . $price['price'] . ' ' . $price['currency'] . '</p>';
-        }
-      }
-      echo '</div>';
-      echo '</div>';
-
-      echo '<div class="card-body" style="padding-top: 10px;">'; // Aumentar el espacio entre el título y el cuerpo de la tarjeta
-      echo '<h5 class="card-title text-center">' . $property['publication_title'] . '</h5>';
-      echo '<div class="d-flex justify-content-between align-items-center mb-3">';
-      echo '<p class="card-icon"><img src="../brucker2.0/img/icons/dormitorios.jpg" alt="icono cama" class="icon"> ' .   $property['suite_amount'] . '  </p>';
-      echo '<p class="card-text"><img src="../brucker2.0/img/icons/superficie.jpg" alt="icono superficie" class="icon"> ' .  $property['surface'] . '  m²</p>';
-      echo '</div>';
-
-      echo '<div class="text-center">'; // Centrar el botón
-      echo '<a href="detallePropiedades.php?id=' . $property['id'] . '" class="btn btn-outline-primary mt-3">Ver Propiedad</a>'; // Mover el botón hacia el centro
-      echo '</div>';
-      echo '</div>';
-      echo '</div>';
-      echo '</div>';
-    }
-  } else {
-    echo 'Error al obtener las propiedades.';
-  }
-?>
         </div>
       </div>
 
