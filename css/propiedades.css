@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 
 body {
     font-family: 'Baloo 2', sans-serif;
@@ -18,30 +18,63 @@ body {
     background-attachment: fixed;
 }
 
-.filter-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('//img/img-cards/card-comprar.png');
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(0, 0, 0, 0.5);
+.portada-search_properties{
+  background-image: url('../img/img-propiedades/cuarto.jpg');
+  background-size: cover;
+  height: 500px;
+  position: relative;
+  z-index: 0;
+  background-attachment: fixed;
 }
 
-.filter-content {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+.container-filtro {
+  width: 100%; /* Hacer que el filtro ocupe todo el ancho del contenedor */
+  margin: 0 auto; /* Centrar el filtro horizontalmente dentro del contenedor-filtro-bg */
+  
+  border-radius: 10px; /* Opcional: agregar bordes redondeados al contenedor */
+}
+
+.container-filtro:hover{
+  transform: scale(1.05);
+  transition: 0.5s;
+    
+}
+.container-filtro-bg{
+  background-color: rgba(0, 0, 0, 0.116);
+  border-radius: 5px;
+  
+}
+
+.btn{
+  background-color: #002244;
+  color: #f8f9fa;
+  
+}
+
+.btn:hover{
+  background-color: #C9C2B2;
+  color: #002244;
+  
+}
+.content-filtro{
+  text-align: center;
+  margin-left: 200px;
 }
 
 .card {
+    margin-top: 15px;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 300px;
+    width: 270px;
+    height: 350px; /* Altura fija para todas las tarjetas */
     transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0; /* Asegurar que las tarjetas no tengan bordes redondeados */
+    margin-bottom: 20px;
 }
+
 
 .card:hover {
     transform: translateY(-10px);
@@ -49,45 +82,53 @@ body {
 
 /* Estilo para la imagen dentro de la tarjeta */
 .card img {
-    width: 100%;
-    height: 200px;
+  
+    height: 60%; /* Imagen ocupa el 60% de la altura de la tarjeta */
+    width: auto;
     object-fit: cover;
+    object-position: center;
     transition: transform 0.3s ease-in-out;
+    margin-bottom: 0; /* Asegurarse de que no haya margen inferior en la imagen */
+    border-radius: 0; /* Asegurar que las imágenes no tengan bordes redondeados */
+}
+
+.card-img-top{
+  position: absolute;
 }
 
 /* Efecto de zoom en la imagen al hacer hover sobre la tarjeta */
-.card:hover .card-img-top {
-    transform: scale(1.1);
+.card:hover img {
+    transform: scale(1.05);
     opacity: 0.4;
-   
 }
-
 
 /* Estilo para la palabra "más" */
 .card::after {
-  background-color: rgba(0, 0, 0, 0.4);
-  content: "Ver detalles";
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
-  color: #f8f9fa;
-  text-align: center;
-  padding: 85px 200px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    content: "Ver detalles";
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all;
+    font-size: 18px;
+    color: #f8f9fa;
+    text-align: center;
+    padding: 37% 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 0; /* Asegurar que el after pseudo-elemento no tenga bordes redondeados */
 }
 
 /* Mostrar la palabra "más" al hacer hover sobre la tarjeta */
 .card:hover::after {
-  opacity: 1;
+    opacity: 1;
 }
 
 .overlay {
-    position: relative;
-    bottom: 34px;
+    position: absolute;
+    bottom: 140px; /* Ajustar la posición del overlay */
     left: 0;
     width: 100%;
     display: flex;
@@ -103,6 +144,7 @@ body {
     padding: 5px;
     color: white;
     width: 50%;
+    border-left: #f8f9fa;
 }
 
 .icon-text-bed img,
@@ -110,7 +152,7 @@ body {
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .icon-text-house:first-child {
@@ -118,32 +160,62 @@ body {
 }
 
 .card-content {
-    padding: 5px 5px;
-    position: relative;
-    z-index: 2;
+  position: relative;
+  margin-top: 205px;
+    flex-grow: 1; /* El contenido restante ocupa el espacio disponible */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinear al inicio */
+    text-align: center;
 }
 
 .card-content h3 {
-    margin-top: -20px;
-    font-size: 17px;
+    font-size: 15px;
     color: #000000;
-    text-align: center;
+    margin-top: 5px; /* Ajustar margen superior para reducir la distancia */
+    margin-bottom: 5px; /* Ajustar margen inferior si es necesario */
 }
 
 .card-content hr {
     border: none;
     border-top: 1px solid #a09c9c;
-    margin: 10px 0;
+    margin: 3px 0; /* Ajustar márgenes para reducir la distancia */
 }
 
 .card-content p {
-    margin-bottom: 10px;
     color: #000000;
-    text-align: center;
+    margin-top: 5px; /* Ajustar margen superior para reducir la distancia */
 }
 
 .precio {
     color: #002244;
-    text-align: center;
     font-size: 19px;
+    font-style:unset;
+    
+}
+
+.boton-atras {
+  display: flexbox;
+  /* Cambiado a inline-block */
+  text-align: center;
+  background-color: #002244;
+  color: #fff;
+  padding: 5px 20px;
+  /* Ajusta el padding según necesites */
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+
+}
+
+.boton-atras:hover {
+  background-color: #C9C2B2;
+}
+
+.boton-pie {
+  text-align: left;
+  margin-top: 30px; 
+  margin-bottom: 30px;
 }

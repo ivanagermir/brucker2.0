@@ -14,114 +14,6 @@
   <link rel="stylesheet" href="../brucker2.0/css/propiedades.css">
   <link rel="stylesheet" href="../brucker2.0/css/style.css">
 
-    <style>
-        body {
-            margin-top: 10%;
-        }
-
-        .card {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            
-        }
-        .card:hover {
-            transform: scale(1.05);
-        }
-     
-
-        .card-img-top {
-            object-fit: cover;
-            /* Ajusta el tamaño de la imagen */
-            height: 200px;
-            /* Ajusta la altura de la imagen */
-        }
-
-        .card-body {
-            padding: 20px;
-            background-color: #f8f9fa;
-            /* Fondo del cuerpo de la card */
-        }
-
-        .card-title {
-            color: #fff;
-            /* Color del texto */
-            background-color: #002244;
-            /* Color de fondo del título */
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 0 0 10px 10px;
-            /* Borde inferior redondeado */
-        }
-
-        .btn {
-            background-color: #002244;
-            color: #fff;
-            border-color: #002244;
-            text-align: center;
-        }
-
-        .title-filtro {
-            text-align: center;
-            background-color: #002244;
-            color: #fff;
-            padding: 5px;
-        }
-
-        .icon {
-            width: 35px;
-            /* Tamaño deseado para los iconos */
-            height: 30px;
-        }
-
-        .precio-propiedad {
-            background-color: #C9C2B2;
-            place-items: center;
-            color: #fff;
-            margin-bottom: 0;
-            padding: 3px;
-            border-radius: 5px;
-
-
-        }
-
-        .fondo-precio {
-            padding: 0px;
-            
-
-
-        }
-
-        .boton-atras {
-            display: flexbox;
-            /* Cambiado a inline-block */
-            text-align: center;
-            background-color: #002244;
-            color: #fff;
-            padding: 5px 20px;
-            /* Ajusta el padding según necesites */
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-
-        }
-
-        .boton-atras:hover {
-            background-color: #C9C2B2;
-        }
-
-        .boton-pie {
-            text-align: left;
-            margin-top: 30px; 
-            margin-bottom: 30px;
-        }
-        
-    </style>
 
 </head>
 <body>
@@ -191,6 +83,12 @@
 </header>
 
 <main>
+  <!--Portada-->
+  <div class="img-fluid portada-search_properties">
+      <div class="cover-text">
+        
+      </div>
+    </div>
   <aside>
     <div class="container">
       <div class="whatsapp-container">
@@ -230,54 +128,61 @@
         $data = json_decode($response, true);
     ?>
         <div class="container">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="row row-cols-1 row-cols-md-4 g-1">
                 <?php
                 if ($data && isset($data['objects'])) {
-                    foreach ($data['objects'] as $property) {
-                ?>
-                        <div class="col">
-                            <div class="card">
-                                <?php
-                                if (isset($property['photos']) && is_array($property['photos']) && !empty($property['photos'])) {
-                                    $first_photo = reset($property['photos']);
-                                ?>
-                                    <img src="<?php echo $first_photo['image']; ?>" class="card-img-top" alt="<?php echo $first_photo['description']; ?>">
-                                <?php
-                                } else {
-                                ?>
-                                    <img src="default-image.jpg" class="card-img-top" alt="Imagen no disponible">
-                                <?php
-                                }
-                                ?>
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php echo $property['publication_title']; ?></h5>
-                                    <p class="card-text">Dormitorios: <?php echo $property['suite_amount']; ?></p>
-                                    <p class="card-text">Superficie: <?php echo $property['surface']; ?> m²</p>
-                                    <?php
-                                    echo '<div class="fondo-precio position-relative bottom-0 start-0 w-100 p-3;">';
-                                    ?>
-                                    <div class="precio-propiedad">
-                                        <?php
-                                        foreach ($property['operations'] as $operation) {
-                                            foreach ($operation['prices'] as $price) {
-                                                echo '<p> ' . $price['price'] . ' ' . $price['currency'] . '</p>';
-                                            }
-                                        }
-                                        ?>
-                                    </div>
-                                    <?php
-                                    echo '</div>';
-                                    ?>
-                                    <a href="detallePropiedades.php?id=<?php echo $property['id']; ?>" class="btn btn-primary">Ver Propiedad</a>
-                                </div>
-                            </div>
-                        </div>
-                <?php
-                    }
-                } else {
-                    echo 'No se encontraron resultados.';
-                }
-                ?>
+                  foreach ($data['objects'] as $property) {
+                      echo '<div class="col">';
+                      echo '<a href="detallePropiedades.php?id=' . $property['id'] . '" class="text-decoration-none">';
+                      echo '<div class="card">';
+                      
+                      if (isset($property['photos']) && is_array($property['photos']) && !empty($property['photos'])) {
+                          $first_photo = reset($property['photos']);
+                          echo '<img src="' . $first_photo['image'] . '" class="card-img-top" alt="' . $first_photo['description'] . '">';
+                      } else {
+                          echo '<img src="default-image.jpg" class="card-img-top" alt="Imagen no disponible">';
+                          
+                      }
+              
+                      echo '<div class="overlay">';
+                      echo '<div class="icon-text-bed">'; 
+                      echo '<img src="../brucker2.0/img/icons/bed.png" alt="icono cama" class="icon"> ' . $property['suite_amount'];
+                      echo '</div>';
+                      echo '<div class="icon-text-house">'; 
+                      echo '<img src="../brucker2.0/img/icons/house.png" alt="icono superficie" class="icon"> ' . $property['surface'] . ' m²</p>';
+                      echo '</div>';
+                      echo '</div>';
+                      echo '<div class="card-content">';
+                      
+                      echo '<h3>';
+                      // Obtener el título de la propiedad y limitar a 37 caracteres
+                      $trimmed_title = mb_strimwidth($property['publication_title'], 0, 37, '...');
+                      // Convertir la primera letra a mayúscula y el resto a minúscula
+                      $formatted_title = ucfirst(strtolower($trimmed_title));
+                      echo $formatted_title;
+                      echo '</h3>';
+                      
+                      // Mostrar la ubicación en negrita
+                      echo '<p><strong>' . $property['location']['short_location'] . '</strong></p>';
+                      echo '<hr>';
+                      
+                      foreach ($property['operations'] as $operation) {
+                          foreach ($operation['prices'] as $price) {
+                              // Mostrar el precio en negrita
+                              echo '<div class="precio"><strong>' . $price['price'] . ' ' . $price['currency'] . '</strong></div>';
+                          }
+                      }
+                      echo '</div>';
+                      echo '</div>';
+                      echo '</a>';
+                      echo '</div>';
+                  }
+              } else {
+                  echo 'Error al obtener las propiedades.';
+              }
+              
+            ?>
+                 
             </div>
         </div>
     <?php
