@@ -95,48 +95,52 @@
     <section>
 
     <section class="container">
-  <div class="container-filtro-bg">
-    <div class="container container-filtro p-4 mb-5 mt-5 shadow rounded">
-      <form action="search_properties.php" method="get">
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="input-group mb-3 me-3">
-            <label class="input-group-text" for="operation_types">Tipo de Operación</label>
-            <select class="form-select" id="operation_types" name="operation_types">
-              <option value='-1'>Seleccionar</option>
-              <option value="1">Venta</option>
-              <option value="2">Alquiler</option>
-              <option value="3">Alquiler Temporal</option>
-              <!-- Agrega más opciones según sea necesario -->
-            </select>
-          </div>
-          <div class="input-group mb-3 me-3">
-            <label class="input-group-text" for="property_types">Tipo de Propiedad</label>
-            <select class="form-select" id="property_types" name="property_types">
-              <option value='-1'>Seleccionar</option>
-              <option value='1'>Land / Terreno</option>
-              <option value='2'>Appartment / Departamento</option>
-              <option value='3'>House / Casa</option>
-              <option value='4'>Weekend House</option>
-              <option value='5'>Office / Oficina</option>
-              <option value='6'>Mooring</option>
-              <option value='7'>Bussiness Premises</option>
-              <option value='8'>Commercial Building</option>
-              <!-- Agrega más opciones según sea necesario -->
-            </select>
-          </div>
-          <div class="input-group mb-3">
-            <button type="submit" class="btn btn-outline-primary">Buscar</button>
-          </div>
+    <div class="container-filtro-bg">
+        <div class="container-filtro p-4 mb-5 mt-5  rounded">
+            <form action="search_properties.php" method="get">
+              <div class="content-filtro">
+              <div class="d-flex p-2 justify-content-between align-items-center">
+                    <div class="input-group mb-3 me-3">
+                        <label class="input-group-text" for="operation_types">Tipo de Operación</label>
+                        <select class="form-select" id="operation_types" name="operation_types">
+                            <option value='-1'>Seleccionar</option>
+                            <option value="1">Venta</option>
+                            <option value="2">Alquiler</option>
+                            <option value="3">Alquiler Temporal</option>
+                            <!-- Agrega más opciones según sea necesario -->
+                        </select>
+                    </div>
+                    <div class="input-group mb-3 me-3">
+                        <label class="input-group-text" for="property_types">Tipo de Propiedad</label>
+                        <select class="form-select" id="property_types" name="property_types">
+                            <option value='-1'>Seleccionar</option>
+                            <option value='1'>Land / Terreno</option>
+                            <option value='2'>Appartment / Departamento</option>
+                            <option value='3'>House / Casa</option>
+                            <option value='4'>Weekend House</option>
+                            <option value='5'>Office / Oficina</option>
+                            <option value='6'>Mooring</option>
+                            <option value='7'>Bussiness Premises</option>
+                            <option value='8'>Commercial Building</option>
+                            <!-- Agrega más opciones según sea necesario -->
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <button type="submit" class="btn">Buscar</button>
+                    </div>
+                </div>
+              </div>
+                
+            </form>
         </div>
-      </form>
     </div>
-  </div>
 </section>
 
 
 
+
 <div class="container">
-    <div class="row row-cols-1 row-cols-md-3 g-3">
+    <div class="row row-cols-1 row-cols-md-4 g-1">
     <?php
         // Realizar la solicitud a la API de Tokko Broker para obtener los datos de las propiedades
         $url = 'http://www.tokkobroker.com/api/v1/property/?limit=10&offset=0&lang=es_ar&format=json&key=afc6818db3d1bc5b3ae1e77169f5cb2aae4542f3';

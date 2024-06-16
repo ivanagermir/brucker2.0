@@ -9,19 +9,17 @@
     <link rel="shortcut icon" href="/img/logo/PNG/fondoDorado.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
     <link rel="stylesheet" href="../brucker2.0/css/style.css">
     <link rel="stylesheet" href="../brucker2.0/css/detallePropiedad.css">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body>
     <header>
-
-        <nav class=" navbar navbar-expand-lg">
-            <div class="col-lg-10 container-fluid">
-                <!-- Logo aqui POSICIONADO A LA IZQUIERDA-->
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <!-- Logo -->
                 <a class="navbar-brand" href="../bruckerCopia/home.php">
                     <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo Brücker" height="70">
                 </a>
@@ -29,27 +27,20 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <!-- Menú POSICIONADO A LA DERECHA-->
-                <div class="collapse navbar-collapse navbar-style" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto justify-content-end">
+                <!-- Menú -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="../brucker2.0/home.php"><b>Home</b></a>
                         </li>
-                        <!-- desplegable nosotros -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <b>Nosotros</b>
-                            </a>
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><b>Nosotros</b></a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="../brucker2.0/quienesSomos.php">Quiénes somos</a></li>
-<!--                                <li><a class="dropdown-item" href="../brucker2.0/exclusividad.php">La exclusividad</a></li> -->
                             </ul>
                         </li>
-                        <!-- desplegable servicios -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <b>Servicios</b>
-                            </a>
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><b>Servicios</b></a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="../brucker2.0/comprar.php">Comprar</a></li>
                                 <li><a class="dropdown-item" href="../brucker2.0/vender.php">Vender</a></li>
@@ -57,7 +48,6 @@
                                 <li><a class="dropdown-item" href="../brucker2.0/invertir.php">Invertir</a></li>
                             </ul>
                         </li>
-                        <!-- nav propiedades-novedades-contacto -->
                         <li class="nav-item">
                             <a class="nav-link" href="../brucker2.0/propiedades.php"><b>Propiedades</b></a>
                         </li>
@@ -74,7 +64,9 @@
     </header>
 
     <main>
-        <!-- ICONO DE WHATSAPP -->
+        <div class="img-fluid portada-detallePropiedades">
+            <div class="cover-text"></div>
+        </div>
         <aside>
             <div class="container">
                 <div class="whatsapp-container">
@@ -86,7 +78,7 @@
             </div>
         </aside>
 
-
+        <section class="container mt-4">
             <?php
             // Verificar si se recibió un ID válido de la propiedad a través de la URL
             if (isset($_GET['id']) && !empty($_GET['id'])) {
@@ -97,178 +89,194 @@
                 $response = file_get_contents($url);
                 $property = json_decode($response, true);
 
+                // Verificar si se obtuvieron los detalles de la propiedad
+                if ($property && isset($property['id'])) {
             ?>
-                <div class="container contenedor-propiedades">
-                    <?php
-                    // Verificar si se obtuvieron los detalles de la propiedad
-                    if ($property && isset($property['id'])) {
-                        // Mostrar las imágenes en un carrusel
-                        ?>
-                        <div class="title-propiedades-pag">
+              <div class="title-propertie">
+            <?php echo $property['publication_title']; ?>
+                    <div class="property-price">
                         <?php
-                        echo '<h1>' . $property['publication_title'] . '</h1>';
-                        echo '<div class="precio-propiedad">';
                         foreach ($property['operations'] as $operation) {
                             foreach ($operation['prices'] as $price) {
-                                echo '<strong></strong> ' . $price['price'] . ' ' . $price['currency'];
+                                echo '<p>' . $price['price'] . ' ' . $price['currency'] . '</p>';
                             }
                         }
-                        echo '</div>';
                         ?>
                         
+                    </div>
+            </div>
+            <div class="row">
+                <!-- Carrusel principal -->
+                <div class="col-md-9">
+                    <div id="propertyCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <?php foreach ($property['photos'] as $index => $photo) : ?>
+                            <?php $active = $index === 0 ? 'active' : ''; ?>
+                            <div class="carousel-item <?php echo $active; ?>">
+                                <img src="<?php echo $photo['image']; ?>" class="d-block w-100" alt="<?php echo $photo['description']; ?>">
+                            </div>
+                            <?php endforeach; ?>
                         </div>
-
-                        
-                        <?php
-                        echo '<div class="carousel">';
-                        echo '<div class="carousel-inner">';
-                        foreach ($property['photos'] as $index => $photo) {
-                            $active = $index === 0 ? 'active' : '';
-                            echo '<div class="carousel-item ' . $active . '">';
-                            echo '<img src="' . $photo['image'] . '" alt="' . $photo['description'] . '">';
-                            echo '</div>';
-                        }
-                        echo '</div>';
-                        echo '<button class="carousel-control-prev" onclick="prevSlide()" aria-label="Previous">&lt;</button>';
-                        echo '<button class="carousel-control-next" onclick="nextSlide()" aria-label="Next">&gt;</button>';
-                        echo '</div>';
-
-                        
-                    ?>
-                        <div class="caracteristicas-propiedades">
-
-                            <fieldset>
-                                <legend>Caracteristicas</legend>
-                                <div class="column">
-                                    <?php
-                                    // detalles de la propiedad
-                                    echo '<p><strong>Habitaciones:</strong> ' . $property['room_amount'] . '</p>';
-                                    echo '<p><strong>Baños:</strong> ' . $property['bathroom_amount'] . '</p>';
-                                    echo '<p><strong>Superficie:</strong> ' . $property['surface'] . ' ' . $property['surface_measurement'] . '</p>';
-                                    echo '<p><strong>Disposición:</strong> ' . $property['disposition'] . '</p>';
-                                    echo '<p><strong>Dirección:</strong> ' . $property['fake_address'] . '</p>';
-                                    echo '<p><strong>Ubicación:</strong> ' . $property['location']['full_location'] . '</p>';
-                                    echo '<p><strong>Orientation:</strong> ' . $property['orientation'] . '</p>';
-                                    echo '<p><strong>Estacionamientos:</strong> ' . $property['parking_lot_amount'] . '</p>';
-                                    echo '<p><strong>Situación:</strong> ' . $property['situation'] . '</p>';
-                                    ?>
-
-                                </div>
-                            </fieldset>
-
-
-                            <fieldset>
-                                <legend>Contacto</legend>
-                                <div class="column">
-                                    <?php
-                                    echo '<p><strong>Email:</strong> ' . $property['producer']['email'] . '</p>';
-                                    echo '<p><strong>Celular:</strong> ' . $property['producer']['cellphone'] . '</p>';
-
-                                    ?>
-                                </div>
-
-                            </fieldset>
-
-                            <fieldset>
-                                <legend>Tipo de Operación</legend>
-                                <?php
-                                echo '<p><strong>Disponible:</strong></p>';
-                                echo '<ul>';
-                                foreach ($property['operations'] as $operation) {
-                                    echo '<strong></strong> ' . $operation['operation_type'];
-                                    echo '<ul>';
-                                }
-                                ?>
-                            </fieldset>
-
-
-
-
-                        </div>
-
-                        <div class="descripcion_propiedades">
-                            <?php
-                            echo '<p><strong></strong> ' . $property['rich_description'] . '</p>';
-                            // Mostrar las operaciones (ventas, alquileres, etc.)
-
-                            echo '</ul>';
-
-                            echo '<a href="propiedades.php?id=' . $property['id'] . '" class="boton-atras">Volver a Propiedades</a>';
-                            ?>
-
-
-                        </div>
-
+                        <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
                 </div>
 
-        <?php
-                        // Mostrar más detalles según sea necesario
-                    } else {
-                        echo 'No se encontraron detalles de la propiedad con el ID proporcionado.';
-                    }
+                <!-- Miniaturas -->
+                <div class="col-md-3">
+                    <div class="carousel-thumbnails-container">
+                        <div id="carouselThumbnails" class="carousel-thumbnails">
+                            <?php foreach ($property['photos'] as $index => $photo) : ?>
+                            <?php $active = $index === 0 ? 'active' : ''; ?>
+                            <div class="carousel-thumbnail-item <?php echo $active; ?>" data-bs-target="#propertyCarousel" data-bs-slide-to="<?php echo $index; ?>">
+                                <img src="<?php echo $photo['image']; ?>" class="d-block w-100" alt="<?php echo $photo['description']; ?>">
+                            </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+           
+            <div class="col-md-6">
+                <div class="property-details">
+                    
+                    <div class="property-features">
+                        <p> <?php echo $property['reference_code']; ?></p>
+                        <p><strong>Habitaciones:</strong> <?php echo $property['room_amount']; ?></p>
+                        <p><strong>Baños:</strong> <?php echo $property['bathroom_amount']; ?></p>
+                        <p><strong>Superficie:</strong> <?php echo $property['surface'] . ' ' . $property['surface_measurement']; ?></p>
+                        <p><strong>Disposición:</strong> <?php echo $property['disposition']; ?></p>
+                        <p><strong>Dirección:</strong> <?php echo $property['fake_address']; ?></p>
+                        <p><strong>Ubicación:</strong> <?php echo $property['location']['full_location']; ?></p>
+                        <p><strong>Latitud:</strong> <?php echo $property['location']['latitude']; ?></p>
+                        <p><strong>Longitud:</strong> <?php echo $property['location']['longitude']; ?></p>
+                        <p><strong>Orientación:</strong> <?php echo $property['orientation']; ?></p>
+                        <p><strong>Estacionamientos:</strong> <?php echo $property['parking_lot_amount']; ?></p>
+                        <p><strong>Situación:</strong> <?php echo $property['situation']; ?></p>
+                    </div>
+                   
+                    <fieldset>
+                        <legend>Contacto</legend>
+                        <div class="column">
+                            <?php
+                            echo '<p><strong>Email:</strong> ' . $property['producer']['email'] . '</p>';
+                            echo '<p><strong>Celular:</strong> ' . $property['producer']['cellphone'] . '</p>';
+                            ?>
+                        </div>
+                    </fieldset>
+           
+                   
+
+                    <fieldset>
+                        <legend>Tipo de Operación</legend>
+                        <?php
+                        foreach ($property['operations'] as $operation) {
+                            echo '<p><strong>Operación:</strong> ' . $operation['operation_type'] . '</p>';
+                        }
+                        ?>
+                    </fieldset>
+                </div>
+
+                <div class="property-description">
+                    <h2>Descripción</h2>
+                    <?php
+                    echo '<p>' . $property['rich_description'] . '</p>';
+                    ?>
+                </div>
+
+                <a href="propiedades.php" class="btn btn-secondary mt-3">Volver a Propiedades</a>
+            </div>
+           
+            <?php
                 } else {
-                    echo 'No se proporcionó un ID de propiedad válido.';
+                    echo '<p>No se encontraron detalles de la propiedad con el ID proporcionado.</p>';
                 }
-        ?>
-
-
-
-        <script>
-            let currentSlide = 0;
-            const slides = document.querySelectorAll('.carousel-item');
-            const totalSlides = slides.length;
-
-            function showSlide(index) {
-                if (index < 0) {
-                    currentSlide = totalSlides - 1;
-                } else if (index >= totalSlides) {
-                    currentSlide = 0;
-                } else {
-                    currentSlide = index;
-                }
-
-                slides.forEach((slide, i) => {
-                    if (i === currentSlide) {
-                        slide.classList.add('active');
-                    } else {
-                        slide.classList.remove('active');
-                    }
-                });
+            } else {
+                echo '<p>No se proporcionó un ID de propiedad válido.</p>';
             }
+            ?>
+        </section>
+    </main>
+       <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLR4pK3f5kB5Np5+8hNfES5P2mF0xJ5p6yXZ7E6Msh" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-dm0CpcVf5Qd44vCg8bqD2WtH4OLnP5wUbAATjx5gIiwMIydKMl8Bd5LtEIP7gs7" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+    // Función para desplazar las miniaturas hacia arriba y mostrar la miniatura en la imagen principal
+    $('#carouselThumbnails .carousel-thumbnail-item').on('click', function() {
+        var slideIndex = $(this).attr('data-bs-slide-to');
+        $('#propertyCarousel').carousel(parseInt(slideIndex));
+        $('#carouselThumbnails .carousel-thumbnail-item').removeClass('active');
+        $(this).addClass('active');
 
-            function nextSlide() {
-                showSlide(currentSlide + 1);
-            }
+        // Desplazar las miniaturas hacia arriba para mostrar la imagen principal
+        var thumbnailPosition = $(this).position().top;
+        var containerScrollTop = $('.carousel-thumbnails-container').scrollTop();
+        var containerHeight = $('.carousel-thumbnails-container').height();
+        $('.carousel-thumbnails-container').animate({
+            scrollTop: containerScrollTop + thumbnailPosition - containerHeight / 2 + $(this).height() / 2
+        }, 500);
+    });
 
-            function prevSlide() {
-                showSlide(currentSlide - 1);
-            }
+    // Ocultar barra de desplazamiento vertical
+    $('.carousel-thumbnails-container').on('mouseenter', function() {
+        $(this).css('overflow-y', 'hidden');
+    }).on('mouseleave', function() {
+        $(this).css('overflow-y', 'auto');
+    });
 
-            showSlide(currentSlide);
-        </script>
+    // Sincronización al deslizar en el carrusel principal
+    $('#propertyCarousel').on('slid.bs.carousel', function(event) {
+        var slideIndex = $(event.relatedTarget).index();
+        $('#carouselThumbnails .carousel-thumbnail-item').removeClass('active');
+        $('#carouselThumbnails .carousel-thumbnail-item[data-bs-slide-to="' + slideIndex + '"]').addClass('active');
 
-  <!--Footer-->
-  <footer class="footer py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 text-center mb-3 mb-md-0">
-          <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo de la empresa" class="img-fluid" style="max-height: 70px;">
-          <p class="mt-3">© 2024 BRÜCKER. Todos los derechos reservados.</p>
+        // Desplazar las miniaturas hacia arriba para mostrar la imagen principal
+        var $activeThumbnail = $('#carouselThumbnails .carousel-thumbnail-item[data-bs-slide-to="' + slideIndex + '"]');
+        var thumbnailPosition = $activeThumbnail.position().top;
+        var containerScrollTop = $('.carousel-thumbnails-container').scrollTop();
+        var containerHeight = $('.carousel-thumbnails-container').height();
+        $('.carousel-thumbnails-container').animate({
+            scrollTop: containerScrollTop + thumbnailPosition - containerHeight / 2 + $activeThumbnail.height() / 2
+        }, 500);
+    });
+});
+
+</script>
+
+   
+
+
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <img src="../brucker2.0/img/logo/PNG/sinFondocompleto.png" alt="Logo de la empresa" class="img-fluid" style="max-height: 70px;">
+                    <p class="mt-3">© 2024 BRÜCKER. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                </div>
+                <div class="col-md-4 text-center">
+                    <ul class="list-inline social-icons mt-3">
+                        <li class="list-inline-item"><a href="https://wa.me/543512010010"><i class="bi bi-whatsapp"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/brucker.ok?igsh=MWI0Z2U3OHpoajBjeQ=="><i class="bi bi-instagram"></i></a></li>
+                    </ul>
+                    <h5>Síguenos</h5>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4 text-center mb-3 mb-md-0">
-        </div>
-        <div class="col-md-4 text-center">
-          <ul class="list-inline social-icons mt-3">
-            <li class="list-inline-item"><a href="https://wa.me/543512010010"><i class="bi bi-whatsapp"></i></a></li>
-            <li class="list-inline-item"><a href="https://www.instagram.com/brucker.ok?igsh=MWI0Z2U3OHpoajBjeQ=="><i class="bi bi-instagram"></i></a></li>
-          </ul>
-          <h5>Síguenos</h5>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="/app.js"></script>
 </body>
 
