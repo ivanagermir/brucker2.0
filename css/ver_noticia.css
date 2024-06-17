@@ -1,16 +1,30 @@
 /*Espacio para la fuente*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+.portada-detallePropiedades {
+    background-image: url('../img/img-portadas/portada_casa2.png');
+     background-size: cover;
+     height: 600px;
+     position: relative;
+     z-index: 0;
+     background-attachment: fixed;
+ }
 .news-title {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    src: url(Montserrat-VariableFont_wght);
     font-size: 2.5rem;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 5px;
     text-align: center;
 }  
 
+.news-title{
+
+    font-size: 35px;
+}
 h3 {
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    src: url(Montserrat-VariableFont_wght);
     font-size: 1.25rem;
     font-style: italic;
     color: gray; /* Color gris */
@@ -20,7 +34,8 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 
 
 .news-content {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    src: url(Montserrat-VariableFont_wght);
     font-size: 1rem;
     line-height: 1.5;
     margin-top: 10px;
@@ -28,7 +43,8 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
     text-justify: auto;
 }
 .news-additional-content{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    src: url(Montserrat-VariableFont_wght);
     font-size: 1rem;
     line-height: 1.5;
     margin-top: 10px;

@@ -75,7 +75,7 @@
     <!--Portada-->
     <div class="img-fluid portada-propiedades">
       <div class="cover-text">
-        <h1 class="container display-4">PROPIEDADES
+      <h1 class="container display-4">PROPIEDADES
         <hr style="border-top: 5px solid #000000; width: 10%; margin: 1rem 0;">
         </h1>
       </div>
