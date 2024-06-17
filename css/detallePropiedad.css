@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 
+p{
+    font-family: 'Montserrat', sans-serif;
+    src: url(Montserrat-VariableFont_wght);
+   }
+   label{
+    font-family: 'Montserrat', sans-serif;
+    src: url(Montserrat-VariableFont_wght);
+   }
 .portada-detallePropiedades {
    background-image: url('../img/img-portadas/Cordoba.jpeg');
     background-size: cover;
@@ -14,7 +22,7 @@
 .carousel-thumbnails-container {
     display: flex;
     height: 383px;
-    width: 300px; /* Ancho fijo del contenedor */
+    width: 280px; /* Ancho fijo del contenedor */
     overflow-y: scroll;
     overflow-x: hidden; /* Ocultar la barra de desplazamiento horizontal */
     white-space: nowrap; /* Evitar que las miniaturas se envuelvan */
@@ -82,6 +90,7 @@
     width: 150px;
     text-align: center;
 }
+
 .property-details {
     margin-top: 30px;
     padding: 20px;
@@ -95,28 +104,30 @@
     margin-bottom: 20px;
 }
 
-.property-details .property-price {
+.property-details .property-price,
+.property-details .card-operation {
     font-size: 20px;
-    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #002244;
+    color: #fff;
+    margin: 5px;
+    border-radius: 5px;
+    
+    
 }
 
-.property-details .property-features {
-    margin-bottom: 20px;
+.property-details .property-price p,
+.property-details .card-operation p {
+    margin: 0;
 }
 
-.property-details .property-features p {
-    margin-bottom: 5px;
+.subtitle {
+    display: flex;
+    align-items: center;
 }
-
-.property-description {
-    margin-top: 30px;
+.card-operation{
+    margin-left: 10px;
 }
-
-.property-description p {
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
 
 .caracteristicas-propiedades {
     margin-top: 5%;
@@ -135,6 +146,22 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
+
+.contacto{
+    max-height: 572px;
+    border-radius: 5px;
+    margin-bottom: 300px;
+    margin-top: 25px;
+    border-color: #002244;
+}
+.bg-custom-light {
+    background-color: #f8f9fa; /* color gris claro similar a bg-light de Bootstrap */
+    padding: 15px; /* agregar padding para espacio interior */
+    border-radius: 5px; /* bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* sombra suave para darle profundidad */
+    
+}
+
 
 .column p {
     margin-bottom: 10px;
@@ -181,18 +208,14 @@ legend {
 
 
 /*boton ir atras*/
-.boton-atras {
-    display: flexbox; /* Cambiado a inline-block */
-    text-align: center;
+.btn{
     background-color: #002244;
-    color: #fff;
-    padding: 5px 20px; /* Ajusta el padding según necesites */
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-}
-
-.boton-atras:hover {
+    color: #f8f9fa;
+    
+  }
+  
+  .btn:hover{
     background-color: #C9C2B2;
-}
+    color: #002244;
+    
+  }
