@@ -210,7 +210,7 @@
                                     </div>
                                     <input type="hidden" name="_template" value="table">
                                     <input type="hidden" name="_captcha" value="false">
-                                    <input type="hidden" name="_next" value="http://localhost/brucker2.0/contacto.php">
+                                    <input type="hidden" name="_next" value="http://localhost/brucker2.0/detallePropiedades.php">
                                 </form>
                             </div>
                         </div>
