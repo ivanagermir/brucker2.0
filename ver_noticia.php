@@ -70,6 +70,9 @@
     </nav>
   </header>
 
+  <div class="img-fluid portada-detallePropiedades">
+            <div class="cover-text"></div>
+        </div>
   <!-- ICONO DE WHATSAPP -->
   <aside class="container">
       <div class="whatsapp-container">
@@ -107,8 +110,12 @@ if(isset($_GET['id'])) {
     if ($result->num_rows > 0) {
         // Mostrar la información de la noticia
         $row = $result->fetch_assoc();
-        echo "<div class='news-article'>";
-        echo "<h2 class='news-title mb-4'>" . $row['title'] . "</h2>";
+        echo "<div class='news-article'>";?>
+
+<?php
+        echo "<div class='news-title mb-4'>" . $row['title'] . "</div>"; ?>
+        <legend></legend>
+        <?php
         echo "<img src='" . $row['imagen'] . "' class='image-text-container mb-4' alt='Imagen'>";
         
         echo "<h3 class='news-subtitle mb-4'>" . $row['subtitle'] . "</h3>";

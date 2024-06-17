@@ -60,11 +60,11 @@
             </div>
         </nav>
     </header>
-
-    <main>
-        <div class="img-fluid portada-detallePropiedades">
+    <div class="img-fluid portada-detallePropiedades">
             <div class="cover-text"></div>
         </div>
+    <main>
+      
         <aside>
             <div class="container">
                 <div class="whatsapp-container">
