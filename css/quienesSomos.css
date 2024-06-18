@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .portada-quienesSomos {
-  background-image: url('../img/img-quienesSomos/portada.jpeg');
+  background-image: url('../img/img-quienesSomos/sala.jpg');
   background-size: cover;
   height: 650px;
   position: relative;
@@ -36,6 +36,7 @@
 }
   
 .list-values {
+  margin-top: 40px;
   background-color: #EFF0F0;
   text-align: center;
   padding-top: 5%;
@@ -70,18 +71,20 @@
 
 /* Estilos para la Card */
 .body-card{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #efefef;
+  margin-top: 10px;
+  background-image: url('../img/img-quienesSomos/sala.jpg'); /* Cambia el path a la imagen que deseas usar */
+  background-size: cover; /* Asegura que la imagen cubra toda la sección */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Mantiene el fondo fijo mientras se desplaza la página */
+  
+  padding: 60px 0; /* Ajusta el padding según necesites */
 }
 
 .card{
   font-family: "Baloo 2", sans-serif;
   position: relative;
-  min-width: 300px;
-  min-height: 450px;
+  min-width: 250px;
+  min-height: 400px;
   background-color: rgb(233, 225, 225);
   border-radius: 5px;
   overflow: hidden;
@@ -104,11 +107,12 @@
 
 .card .head .circle{
   position:absolute;
-  width: 2000px;
-  height:2000px;
-  border-radius: 20%;
+  width: 80px;
+  height:200px;
+  border-radius: 8%;
   background-color:#002244;
-  bottom: 0;  
+  bottom: 5px;  
+  margin-left: 10px;
 }
 
 .card .head .img{
@@ -145,6 +149,9 @@
   color: #1c5a5c;
 }
 
+.card-title{
+  color: #002244;
+}
 .card .description p{
  margin-top: 20px;
  font-size: 15px;

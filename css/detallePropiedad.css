@@ -9,13 +9,18 @@ p{
     font-family: 'Montserrat', sans-serif;
     src: url(Montserrat-VariableFont_wght);
    }
-.portada-detallePropiedades {
-   background-image: url('../img/img-portadas/Cordoba.jpeg');
+   .portada-tasar {
+    background-image: url('../img/img-portadas/hogar-escaleas.jpg');
     background-size: cover;
-    height: 300px;
+    height: 400px;
     position: relative;
     z-index: 0;
     background-attachment: fixed;
+}
+
+.portada-tasar h1 {
+    color: #002244;
+    text-shadow: #fff;
 }
 
 /* Ocultar barra de desplazamiento vertical en navegadores basados en WebKit */
@@ -102,12 +107,13 @@ p{
 .property-details h1 {
     font-size: 24px;
     margin-bottom: 20px;
+    padding: 0%;
 }
 
 .property-details .property-price,
 .property-details .card-operation {
     font-size: 20px;
-    padding: 10px;
+    padding: 0px;
     background-color: #002244;
     color: #fff;
     margin: 5px;
@@ -211,6 +217,7 @@ legend {
 .btn{
     background-color: #002244;
     color: #f8f9fa;
+    margin-top: 5px;
     
   }
   

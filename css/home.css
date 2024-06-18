@@ -8,6 +8,7 @@
   background-attachment: fixed;
 }
 
+
 /* CARDS - home */
 .card-section {
   margin: -100px 50px 50px 50px;
@@ -60,55 +61,32 @@
 }
 
 /* proposito-home*/
-.proposito-section{
-  font-family: 'Montserrat', sans-serif;
-  src: url(Montserrat-VariableFont_wght);
-  margin-bottom: 50px;
-  background-image: url(../img/img-background/background01.png)
+.proposito-section {
+  background-image: url('../img/img-home/propiedad01.png'); /* Cambia el path a la imagen que deseas usar */
+  background-size: cover; /* Asegura que la imagen cubra toda la sección */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Mantiene el fondo fijo mientras se desplaza la página */
+  color: #fff; /* Ajusta el color del texto si es necesario */
+  padding: 60px 0; /* Ajusta el padding según necesites */
 }
+
+.proposito-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Añade una superposición oscura para mejorar la legibilidad del texto */
+  padding: 20px;
   
+}
+
 .proposito-title {
-  text-align: center;
-  color: #002244;
-  margin-bottom: 50px;
-}
-  
-.proposito-image {
-  align-content: center;
-  margin-bottom: -150px;
+  margin-bottom: 20px;
 }
 
-.proposito-content .text-principal {
-  align-items: center;
-  margin-bottom: 50px;
-  border: none;
-}
-  
-.proposito-content {
-  background-color: #EFF0F0;
-  text-align: center;
-  padding-top: 15%;
-}
-  
-.proposito-content h6 {
-  color: #002244;
-  font-weight: bold;
-  margin-top: 10px;
-  border: 2px solid #002244;
-  padding: 5px;
-  border-radius: 20px;
+.text-principal {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
-.proposito-content p {
-  font-weight: bold;
-  color: #105498;
-  font-size: 14px;
-}
-
-.image-logo {
-  width: 180px;
-  margin-bottom: 10px;
-}
 
 /* TESTIMONIOS */
 .testimonials-title {
