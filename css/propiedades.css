@@ -136,6 +136,19 @@ body {
     display: flex;
     justify-content: space-around;
     z-index: 2;
+    
+
+}
+
+.overlay::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px; /* Ancho de la línea blanca */
+    background-color: white;
+    transform: translateX(-50%);
 }
 
 .icon-text-bed,
