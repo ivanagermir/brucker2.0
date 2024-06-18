@@ -92,7 +92,7 @@
 
     <!-- Cards: Comprar, vender, tasar, invertir-->
     <section class="card-section">
-      <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="row row-cols-1 row-cols-md-3 g-3">
         <div class="col">
           <div class="container card-first h-100" data-aos="fade-up">
             <div class="card-body">
@@ -159,20 +159,17 @@
     </section>
 
     <!-- PROPOSITO -->
-    <section class="container-fluid proposito-section">
-      <div>
-        <h2 class="proposito-title fs-2" data-aos="zoom-in">¿Por qué <strong>ELEGIRNOS</strong>?</h2>
-        <img src="../brucker2.0/img/img-valores/valores.png" class="proposito-image rounded mx-auto d-none d-md-block" data-aos="zoom-in" alt="Pareja feliz">
-      </div>
-      <div class="container-fluid proposito-content">
+    <section class="container-fluid proposito-section" id="proposito">
+      <div class="proposito-overlay">
+        <h2 class="container proposito-title fs-2" data-aos="zoom-in">¿Por qué <strong>ELEGIRNOS</strong>?</h2>
         <h6 class="container text-principal text-center">
           Nuestro PROPÓSITO es poner al cliente como protagonista, ofreciendo un servicio diferente,
           profesional, de excelencia y compromiso. Somos el PUENTE que conecta a las personas con sus
-          sueños, brindándoles una nueva forma de vivir la experiencia inmobiliaria. <br><br><br><br>
+          sueños, brindándoles una nueva forma de vivir la experiencia inmobiliaria.
         </h6>
       </div>
     </section>
-
+ 
     <!-- TESTIMONIOS -->
     <?php
       // Conectar a la base de datos
@@ -257,12 +254,13 @@
       <h2>CONSULTORÍA GRATUITA</h2>
       <h4>¿Querés dar el primer paso hacia tu objetivo?</h4>
       <h5>Reservá una reunión de 30' con nosotros</h5>
-      <hr style="border-top: 5px solid #002244; width: 10%; margin: 1rem 0;">
+      <hr style="border-top: 5px solid #002244; width: 8%; margin: 1rem 0;">
     </div>
-    <!-- Principio del widget integrado de Calendly -->
-    <div class="calendly-inline-widget" data-url="https://calendly.com/brucker_inmo/30min?primary_color=002244" style="min-width:320px;height:700px;"></div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <!-- Final del widget integrado de Calendly -->
+        
+        <!-- Principio del widget integrado de Calendly -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/brucker_inmo/brucker?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Final del widget integrado de Calendly -->
   </section>
 
   <!--Footer-->

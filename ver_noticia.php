@@ -147,7 +147,20 @@ if(isset($_GET['id'])) {
     </figcaption>
 </figure>
 
-
+  <!--Turnero-->
+  <section class="turnero">
+    <div class="headTurnero">
+      <h2>CONSULTORÍA GRATUITA</h2>
+      <h4>¿Querés dar el primer paso hacia tu objetivo?</h4>
+      <h5>Reservá una reunión de 30' con nosotros</h5>
+      <hr style="border-top: 5px solid #002244; width: 8%; margin: 1rem 0;">
+    </div>
+        
+        <!-- Principio del widget integrado de Calendly -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/brucker_inmo/brucker?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Final del widget integrado de Calendly -->
+  </section>
 <!--Footer-->
 <footer class="footer py-5">
     <div class="container">
