@@ -92,7 +92,7 @@
 
     <!-- Cards: Comprar, vender, tasar, invertir-->
     <section class="card-section">
-      <div class="row row-cols-1 row-cols-md-3 g-3">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
           <div class="container card-first h-100" data-aos="fade-up">
             <div class="card-body">

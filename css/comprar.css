@@ -6,7 +6,7 @@ main{
 }
 
 .portada-comprar {
-  background-image: url('../img/img-portadas/');
+  background-image: url('../img/img-portadas/portada_comprar.png');
   background-size: cover;
   height: 650px;
   position: relative;

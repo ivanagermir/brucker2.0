@@ -1,6 +1,6 @@
 /* Portada - home */
 .jumbotron {
-  background-image: url('../img/img-portadas/portada-puente.png');
+  background-image: url('../img/img-portadas/cordoba3.png');
   background-size: cover;
   height: 700px;
   position: relative;
@@ -15,6 +15,7 @@
   padding: 0px 50px 50px 50px;
   position: relative;
   z-index: 1;
+  
 }
 
 .card{
