@@ -92,15 +92,14 @@
       </div>
     </aside>
 
-    <section>
+      <!--Filtro de búsqueda-->
 
-    
     <section class="container">
       <div class="container-filtro-bg">
-        <div class="container-filtro p-4 mb-5 mt-5 rounded">
+        <div class="container-filtro p-4 mb-5 mt-5 rounded mx-auto">
           <form action="search_properties.php" method="get">
             <div class="content-filtro">
-              <div class="row g-3">
+              <div class="row g-3 justify-content-center">
                 <div class="col-md-4">
                   <div class="input-group">
                     <label class="input-group-text" for="operation_types">Tipo de Operación</label>
@@ -109,7 +108,6 @@
                       <option value="1">Venta</option>
                       <option value="2">Alquiler</option>
                       <option value="3">Alquiler Temporal</option>
-                      <!-- Agrega más opciones según sea necesario -->
                     </select>
                   </div>
                 </div>
@@ -126,12 +124,11 @@
                       <option value='6'>Mooring</option>
                       <option value='7'>Bussiness Premises</option>
                       <option value='8'>Commercial Building</option>
-                      <!-- Agrega más opciones según sea necesario -->
                     </select>
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <button type="submit" class="btn btn-primary w-100">Buscar</button>
+                  <button type="submit" class="btn btn-primary blue-button w-100">Buscar</button>
                 </div>
               </div>
             </div>
@@ -141,10 +138,11 @@
     </section>
 
 
+    <!--Propiedades desde la API TOKKO BROCKER-->
 
-<div class="container">
-    <div class="row row-cols-1 row-cols-md-4 g-1">
-    <?php
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-4 g-1">
+      <?php
         // Realizar la solicitud a la API de Tokko Broker para obtener los datos de las propiedades
         $url = 'http://www.tokkobroker.com/api/v1/property/?limit=10&offset=0&lang=es_ar&format=json&key=afc6818db3d1bc5b3ae1e77169f5cb2aae4542f3';
         $response = file_get_contents($url);
@@ -187,32 +185,27 @@
               echo '<hr>';
               
               foreach ($property['operations'] as $operation) {
-                  foreach ($operation['prices'] as $price) {
-                      // Mostrar el precio en negrita
-                      echo '<div class="precio"><strong>' . $price['price'] . ' ' . $price['currency'] . '</strong></div>';
-                  }
+                foreach ($operation['prices'] as $price) {
+                  // Mostrar el precio en negrita
+                  echo '<div class="precio"><strong>' . $price['price'] . ' ' . $price['currency'] . '</strong></div>';
+                }
               }
               echo '</div>';
               echo '</div>';
               echo '</a>';
               echo '</div>';
+            }
+          } else {
+            echo 'Error al obtener las propiedades.';
           }
-      } else {
-          echo 'Error al obtener las propiedades.';
-      }
       
-    ?>
-    </div>
-</div>
-
-        </div>
+        ?>
       </div>
-
-    </section>
-
+    </div>
   </main>
-<!--Footer-->
-<footer class="footer py-5">
+
+  <!--Footer-->
+  <footer class="footer py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-4 text-center mb-3 mb-md-0">

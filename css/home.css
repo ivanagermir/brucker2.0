@@ -18,6 +18,15 @@
   
 }
 
+@media (max-width: 767.98px) {
+  .card-section {
+    margin: -100px 0px 0px 0px;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+  }
+}
+
 .card{
   box-shadow: 5px 5px 5px #dcdddd;
   position: relative;

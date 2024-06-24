@@ -145,8 +145,8 @@
     </section>
 
       <!--Card-->
-      <section class="body-card">
-        <div class="container card">
+      <section class="container body-card">
+        <div class="card">
           <div class="head">
               <div class="circle"> </div>
               <div class="img">

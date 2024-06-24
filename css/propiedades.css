@@ -1,23 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-
 body {
     font-family: 'Baloo 2', sans-serif;
     background-color: #f8f9fa;
 }
 
 .navbar-brand img {
-    max-height: 60px;
+  max-height: 60px;
 }
 
 .portada-propiedades {
-    background-image: url('../img/img-home/propiedad02.png');
-    background-size: cover;
-    height: 650px;
-    position: relative;
-    z-index: 0;
-    background-attachment: fixed;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-image: url('../img/img-home/propiedad02.png');
+  background-size: cover;
+  height: 650px;
+  position: relative;
+  z-index: 0;
+  background-attachment: fixed;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .portada-search_properties{
@@ -29,39 +28,25 @@ body {
   background-attachment: fixed;
 }
 
-.container-filtro {
-  width: 100%; /* Hacer que el filtro ocupe todo el ancho del contenedor */
-  margin: 0 auto; /* Centrar el filtro horizontalmente dentro del contenedor-filtro-bg */
-  text-align: center;
-  border-radius: 10px; /* Opcional: agregar bordes redondeados al contenedor */
-  
+.container-filtro:hover {
+  transform: scale(1.05);
+  transition: 0.5s;    
 }
 
-.container-filtro:hover{
-  transform: scale(1.05);
-  transition: 0.5s;
-    
-}
-.container-filtro-bg{
+.container-filtro-bg {
   background-color: rgba(0, 0, 0, 0.116);
   border-radius: 5px;
-  
 }
 
-.btn{
-  background-color: #002244;
-  color: #f8f9fa;
-  
-}
-
-.btn:hover{
-  background-color: #C9C2B2;
-  color: #002244;
-  
-}
-.content-filtro{
+.content-filtro {
   text-align: center;
-  margin-left: 200px;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 767.98px) {
+  .container-filtro {
+    margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
+  }
 }
 
 .card {

@@ -70,16 +70,6 @@
 
 
 /* Estilos para la Card */
-.body-card{
-  margin-top: 10px;
-  background-image: url('../img/img-quienesSomos/sala.jpg'); /* Cambia el path a la imagen que deseas usar */
-  background-size: cover; /* Asegura que la imagen cubra toda la sección */
-  background-position: center; /* Centra la imagen */
-  background-attachment: fixed; /* Mantiene el fondo fijo mientras se desplaza la página */
-  
-  padding: 60px 0; /* Ajusta el padding según necesites */
-}
-
 .card{
   font-family: "Baloo 2", sans-serif;
   position: relative;
@@ -93,6 +83,17 @@
   margin-left: 5%;
   margin-right: 5%;
 }
+
+.body-card{
+  margin-top: 10px;
+  background-image: url('../img/img-quienesSomos/sala.jpg'); /* Cambia el path a la imagen que deseas usar */
+  background-size: cover; /* Asegura que la imagen cubra toda la sección */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Mantiene el fondo fijo mientras se desplaza la página */
+  
+  padding: 60px 0; /* Ajusta el padding según necesites */
+}
+
 
 .card:hover{
   box-shadow: 0 5px 15px #002244;

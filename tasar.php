@@ -117,51 +117,49 @@
       </div>
     </section>
 
-    <section>
-      <div class="container" style="justify-content: center;">
-        <img src="../brucker2.0/img/img-tasar/imagen-tasar.png" alt="Pirámide de tasación">
+    <section class="container">
+      <div style="justify-content: center;">
+        <img src="../brucker2.0/img/img-tasar/imagen-tasar.png" class="img-fluid" alt="Pirámide de tasación">
       </div>
     </section>
 
     <!-- Formulario para pedir tasación -->
-    <section>
-      <div class="container">
-        <div class="form">
-          <form action="https://formsubmit.co/damian.gariok@gmail.com" method="POST"> <!-- API para enviar el Formulario al mail formsubmit.co -->
-            <div class="row mb-3">
-              <h4>SOLICITAR TASACIÓN</h4>
-              <label for="inputText" class="col-sm-2 col-form-label">Nombre y apellido</label>
-              <div class="col-sm-10">
-                <input type="text" name="Nombre" class="form-control" id="inputText">
-              </div>
+    <section class="container mt-4">
+      <div class="form">
+        <form action="https://formsubmit.co/damian.gariok@gmail.com" method="POST"> <!-- API para enviar el Formulario al mail formsubmit.co -->
+          <div class="row mb-3">
+            <h4>SOLICITAR TASACIÓN</h4>
+            <label for="inputText" class="col-sm-2 col-form-label">Nombre y apellido</label>
+            <div class="col-sm-10">
+              <input type="text" name="Nombre" class="form-control" id="inputText">
             </div>
-            <div class="row mb-3">
-              <label for="inputText" class="col-sm-2 col-form-label">Teléfono</label>
-              <div class="col-sm-10">
-                <input type="text" name="Teléfono" class="form-control" id="text">
-              </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputText" class="col-sm-2 col-form-label">Teléfono</label>
+            <div class="col-sm-10">
+              <input type="text" name="Teléfono" class="form-control" id="text">
             </div>
-            <div class="row mb-3">
-              <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-              <div class="col-sm-10">
-                <input type="email" name="email" class="form-control" id="inputEmail3">
-              </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" name="email" class="form-control" id="inputEmail3">
             </div>
-            <div class="row mb-3">
-              <label for="inputEmail3" class="col-sm-2 col-form-label">Deja tu mensaje</label>
-              <div class="col-sm-10">
-                <textarea name="Mensaje" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
+          </div>
+          <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Deja tu mensaje</label>
+            <div class="col-sm-10">
+              <textarea name="Mensaje" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
-            <div class="d-grid gap-2 col-6 mx-auto">
-              <button type="submit" class="btn light-button btn-primary">Enviar</button>
-            </div>
-             <!-- input para en envío del Formulario al mail API: formsubmit.co cambiar el value por la pagina en su momento -->
-             <input type="hidden" name="_template" value="table">
-             <input type="hidden" name="_captcha" value="false">
-             <input type="hidden" name="_next" value="http://localhost/brucker2.0/tasar.php">      
-          </form>         
-        </div>
+          </div>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn light-button btn-primary">Enviar</button>
+          </div>
+            <!-- input para en envío del Formulario al mail API: formsubmit.co cambiar el value por la pagina en su momento -->
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="http://localhost/brucker2.0/tasar.php">      
+        </form>         
       </div>
     </section>
 
