@@ -6,7 +6,7 @@ main{
 }
 
 .portada-vender {
-  background-image: url('../img/img-portadas/portada_vender.png');
+  background-image: url('../img/img-portadas/portada-vender.png');
   background-size: cover;
   height: 650px;
   position: relative;

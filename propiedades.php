@@ -94,48 +94,51 @@
 
     <section>
 
+    
     <section class="container">
-    <div class="container-filtro-bg">
-        <div class="container-filtro p-4 mb-5 mt-5  rounded">
-            <form action="search_properties.php" method="get">
-              <div class="content-filtro">
-              <div class="d-flex p-2 justify-content-between align-items-center">
-                    <div class="input-group mb-3 me-3">
-                        <label class="input-group-text" for="operation_types">Tipo de Operación</label>
-                        <select class="form-select" id="operation_types" name="operation_types">
-                            <option value='-1'>Seleccionar</option>
-                            <option value="1">Venta</option>
-                            <option value="2">Alquiler</option>
-                            <option value="3">Alquiler Temporal</option>
-                            <!-- Agrega más opciones según sea necesario -->
-                        </select>
-                    </div>
-                    <div class="input-group mb-3 me-3">
-                        <label class="input-group-text" for="property_types">Tipo de Propiedad</label>
-                        <select class="form-select" id="property_types" name="property_types">
-                            <option value='-1'>Seleccionar</option>
-                            <option value='1'>Land / Terreno</option>
-                            <option value='2'>Appartment / Departamento</option>
-                            <option value='3'>House / Casa</option>
-                            <option value='4'>Weekend House</option>
-                            <option value='5'>Office / Oficina</option>
-                            <option value='6'>Mooring</option>
-                            <option value='7'>Bussiness Premises</option>
-                            <option value='8'>Commercial Building</option>
-                            <!-- Agrega más opciones según sea necesario -->
-                        </select>
-                    </div>
-                    <div class="input-group mb-3">
-                        <button type="submit" class="btn">Buscar</button>
-                    </div>
+      <div class="container-filtro-bg">
+        <div class="container-filtro p-4 mb-5 mt-5 rounded">
+          <form action="search_properties.php" method="get">
+            <div class="content-filtro">
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <div class="input-group">
+                    <label class="input-group-text" for="operation_types">Tipo de Operación</label>
+                    <select class="form-select" id="operation_types" name="operation_types">
+                      <option value='-1'>Seleccionar</option>
+                      <option value="1">Venta</option>
+                      <option value="2">Alquiler</option>
+                      <option value="3">Alquiler Temporal</option>
+                      <!-- Agrega más opciones según sea necesario -->
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="input-group">
+                    <label class="input-group-text" for="property_types">Tipo de Propiedad</label>
+                    <select class="form-select" id="property_types" name="property_types">
+                      <option value='-1'>Seleccionar</option>
+                      <option value='1'>Land / Terreno</option>
+                      <option value='2'>Appartment / Departamento</option>
+                      <option value='3'>House / Casa</option>
+                      <option value='4'>Weekend House</option>
+                      <option value='5'>Office / Oficina</option>
+                      <option value='6'>Mooring</option>
+                      <option value='7'>Bussiness Premises</option>
+                      <option value='8'>Commercial Building</option>
+                      <!-- Agrega más opciones según sea necesario -->
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <button type="submit" class="btn btn-primary w-100">Buscar</button>
                 </div>
               </div>
-                
-            </form>
+            </div>
+          </form>
         </div>
-    </div>
-</section>
-
+      </div>
+    </section>
 
 
 

@@ -32,8 +32,9 @@ body {
 .container-filtro {
   width: 100%; /* Hacer que el filtro ocupe todo el ancho del contenedor */
   margin: 0 auto; /* Centrar el filtro horizontalmente dentro del contenedor-filtro-bg */
-  
+  text-align: center;
   border-radius: 10px; /* Opcional: agregar bordes redondeados al contenedor */
+  
 }
 
 .container-filtro:hover{
