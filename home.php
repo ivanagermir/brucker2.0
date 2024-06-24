@@ -92,7 +92,7 @@
 
     <!-- Cards: Comprar, vender, tasar, invertir-->
     <section class="card-section">
-      <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="container row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
           <div class="container card-first h-100" data-aos="fade-up">
             <div class="card-body">
@@ -159,7 +159,7 @@
     </section>
 
     <!-- PROPOSITO -->
-    <section class="container-fluid proposito-section" id="proposito">
+    <section class="container-fluid proposito-section mt-5" id="proposito">
       <div class="proposito-overlay">
         <h2 class="container proposito-title fs-2" data-aos="zoom-in">¿Por qué <strong>ELEGIRNOS</strong>?</h2>
         <h6 class="container text-principal text-center">
